@@ -8,7 +8,7 @@ PAPER         =
 BUILDDIR      = _build
 
 DEPLOY_HOST   = daniel-siepmann.de
-DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
+DEPLOY_PATH   = htdocs/daniel-siepmann.de
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
