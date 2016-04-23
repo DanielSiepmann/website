@@ -7,6 +7,9 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
 
+DEPLOY_HOST   = daniel-siepmann.de
+DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
+
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
@@ -50,6 +53,11 @@ help:
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
+
+.PHONY: livehtml
+livehtml:
+	# Ignore Vim Temporary Files: *.sw[pmnox] and *~ and 4913
+	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '.git*' -i '*~' -i '*/4913' -i '4913' $(ALLSPHINXOPTS) -p 8001 $(BUILDDIR)/html
 
 .PHONY: html
 html:
@@ -214,3 +222,11 @@ pseudoxml:
 	$(SPHINXBUILD) -b pseudoxml $(ALLSPHINXOPTS) $(BUILDDIR)/pseudoxml
 	@echo
 	@echo "Build finished. The pseudo-XML files are in $(BUILDDIR)/pseudoxml."
+
+.PHONY: deploy
+deploy:
+	# TODO: Raise version on each deploy?
+	# 		Enables generation of changelogs
+	make clean
+	make html
+	rsync -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)

@@ -1,0 +1,12 @@
+#posts ul {
+    list-style: none;
+}
+
+#posts li {
+    margin-top: 50px;
+}
+
+#posts p.first {
+    font-size: 180%;
+    margin-bottom: 0;
+}

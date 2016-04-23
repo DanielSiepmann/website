@@ -31,10 +31,31 @@ import os
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinxcontrib.gist',
+    'ablog',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
+
+
+##### BLOG CONFIGURATION #####
+# 2. Add ablog templates path
+import ablog
+# 2a. if `templates_path` is not defined
+# templates_path = [ablog.get_html_templates_path()]
+# 2b. if `templates_path` is defined
+templates_path.append(ablog.get_html_templates_path())
+
+blog_baseurl = 'http://new.daniel-siepmann.de/'
+blog_authors = {
+    'ds': ('Daniel Siepmann', 'http://daniel-siepmann.de'),
+}
+blog_default_author = 'ds'
+blog_default_language = 'en'
+
+post_auto_image = 1
+##### BLOG CONFIGURATION #####
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -116,6 +137,17 @@ html_theme = 'alabaster'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #html_theme_options = {}
+# Options for alabaster
+html_theme_options = {
+    'github_user': 'danielsiepmann',
+    'github_button': True,
+    'show_related': True,
+    'page_width': '1200px',
+    'sidebar_width': '250px',
+    'extra_nav_links': {
+        # 'Tw' : 'imprint.html'
+    }
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -155,7 +187,21 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+    '**': [
+        'about.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
+    ],
+    'Posts/**': [
+        'about.html',
+        'postcard.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+        'tagcloud.html', 'categories.html', 'archives.html',
+    ],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
@@ -285,6 +331,21 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+# Furher configuration, independend from output format
+highlight_language = 'bash'
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
+### Allow inline php highlighting
+# load PhpLexer
+from sphinx.highlighting import lexers
+from pygments.lexers.web import PhpLexer
+# enable highlighting for PHP code not between <?php ... ?> by default
+lexers['php'] = PhpLexer(startinline=True)
+lexers['php-annotations'] = PhpLexer(startinline=True)
+### Allow inline php highlighting
+
+primary_domain = None
+
+intersphinx_mapping = {
+    't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
+    't3api': ('http://typo3.org/api/typo3cms/', None),
+}
