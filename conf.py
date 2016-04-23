@@ -140,8 +140,8 @@ html_theme = 'alabaster'
 # Options for alabaster
 html_theme_options = {
     'github_user': 'danielsiepmann',
-    'github_button': True,
-    'show_related': True,
+    'github_button': False,
+    'show_related': False,
     'page_width': '1200px',
     'sidebar_width': '250px',
     'extra_nav_links': {

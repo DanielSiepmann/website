@@ -14,7 +14,7 @@ Profiles
 This is a list of websites where I've a project and my projects can be found:
 
 * My `Github <https://github.com/DanielSiepmann/>`_ Profile and a list of my `Repositories <https://github.com/DanielSiepmann?tab=repositories>`_.
-* My :ref:`Docker` `profile <https://hub.docker.com/r/danielsiepmann/>`_ where my published docker
+* My Docker `profile <https://hub.docker.com/r/danielsiepmann/>`_ where my published docker
   containers can be found.
 
 .. _projects-active:
