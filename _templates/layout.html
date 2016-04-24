@@ -1,4 +1,19 @@
-{# Import the theme's layout. #}
 {% extends "!layout.html" %}
 
-{% set css_files = css_files + ['_static/styles.css', '_static/blog.css'] %}
+{%- block doctype -%}
+<!doctype html>
+{%- endblock %}
+
+{%- block linktags %}
+    {{ super() }}
+    <link href="{{ pathto('_static/stylesheets/screen.css', 1) }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="{{ pathto('_static/stylesheets/print.css', 1) }}" media="print" rel="stylesheet" type="text/css" />
+    <!--[if IE]>
+        <link href="{{ pathto('_static/stylesheets/ie.css', 1) }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+{%- endblock %}
+
+{%- block extrahead %}
+    {{ super() }}
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+{% endblock %}

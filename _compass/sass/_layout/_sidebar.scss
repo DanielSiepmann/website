@@ -1,0 +1,23 @@
+div.sphinxsidebar {
+    border-right: 0.1px dotted silver;
+
+    h3 {
+        border-bottom: 2px solid black;
+        margin-top: 30px;
+    }
+
+    ul {
+        list-style: none;
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            a {
+                display: block;
+                padding: 10px 5px 0px 0px;
+            }
+        }
+    }
+}
