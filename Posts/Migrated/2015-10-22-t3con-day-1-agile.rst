@@ -22,7 +22,7 @@ Let´s get RE.A.L. // No Offers, no Contracts, no Sprints // Do the best Project
 ------------------------------------------------------------------------------------------------
 
 The agile day started with "*Let´s get RE.A.L. // No Offers, no Contracts, no Sprints // Do the best
-Projects you can imagine.*" by `Sven Ditz <http://t3con.eu/speakers/speakers/detail/ditz.html>`__.
+Projects you can imagine.*" by *Sven Ditz*.
 It was packed in a story of a beautiful island called *project island*. And how the agency used
 different aspects of agile and lean management to reduce costs for them and of course for the
 customers. Basically they don't waste time with estimations anymore but do *RawEstimates* nowadays.
@@ -42,12 +42,11 @@ manifesto <http://www.agilemanifesto.org/>`__:
 Public Call for Tenders for an Agile Web Project
 ------------------------------------------------
 
-The second talk was "*Public Call for Tenders for an Agile Web Project*" by `Peter Pröll
-<http://t3con.eu/speakers/speakers/detail/proell.html>`__ and it was all about agile web projects
-with government in mind. How can you achieve to work agile with customers from government in Europe.
-There are some rules you have to keep in mind and you have to follow. It's not as easy as with some
-other customers, like pointed out in the first talk. But it's definitely possible and Peter was able
-to show how.
+The second talk was "*Public Call for Tenders for an Agile Web Project*" by *Peter Pröll* and it was
+all about agile web projects with government in mind. How can you achieve to work agile with
+customers from government in Europe.  There are some rules you have to keep in mind and you have to
+follow. It's not as easy as with some other customers, like pointed out in the first talk. But it's
+definitely possible and Peter was able to show how.
 
 Reinventing punkt.de, a tale from the journey to an agile company
 -----------------------------------------------------------------
@@ -64,10 +63,8 @@ skill radar to make decisions easier.
 Management in agile, fast changing, large organizations
 -------------------------------------------------------
 
-The last talk was "*Agencies and Agile – Pain and Opportunity*" by `Dr.  Johannes Mainusch
-<http://t3con.eu/speakers/speakers/detail/mainusch.html>`__ which was twice as long, because the
-talk afterwards by `Sacha Storz <http://t3con.eu/speakers/speakers/detail/storz.html>`__ could not
-be held during illness.
+The last talk was "*Agencies and Agile – Pain and Opportunity*" by *Dr. Johannes Mainusch* which was
+twice as long, because the talk afterwards by *Sacha Storz* could not be held during illness.
 
 Basically the talk was about how organisations, like agencies, can grow healthy. It was very
 interesting to see how an organisation can be structured to make it easier to grow and how you can

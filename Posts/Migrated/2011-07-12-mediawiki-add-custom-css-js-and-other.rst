@@ -40,4 +40,4 @@ For a better look I added the following styles to the file :file:`shCoreDefault.
 
 For more informations how you can add custom files and header data, take a look at the official
 MediaWiki-Wiki manual: `Manual:Hooks/BeforePageDisplay
-<http://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay>`__
+<https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay>`__

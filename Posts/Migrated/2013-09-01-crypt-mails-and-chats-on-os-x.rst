@@ -8,11 +8,11 @@ You can crypt your Mail and Chat on Mac easily using `Adium <https://adium.im/>`
 using `GPG <https://gpgtools.org/>`__. Here you can find the manuals:
 
 -  Mail:
-   http://support.gpgtools.org/kb/how-to/first-steps-where-do-i-start-where-do-i-begin
+   https://support.gpgtools.org/kb/how-to/first-steps-where-do-i-start-where-do-i-begin
 -  Adium: http://securityspread.com/2013/07/09/encrypted-chats-adium/
 
 Some more information about OTR (Off-the-record) Chat can be found on `cypherpunks.ca
-<http://www.cypherpunks.ca/otr/>`__ and implementation for clients.
+<https://otr.cypherpunks.ca/>`__ and implementation for clients.
 
 How can you check that everything is crypted?
 

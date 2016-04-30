@@ -60,7 +60,7 @@ Last but not least, practice and adjust, google if you need and read blog posts 
 -  `Using Vim as a PHP
    IDE <http://blog.joncairns.com/2012/05/using-vim-as-a-php-ide/>`__
 -  `How to boost your Vim
-   productivity <http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/>`__
+   productivity <https://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/>`__
 
 And of course a good cheatsheet will help you all the time. |Vim cheat
 sheet awesome|

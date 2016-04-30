@@ -5,7 +5,7 @@ TYPO3 XLIFF for Extension Development
 =====================================
 
 Since *TYPO3* 4.5 it's possible to use the new `XLIFF-Format
-<http://en.wikipedia.org/wiki/Xliff>`__ for translation.  There is a very nice article about the
+<https://en.wikipedia.org/wiki/Xliff>`__ for translation.  There is a very nice article about the
 differences and usage in the internet. `Take a look at it
 <http://xavier.perseguers.ch/tutoriels/typo3/articles/managing-localization-files.html>`__.  After
 reading I had some more question. I'll try to answer them now in this post.

@@ -46,5 +46,5 @@ plugin or the default part.
     }
 
 You can find a German version here: `www.typo3-tutorials.org
-<http://www.typo3-tutorials.org/tutorials/entwicklung/typo3-und-ajax-wie-geht-das.html>`__.  There
+<http://www.typo3-tutorials.org/cms/typo3-und-ajax-wie-geht-das.html>`__.  There
 are additional possibilities for AJAX and TYPO3.

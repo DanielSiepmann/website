@@ -15,7 +15,7 @@ Contact
 | Daniel Siepmann
 |
 | E-Mail: coding\|at\|daniel-siepmann.de
-| Internet: http://daniel-siepmann.de/
+| Internet: https://daniel-siepmann.de/
 
 Person responsible
 ------------------
@@ -29,7 +29,7 @@ For content in accordance with 55 Abs. 2 RStV: Daniel Siepmann
    ===================
 
    Angaben der Quelle für verwendetes Bilder- und Grafikmaterial:
-   Max Mustermann, http://www.fotolia.com
+   Max Mustermann, https://www.fotolia.com
 
 Disclaimer
 ==========
@@ -73,7 +73,7 @@ Betreiber und Kontakt
 | Daniel Siepmann
 |
 | E-Mail: coding\|at\|daniel-siepmann.de
-| Internet: http://daniel-siepmann.de/
+| Internet: https://daniel-siepmann.de/
 
 Verantwortlicher
 ----------------
@@ -84,4 +84,4 @@ Für journalistisch-redaktionelle Inhalte gem. § 55 II RstV: Daniel Siepmann
    -------------------
 
    Angaben der Quelle für verwendetes Bilder- und Grafikmaterial:
-   Max Mustermann, http://www.fotolia.com
+   Max Mustermann, https://www.fotolia.com

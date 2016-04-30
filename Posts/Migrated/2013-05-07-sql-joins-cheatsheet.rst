@@ -13,5 +13,5 @@ Foreign Articles — Two articles and one cheat sheet about SQL joins
 
 All from `codeproject.com <http://www.codeproject.com/>`__
 
-.. |SQL Join Cheat sheet| image:: http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_V2.png
-   :target: http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_V2.png
+.. |SQL Join Cheat sheet| image:: https://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_V2.png
+   :target: https://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_V2.png

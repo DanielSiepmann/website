@@ -14,9 +14,9 @@ There is no reason to not use a kind of version system in the 21st century.
 Read more:
 
 -  `Take a look at the free
-   programs <http://en.wikipedia.org/wiki/Category:Free_revision_control_software>`__
+   programs <https://en.wikipedia.org/wiki/Category:Free_revision_control_software>`__
    — For local versioning
 -  `How do I recover deleted
-   files? <https://www.dropbox.com/help/296/en>`__ — At dropbox
+   files? <https://www.dropbox.com/en/help/296>`__ — At dropbox
 -  `How do I recover old versions of
-   files? <https://www.dropbox.com/help/11/en>`__ — At dropbox
+   files? <https://www.dropbox.com/en/help/11>`__ — At dropbox

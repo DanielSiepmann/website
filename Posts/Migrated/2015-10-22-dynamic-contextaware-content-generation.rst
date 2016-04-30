@@ -6,12 +6,11 @@ Dynamic, context aware, content generation
 ==========================================
 
 There was one talk at the TYPO3 conference this year, with the name "*Semantic Annotations within
-TYPO3 CMS*" by `Johannes Goslar <http://t3con.eu/speakers/speakers/detail/goslar.html>`__. The main
-goal is to prepare content inside TYPO3 CMS with semantic information, so you can deliver it with
-rich snippets to improve SEO.  Beside that, the solution developed offers a way to query all your
-content by the semantic understanding. Most of us heard about Graphs nowadays, whether from Facebook
-or Google. They aim to make information understandable by computer and enable users to query
-information like they normally would in the real world.
+TYPO3 CMS*" by *Johannes Goslar*. The main goal is to prepare content inside TYPO3 CMS with semantic
+information, so you can deliver it with rich snippets to improve SEO.  Beside that, the solution
+developed offers a way to query all your content by the semantic understanding. Most of us heard
+about Graphs nowadays, whether from Facebook or Google. They aim to make information understandable
+by computer and enable users to query information like they normally would in the real world.
 
 This will become possible with the solution for your own. You don't need a big company with efforts
 like Google. You can grab the open source solution, annotate your content with information about
