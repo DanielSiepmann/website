@@ -31,6 +31,7 @@ import os
 extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
+    'sphinx.ext.extlinks',
     'sphinxcontrib.gist',
     'ablog',
 ]
@@ -347,5 +348,8 @@ primary_domain = None
 
 intersphinx_mapping = {
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
-    't3api': ('http://typo3.org/api/typo3cms/', None),
+    't3api': ('https://typo3.org/api/typo3cms/', None),
+}
+extlinks = {
+    't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
 }
