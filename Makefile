@@ -13,6 +13,7 @@ endif
 
 # Internal variables.
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
+SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
 DEPLOY_PATH   = htdocs/daniel-siepmann.de
@@ -36,9 +37,8 @@ clean:
 
 .PHONY: livehtml
 livehtml: css
-	# Ignore Vim Temporary Files: *.sw[pmnox] and *~ and 4913
-	# Also ignore git
-	sphinx-autobuild -b html -i '*.sw[pmnox]' - '*/_compass/*' -i '.git*' -i '*~' -i '*/4913' -i '4913' $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	# Ignore some folders and define port
+	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
 html: clean css
@@ -74,6 +74,10 @@ linkcheck:
 .PHONY: css
 css:
 	cd $(COMPASS_CONFIG_PATH) && compass compile --force
+
+# TODO: Add testing? Via gherkin to test before deployment locally and after
+#       deployment production? Use a Variable which defines context? / URL?
+#       Also part of it should be the linkchecker?!
 
 .PHONY: deploy
 deploy: clean css html
