@@ -139,6 +139,7 @@ html_theme = 'alabaster'
 #html_theme_options = {}
 # Options for alabaster
 html_theme_options = {
+    'analytics_id': 'UA-9837518-4',
     'github_user': 'danielsiepmann',
     'github_button': False,
     'show_related': False,
