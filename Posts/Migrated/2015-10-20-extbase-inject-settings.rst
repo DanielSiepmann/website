@@ -13,7 +13,10 @@ following code, and make sure you instantiate the class via
 :ref:`t3api:TYPO3\\CMS\\Extbase\\Object\\ObjectManager` instead of
 :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::makeInstance`.
 
-.. gist:: https://gist.github.com/DanielSiepmann/92d127ee8462e895a7a5
+.. literalinclude:: /Code/TYPO3/InjectTypoScriptSettings.php
+   :language: php
+   :linenos:
+   :emphasize-lines: 33-39
 
 This will use Extbase inject mechanism of ``ObjectManager`` to inject the ``ConfigurationManager``.
 Instead of persisting this instance as a property, we just use it to fetch the settings and persist

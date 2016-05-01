@@ -32,7 +32,6 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.todo',
     'sphinx.ext.extlinks',
-    'sphinxcontrib.gist',
     'ablog',
 ]
 
