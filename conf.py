@@ -47,7 +47,8 @@ import ablog
 # 2b. if `templates_path` is defined
 templates_path.append(ablog.get_html_templates_path())
 
-blog_baseurl = 'http://new.daniel-siepmann.de/'
+blog_title = 'Daniel Siepmann - Coding is Art'
+blog_baseurl = 'https://daniel-siepmann.de/'
 blog_authors = {
     'ds': ('Daniel Siepmann', 'http://daniel-siepmann.de'),
 }
