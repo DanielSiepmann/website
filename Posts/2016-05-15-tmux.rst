@@ -1,0 +1,151 @@
+.. post:: May 15, 2016
+   :tags: tmux, bash
+
+Tmux
+====
+
+Tmux is a nice tool. Most people already know screen, and tmux is like screen a terminal
+multiplexer.
+
+    A terminal multiplexer is a software application that can be used to multiplex several virtual
+    consoles, allowing a user to access multiple separate login sessions inside a single terminal
+    window, or detach and reattach sessions from a terminal.
+
+    Source: https://en.wikipedia.org/wiki/Terminal_multiplexer
+
+.. image:: /images/2016-05-15-tmux/tmux.png
+
+The above image shows my terminal with tmux on a typical sphinx session. In the left I'm editing the
+documentation while I take a look at some code on the right and have the repository of the sphinx
+project also on the right.
+
+What's it all about?
+--------------------
+
+So tmux allows you to have multiple session in one terminal window. The nice thing about that is,
+that you can open a tmux session on a server and disconnect from the server. Once you want to work
+on the server again, you just can attach to the tmux session again and don't need to start again.
+E.g. if you have a shared ssh access and everyone loves his own setup with aliases, prompts, etc.
+
+It's also handy to work on one project, detach, start another one, and reattach to the one before
+without the need to setup all the stuff again.
+
+The awesomeness (scripting)
+---------------------------
+
+Also tmux is scriptable, that will look like this::
+
+    #!/bin/sh
+
+    # Author: Daniel Siepmann
+    # This script will create a new tmux session (or attach existing)
+    # for developing sphinx projects.
+
+    # Initialize some variables
+    session="sphinx-$1"
+    projectRoot="$(pwd)/$1"
+
+    # Only create session if not already exists
+    tmux has-session -t "$session"
+    if [ $? != 0 ]
+    then
+        editorPath="$projectRoot/source"
+        if [[ ! -d "$editorPath" ]]; then
+            editorPath="$projectRoot"
+        fi
+        makePath="$projectRoot"
+        if [[ ! -f "$makePath/Makefile" ]]; then
+            makePath="$editorPath/_make"
+        fi
+
+        # Open editor
+        tmux new-session -s "$session" -n editor -d
+        tmux send-keys -t "$session" "cd $editorPath" C-m
+        tmux send-keys -t "$session" 'vim' C-m
+
+        # Open shell (e.g. for commit)
+        tmux split-window -h
+        tmux send-keys "cd $editorPath" C-m
+        tmux send-keys "git status" C-m
+
+        # Open compile window with auto watch
+        tmux split-window -v
+        tmux resize-pane -y 5
+        tmux send-keys "cd $makePath" C-m
+        tmux send-keys "make livehtml" C-m
+
+        # To switch to shell when moving to the right out of editor
+        tmux select-pane -t 1
+        # Activate editor
+        tmux select-pane -t 0
+    fi
+    # Attach to existing or created session
+    tmux attach -t "$session"
+
+Calling this shell script will start a new tmux session right setup for my
+needs with my text editor open inside the project, the shell beside (e.g. for
+git commits) and the project auto build using ``make livehtml``.
+
+My current setup has three different tmux scripts, one for working on customer
+projects with setup ssh to staging and production. The one from above to work
+on sphinx documentations. And another default one for the rest.
+
+That way I'll start working on a project in no time, can switch between
+multiple projects with ease and once I'm disrupted and have to look up something in another project
+I can switch back to the project before.
+
+Conclusion
+----------
+
+tmux is nice for working remote on servers (where it is installed) and for working on structured
+projects.
+
+At least try it out, it's most likely pre installed in an older version.
+
+Take a look at the configuration options to adjust it to your needs, and get into the scripting.
+
+Some tips
+---------
+
+Attach to remote tmux session::
+
+    ssh <remote host> -t tmux attach-session
+
+Some further reading:
+
+* `Official website <https://tmux.github.io/>`_
+* `Blog Post "A tmux Crash Course" by "thoughtbot" <https://robots.thoughtbot.com/a-tmux-crash-course>`_
+* `Section "The Tao of tmux" of "tmuxp" documentation <http://tmuxp.readthedocs.io/en/latest/about_tmux.html>`_
+* `Blog Post "A tmux Primer" by "danielmiessler.com" <https://danielmiessler.com/study/tmux/>`_
+
+Some options to set inside your :file:`~/.tmux.conf`::
+
+    # reload ~/.tmux.conf using PREFIX r
+    bind r source-file ~/.tmux.conf \; display "Reloaded!"
+
+    # split window and fix path
+    bind % split-window -h -c "#{pane_current_path}"
+    # Find how to remap double quote sign
+    bind '"' split-window -v -c "#{pane_current_path}"
+
+    # Use hjkl to switch between panes:
+    http://stackoverflow.com/questions/16373859/why-tmux-panel-switch-is-vim-likehow-to-change#answer-18942253
+    unbind-key j
+    bind-key j select-pane -D
+    unbind-key k
+    bind-key k select-pane -U
+    unbind-key h
+    bind-key h select-pane -L
+    unbind-key l
+    bind-key l select-pane -R
+
+    # Allow resize of panes using vim like bindings
+    bind -r H resize-pane -L 5
+    bind -r J resize-pane -D 5
+    bind -r K resize-pane -U 5
+    bind -r L resize-pane -R 5
+
+    bind-key | kill-session
+    # Respawn the pane, kill running process and restart
+    bind-key R respawn-pane -k
+    # Senct CTRL+c, clear history for bash and tmux
