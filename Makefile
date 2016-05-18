@@ -12,31 +12,42 @@ $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx in
 endif
 
 # Internal variables.
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) .
+ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) source
 SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
 DEPLOY_PATH   = htdocs/daniel-siepmann.de
 DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
 
-COMPASS_CONFIG_PATH = _compass/
+COMPASS_CONFIG_PATH = source/_compass/
 
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
-	@echo "  dirhtml    to make HTML files named index.html in directories"
-	@echo "  singlehtml to make a single large HTML file"
-	@echo "  changes    to make an overview of all changed/added/deprecated items"
-	@echo "  linkcheck  to check all external links for integrity"
-	@echo "  deploy     to deploy the generated HTML to production"
+	@echo " Generation: "
+	@echo "     html        to make standalone HTML files"
+	@echo "     dirhtml     to make HTML files named index.html in directories"
+	@echo "     singlehtml  to make a single large HTML file"
+	@echo " Validation and deployment: "
+	@echo "     changes     to make an overview of all changed/added/deprecated items"
+	@echo "     linkcheck   to check all external links for integrity"
+	@echo "     deploy      to deploy the generated HTML to production"
+	@echo " Environment setup: "
+	@echo "     clean       to remove build results"
+	@echo "     install     to install all dependencies local for current user"
+
+.PHONY: install
+install:
+	pip install --user --upgrade -r requirements.txt
+	gem install bundler --no-document --user-install
+	bundle install
 
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml: css
+livehtml: clean css
 	# Ignore some folders and define port
 	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
