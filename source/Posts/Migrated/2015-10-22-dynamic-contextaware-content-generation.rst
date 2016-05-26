@@ -2,6 +2,8 @@
    :tags: typo3, events
    :location: Amsterdam, Netherlands
 
+.. _dynamic-context-aware:
+
 Dynamic, context aware, content generation
 ==========================================
 
@@ -36,3 +38,5 @@ Hopefully some day this becomes truth and we are able to generate a good UX from
 If you wanna dig deeper into the topic, check out the `repository on github
 <https://github.com/dkd/php-cmis-client>`__ or the `wikipedia article
 <https://en.wikipedia.org/wiki/Content_Management_Interoperability_Services>`__ about CMIS.
+
+Also you might be interested in this newer blog post: :ref:`everything-is-content`.

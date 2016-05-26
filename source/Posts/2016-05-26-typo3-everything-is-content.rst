@@ -1,6 +1,8 @@
 .. post:: May 26, 2016
    :tags: typo3, solr, content management
 
+.. _everything-is-content:
+
 Everything is Content, that can be served via Solr
 ==================================================
 
@@ -108,6 +110,14 @@ You can help by improving documentation, improve the UX, help implementing fluid
 To do so, take a look at the `official repository of solr <https://github.com/TYPO3-Solr/ext-solr>`_
 of contact the developers on `slack <https://typo3.slack.com/>`_
 
+The detail view?
+----------------
+
+Is already there, as the records are pages, the page itself will serve as the detail view. There are
+no limitations. The editor can use everything you have configured and allowed. No restrictions and
+programming. All plugins are available, if you want, also all content elements. You can also setup
+different layouts. No restrictions, no further "*Can you add ...*", it's already there.
+
 Limits
 ------
 
@@ -140,3 +150,5 @@ The resources that are currently available and that will help you to achieve the
 
 * `Current official documentation of ext:solr
   <https://forge.typo3.org/projects/extension-solr/wiki>`_
+
+Also you might be interested in this earlier blog post: :ref:`dynamic-context-aware`.
