@@ -127,6 +127,18 @@ and you can use the facets and features. There is still no need for a custom sea
 Same goes for galleries. Just setup different templates for search results, partials for different
 result types like images, news, products, and display them differently.
 
+Beside that, you disable some limits. Some extension authors are not aware or don't support certain
+features of TYPO3. Sometimes due to the lack of support in extbase. That are:
+
+* Workspaces
+
+* Multi language
+
+* Versioning
+
+All this features are there, as you just use core TYPO3. And with *fluid_styled_content*, rendering
+output and defining different templates under different circumstances, is no more pain.
+
 How TYPO3 and the ecosystem will benefit
 ----------------------------------------
 
