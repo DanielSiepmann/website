@@ -153,6 +153,15 @@ implement the above, projects and downloads or further custom records.
 TYPO3 also provides an extension to setup forms by editors. Use it instead of 3rd party extensions.
 Improve the base.
 
+Why Solr?
+---------
+
+There can be reasons, but the idea is independent from technologies. You can use Fact-Finder,
+elasticsearch or any other technology or provider for that.
+
+The reason why I've used Solr in this post is, there is already an extension for TYPO3 providing the
+indexing and searching to you. All you need to do is the configuration in TypoScript.
+
 Further resources
 -----------------
 
