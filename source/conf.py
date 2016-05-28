@@ -56,6 +56,12 @@ blog_default_author = 'ds'
 blog_default_language = 'en'
 
 post_auto_image = 1
+
+# TODO: Check via sass to minimize overhead and provide icon for external
+# urls?
+# fontawesome_link_cdn = 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
+
+disqus_shortname = 'daniel-siepmann'
 ##### BLOG CONFIGURATION #####
 
 # The suffix(es) of source filenames.
