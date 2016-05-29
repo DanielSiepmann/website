@@ -145,6 +145,10 @@ html_theme = 'alabaster'
 # documentation.
 #html_theme_options = {}
 # Options for alabaster
+html_context = {
+    'website_title': blog_title,
+    'twitter_user': 'layneobserdia',
+}
 html_theme_options = {
     'analytics_id': 'UA-9837518-4',
     'github_user': 'danielsiepmann',

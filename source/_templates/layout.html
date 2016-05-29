@@ -13,9 +13,23 @@
     <![endif]-->
 {%- endblock %}
 
+{%- block htmltitle %}
+    <title>{{ title|striptags|e }} - {{ website_title }}</title>
+{%- endblock %}
+
 {%- block extrahead %}
     {{ super() }}
     <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <meta name="twitter:card" content="summary">
+    <meta property="og:site_name" content="{{ website_title }}">
+    <meta name="twitter:site" content="@{{ twitter_user }}">
+    <meta name="twitter:title" property="og:title" content="{{ title | striptags | e }}">
+    <meta name="twitter:description" property="og:description" name="description" content="{{ body | striptags | replace("¶", "") | truncate(250) | e }}">
+    {% if pagename in ablog %}{% set post = ablog[pagename] %}
+    {% for coll in post.author %}<meta name="author" content="{{ coll }}">{% endfor %}
+    {% endif %}
+
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_anonymizeIp', true]);
