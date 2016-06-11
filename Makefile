@@ -46,6 +46,7 @@ install:
 .PHONY: optimize
 optimize:
 	pngquant -v source/images/**/*.png --ext .png -f
+	optipng source/images/**/*.png
 
 .PHONY: clean
 clean:
