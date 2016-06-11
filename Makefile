@@ -35,6 +35,7 @@ help:
 	@echo " Environment setup: "
 	@echo "     clean       to remove build results"
 	@echo "     install     to install all dependencies local for current user"
+	@echo "     optimize    to optimize images"
 
 .PHONY: install
 install:
@@ -42,29 +43,33 @@ install:
 	gem install bundler --no-document --user-install
 	bundle install
 
+.PHONY: optimize
+optimize:
+	pngquant -v source/images/**/*.png --ext .png -f
+
 .PHONY: clean
 clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml: clean css
+livehtml: clean css optimize
 	# Ignore some folders and define port
 	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
-html: clean css
+html: clean css optimize
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 .PHONY: dirhtml
-dirhtml: css
+dirhtml: css optimize
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 .PHONY: singlehtml
-singlehtml: css
+singlehtml: css optimize
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
@@ -91,7 +96,7 @@ css:
 #       Also part of it should be the linkchecker?!
 
 .PHONY: deploy
-deploy: clean css html
+deploy: clean css html optimize
 	# TODO: Raise version on each deploy?
 	#       Enables generation of changelogs
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
