@@ -17,7 +17,7 @@ SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
 DEPLOY_PATH   = htdocs/daniel-siepmann.de
-DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
+# DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
 
 COMPASS_CONFIG_PATH = source/_compass/
 
@@ -42,6 +42,7 @@ install:
 	pip install --user --upgrade -r requirements.txt
 	gem install bundler --no-document --user-install
 	bundle install
+	brew install pngquant optipng
 
 .PHONY: optimize
 optimize:

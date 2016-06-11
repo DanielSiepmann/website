@@ -10,8 +10,8 @@ Documentation was never easier, with a Framework like `Sphinx`_ and a hoster lik
 All you need is a repository containing your Documentation written with Sphinx and an account at
 Read the docs. `Plantuml`_ can be used in addition to generate UML-Diagrams using plain text. The
 result can be SVG files in the same color as your Documentation.  The whole setup and workflow for
-that will be explained in this blog post. After reading the post, you are able to kickstart a new
-documentation and host it at Read the docs. You then can dig deepter and adjust it to your needs.
+that will be explained in this Blog post. After reading the post, you are able to kickstart a new
+documentation and host it at Read the docs. You then can dig deeper and adjust it to your needs.
 
 All instructions are tested on OS X, I'll not document for Windows. Unix systems should be the same
 as OS X and you probably already know how to do it yourself.
@@ -124,11 +124,11 @@ An example setup will look like:
     where "builder" is one of the supported builders, e.g. html, latex or linkcheck.
 
 
-As Sphinx is written in Python and used to document Python modules, most extensions can be ommitted
-for you documentation, until you are working with Python code.
+As Sphinx is written in Python and used to document Python modules, most extensions can be omitted
+for your documentation, until you are working with Python code.
 
-I defenitly recommend to enable ``todo`` and ``intersphinx`` all the time. Also ``ifconfig`` can be
-helpfull. But it's just the kickstart and you can add extensions lateron inside the configuration.
+I definitely recommend to enable ``todo`` and ``intersphinx`` all the time. Also ``ifconfig`` can be
+helpful. But it's just the kickstart and you can add extensions later on inside the configuration.
 
 Also do yourself a favour and create the :file:`Makefile` for easier usage.
 
@@ -162,14 +162,14 @@ The first output will look like:
 .. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/FirstResult.png
    :alt: A first result after kickstart and first generation.
 
-You can now start writing the documentation, following the `Sphinx Documentation`_. E.g. change the
-theme using one of the `builtin Themes`_.
+You can now start writing the documentation, following the `Sphinx Documentation`_, and adjust the
+look and feel, e.g. change the theme using one of the `builtin Themes`_.
 
 Github
 ======
 
-To make integration with Read the docs easier, we will publish our documentation as a git repository
-to github.
+To make integration with Read the docs easier, we will publish our documentation as a Git repository
+to Github.
 
 First of all you need to initialize a new Git-Repository, of course you can also use Mercurial or
 something else. Do so by running::
@@ -182,7 +182,7 @@ Next sign up at `Github`_ if you don't have an account yet. `Create a repository
 
     git remote add origin https://github.com/<UserName>/<RepositoryName>.git && git push --mirror
 
-If you reload the web gui of Github you should see a first commit.
+If you reload the web Gui of Github you should see a first commit.
 
 Github provides full documentation at https://help.github.com/ if something is not clear or you need
 further help setting everything up.
@@ -190,13 +190,13 @@ further help setting everything up.
 Read the docs
 =============
 
-To host our documentation without the need to setup the rendering or webspace, we will use Read the
+To host our documentation without the need to setup the rendering or web space, we will use Read the
 docs.
 
 Therefore `register at Read the docs`_, and `connect
 <https://readthedocs.org/accounts/social/connections/>`_ the account to your Github account. You can
 now see all your Github repositories and `select <https://readthedocs.org/dashboard/import/?>`_ the
-created one to automaticly render the documentation on new commits.
+created one to automatically render the documentation on new commits.
 
 .. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/ReadTheDocs-Connection.png
    :alt: Read the docs interface to connect with Github and Bitbucket.
@@ -230,33 +230,33 @@ To provide nice looking UML diagrams like:
 .. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/Example.png
    :alt: Example documentation, rendered ad Read the docs, with PlantUml image.
 
-We will use Plantuml. As it's not available as a debian package yet, Read the docs doesn't provide
+We will use PlantUml. As it's not available as a Debian package yet, Read the docs doesn't provide
 rendering for it. So you have to render the images on your local machine and provide them to Read
 the docs.
 
 Install
 -------
 
-First of all you need to install Java and Graphvix to draw the diagrams. Head over to
+First of all you need to install Java and Graphviz to draw the diagrams. Head over to
 http://plantuml.com/starting.html and http://plantuml.com/faqinstall.html to follow the
 installation.
 
 Provide wrapper
 ---------------
 
-After PlantUML is on your local system, make your live easier by providing the following shell
+After PlantUml is on your local system, make your live easier by providing the following shell
 script inside your ``$PATH`` to just call ``plantuml`` in the future anywhere on your CLI::
 
     #!/usr/bin/env sh -e
     java -Djava.awt.headless=true -jar $HOME/Applications/plantuml.jar -tsvg -failfast2 "$@"
 
-Adjust the path according to your location of :file:`plantuml.jar`. This wrapper will run PlantUML
-without the GUI, and generate svgs as default for all provided plantuml source files.
+Adjust the path according to your location of :file:`plantuml.jar`. This wrapper will run PlantUml
+without the GUI, and generate SVGs as default for all provided PlantUml source files.
 
 Integration into Documentation
 ------------------------------
 
-To integrate PlantUML into your Sphinx documentation, you can setup the following structure:
+To integrate PlantUml into your Sphinx documentation, you can setup the following structure:
 
 .. code-block:: text
 
@@ -274,7 +274,7 @@ To integrate PlantUML into your Sphinx documentation, you can setup the followin
 
     6 directories, 4 files
 
-And adjust your :file:`Makefile` to render all PlantUML files for you.
+And adjust your :file:`Makefile` to render all PlantUml files for you.
 
 Add the following entry to your :file:`Makefile`:
 
