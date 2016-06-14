@@ -159,7 +159,7 @@ documentation using::
 
 The first output will look like:
 
-.. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/FirstResult.png
+.. image:: /images/2016/06-11-read-the-docs-sphinx-plantuml-workflow/FirstResult.png
    :alt: A first result after kickstart and first generation.
 
 You can now start writing the documentation, following the `Sphinx Documentation`_, and adjust the
@@ -198,10 +198,10 @@ Therefore `register at Read the docs`_, and `connect
 now see all your Github repositories and `select <https://readthedocs.org/dashboard/import/?>`_ the
 created one to automatically render the documentation on new commits.
 
-.. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/ReadTheDocs-Connection.png
+.. image:: /images/2016/06-11-read-the-docs-sphinx-plantuml-workflow/ReadTheDocs-Connection.png
    :alt: Read the docs interface to connect with Github and Bitbucket.
 
-.. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/ReadTheDocs-Import.png
+.. image:: /images/2016/06-11-read-the-docs-sphinx-plantuml-workflow/ReadTheDocs-Import.png
    :alt: Read the docs interface to import repositories from Github.
 
 You are now ready to go, Read the docs should already render your documentation. You have an
@@ -227,7 +227,7 @@ structure of our project, or some complex workflows.
 
 To provide nice looking UML diagrams like:
 
-.. image:: /images/2016/06-11-read-the-docs-sphinsx-plantuml-workflow/Example.png
+.. image:: /images/2016/06-11-read-the-docs-sphinx-plantuml-workflow/Example.png
    :alt: Example documentation, rendered ad Read the docs, with PlantUml image.
 
 We will use PlantUml. As it's not available as a Debian package yet, Read the docs doesn't provide
