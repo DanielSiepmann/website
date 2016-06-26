@@ -1,0 +1,4 @@
+CodeMonitoring\Parser\Checkstyle\Parser\CheckstyleParser:
+  properties:
+    eelExpression:
+      value: 'file.fileExtension == "xml" && String.substr(lines[1], 1, 10) == "checkstyle" && String.substr(lines[1], 21, 3) == "2.5"'
