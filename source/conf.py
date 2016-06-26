@@ -61,7 +61,7 @@ post_auto_image = 1
 # urls?
 # fontawesome_link_cdn = 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'
 
-disqus_shortname = 'daniel-siepmann'
+# disqus_shortname = 'daniel-siepmann'
 ##### BLOG CONFIGURATION #####
 
 # The suffix(es) of source filenames.
