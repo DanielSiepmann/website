@@ -364,8 +364,7 @@ intersphinx_mapping = {
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
     't3api': ('https://typo3.org/api/typo3cms/', None),
     'neos': ('https://neos.readthedocs.io/en/stable/', None),
-    'flow': ('https://flowframework.readthedocs.io/en/stable/', None),
-    'tmp-flow': ('https://tmp.daniel-siepmann.de/docs/flow/eel/', None),
+    'flow': ('https://flowframework.readthedocs.io/en/latest/', None),
 }
 extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),

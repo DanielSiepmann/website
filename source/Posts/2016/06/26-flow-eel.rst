@@ -167,14 +167,9 @@ Further reading
 
 The package itself can be found at `Github <https://github.com/neos/eel>`_.
 
-Documentation will be available in the near future at `Flow`_ documentation. In the meanwhile you
-can find the documentation at :ref:`tmp-flow:eel`. You can also take a look at the `pull request
-<https://github.com/neos/flow-development-collection/pull/393>`_.
-
-Also the `grammar <https://github.com/neos/eel/blob/master/Documentation/FLOW3-Eel-Grammar.txt>`_ is
-already documented.
-
-Same is true for the :ref:`neos:Eel Helpers Reference`.
+Documentation is available at :ref:`flow:eel`. Also the `grammar
+<https://github.com/neos/eel/blob/master/Documentation/FLOW3-Eel-Grammar.txt>`_ is already
+documented. Same is true for the :ref:`neos:Eel Helpers Reference`.
 
 .. _Flow: https://flowframework.readthedocs.io/
 .. _Neos: https://www.neos.io/
