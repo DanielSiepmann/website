@@ -5,8 +5,16 @@ li {
     font-size: 115%;
 }
 
+// Keep normal scale if elements are child elements.
+dd p,
+li p,
+dd li,
 li li {
     font-size: 100%;
+}
+
+dt {
+    font-weight: bold;
 }
 
 pre,
