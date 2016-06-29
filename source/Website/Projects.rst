@@ -14,8 +14,13 @@ Profiles
 This is a list of websites where I've a project and my projects can be found:
 
 * My `Github <https://github.com/DanielSiepmann/>`_ Profile and a list of my `Repositories <https://github.com/DanielSiepmann?tab=repositories>`_.
+
 * My Docker `profile <https://hub.docker.com/r/danielsiepmann/>`_ where my published docker
   containers can be found.
+
+* My read the docs `profile <https://readthedocs.org/profiles/DanielSiepmann/>`_ where my published
+  documentations can be found. Basically they are ideas without any useful implementation yet.
+  To keep read the docs clean, they might move over to https://concepts.daniel-siepmann.de/ .
 
 .. _projects-active:
 

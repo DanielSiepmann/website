@@ -10,4 +10,5 @@ Posts
    :maxdepth: 1
 
    Website/Projects
+   Website/Concepts
    Website/Imprint

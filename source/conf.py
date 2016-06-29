@@ -365,6 +365,7 @@ intersphinx_mapping = {
     't3api': ('https://typo3.org/api/typo3cms/', None),
     'neos': ('https://neos.readthedocs.io/en/stable/', None),
     'flow': ('https://flowframework.readthedocs.io/en/latest/', None),
+    'concept-typo3-cms': ('https://concepts.daniel-siepmann.de/the-future-of-typo3-cms/', None),
 }
 extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
