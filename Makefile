@@ -54,12 +54,12 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml: clean css optimize
+livehtml: clean css
 	# Ignore some folders and define port
 	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
-html: clean css optimize
+html: clean css
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
