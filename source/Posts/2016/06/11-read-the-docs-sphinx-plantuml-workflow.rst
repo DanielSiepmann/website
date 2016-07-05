@@ -3,6 +3,8 @@
 .. post:: Jun 11, 2016
    :tags: docs, sphinx, plantuml
 
+.. _post-readthedocs-sphinx-plantuml:
+
 Workflow for: Read the docs, Sphinx and Plantuml
 ================================================
 
