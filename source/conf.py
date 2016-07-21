@@ -363,6 +363,7 @@ primary_domain = None
 intersphinx_mapping = {
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
     't3api': ('https://typo3.org/api/typo3cms/', None),
+    't3tsref': ('https://docs.typo3.org/typo3cms/TyposcriptReference/', None),
     'neos': ('https://neos.readthedocs.io/en/stable/', None),
     'flow': ('https://flowframework.readthedocs.io/en/latest/', None),
 }
