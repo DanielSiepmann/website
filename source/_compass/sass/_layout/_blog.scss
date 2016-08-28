@@ -1,6 +1,13 @@
-li p.first a {
+.postlist li p.first a:first-of-type {
     margin: 20px 0;
     font-size: 160%;
+}
+
+div.body p {
+    line-height: 1em;
+}
+.postlist p {
+    line-height: 1.4em;
 }
 
 #posts {

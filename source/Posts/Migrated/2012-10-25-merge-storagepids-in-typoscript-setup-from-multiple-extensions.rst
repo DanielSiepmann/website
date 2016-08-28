@@ -1,4 +1,4 @@
-.. highlight:: plaintext
+.. highlight:: text
 .. post:: Oct 25, 2012
    :tags: typo3, extbase, typoscript, docs
 
