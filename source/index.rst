@@ -10,6 +10,7 @@ Posts
    :maxdepth: 1
 
    Website/Manifesto
+   Website/Talks
    Website/Projects
    Website/Contact
    Website/Imprint

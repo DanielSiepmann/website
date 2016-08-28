@@ -1,0 +1,50 @@
+.. post:: Sep 18, 2016
+   :tags: vim
+   :category: Event
+   :location: Vimfest Berlin
+   :excerpt: 2
+
+Vimfest Berlin 2016
+===================
+
+You can find the Event online at http://vimfest.de/ .
+
+Following the agenda, I'll list the different things like Hacking, Talks and Tools in different
+sections here, so you can get an insight how the event was for me, what was shared and what I wanted
+to do.
+
+Hacking
+-------
+
+The things I wanted to do during the hacking at first day:
+
+* Try out `Athame`_ an extension for zsh and readline to pipe keystrokes through an actual Vim
+  process to not have an reduced emulation but the full power of Vim.
+
+* Try out `mycli`_ an interactive MySQL shell client with syntax highlighting and auto completion.
+
+* Try out `PHP Refactoring support for Vim`_, support like PHPStorm and other IDEs provide to
+  extract code into a new method or rename variables, clean up use statements, ... .
+
+* Try out `tldr`_ an CLI client to user contributed simplified man pages.
+
+* Read `Awsome lists`_ to check out nice findings.
+
+Talks
+-----
+
+The things I wanted to to during the talks at second day:
+
+* Present my own two talks:
+
+  * :ref:`introduction-to-git-for-daily-usage`
+  * :ref:`my-vim-setup`
+
+Further reading
+---------------
+
+.. _Athame: https://github.com/ardagnir/athame
+.. _mycli: https://github.com/dbcli/mycli
+.. _PHP Refactoring support for Vim: https://github.com/vim-php/vim-php-refactoring
+.. _ltdr: https://github.com/tldr-pages/tldr
+.. _Awesome lists: https://github.com/sindresorhus/awesome

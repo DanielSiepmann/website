@@ -1,0 +1,118 @@
+.. highlight:: bash
+.. post:: Sep 17, 2016
+   :tags: git
+   :category: Talk
+   :location: Vimfest Berlin
+   :excerpt: 1
+
+.. _introduction-to-git-for-daily-usage:
+
+Introduction to Git for daily usage
+===================================
+
+This talk will be held at `Vimfest`_ 2016 in Berlin. It will introduce you to `Git`_ and provide the
+minimum necessary information to get started using Git on a daily basis.
+
+.. caution::
+
+   It's not a full blown tutorial, or documentation, there are enough already.
+
+What is Git?
+------------
+
+Git is a version control system. Version control systems are used to keep track of different
+versions of something, e.g. of code, documents or something else. Some OS like Mac OS already
+implement such a system.
+
+Beside Git there are some others like `Hg`_ or Mercurial, `SVN`_ and some more.
+
+Some, especially older systems, are centralized solutions while Git is decentralized.
+
+Decentralized in this context means you can have your system distributed, e.g. you have the
+necessary information on Services like `Github`_ or `Bitbucket`_ but also on your local machine and
+server.
+
+Why should I use Git?
+---------------------
+
+With Git you can take a look back how your documents, website or code has look.
+
+Also you can revert changes or develop multiple features at the same time.
+
+Also Git allows you to synchronize some state between different remotes like your server, mobile
+device like laptop, and local device like desktop.
+
+Git supports collaboration as someone can see your code, e.g. at Github, check it out, change some
+parts, and share the changes with your.
+
+When should I use Git?
+----------------------
+
+Really just ever. There is so less overhead by using Git but so much benefit.
+
+Here are some ideas for what kind of things you can, and should, use Git:
+
+Website
+    E.g. HTML, JS, and server side code.
+    Also static websites or generation e.g. through tools like `Jekyll`_ or `Sphinx`_.
+
+Code
+    Whether it's a small script or a huge code base for a program.
+    We are keeping track of our deployment bash scripts via Git and deploy them to our `Bamboo`_.
+
+Concepts
+    Whether you write them as markdown, rst or Word and Open Office documents. They are just text or
+    xml and are easy to track.
+
+Documents
+    As with concepts, most documents are saved in a text format that can be tracked.
+
+Knowledge exchange
+    There are `awsome lists`_ on Github where users collaborate on via Git. It's like Wikipedia.
+
+The only part where tools like Git are not that helpful are binary files like images or compiled
+code. As they keep track of changes and one change on a binary file will change the whole file.
+
+How can I use Git?
+------------------
+
+First of all you need to install Git. On some systems Git comes pre installed, like Mac. Otherwise
+use your favourite package manager to install Git or download from official source at `Git Download`_.
+
+We won't cover client except the CLI interface here.
+
+Further reading
+---------------
+
+* `Video of the talk <>`_
+
+* `Official git website <https://git-scm.com/>`_
+
+* `Official online interactive tutorial <https://try.github.io/levels/1/challenges/1>`_
+
+* `Official online book <https://git-scm.com/book/en/>`_
+
+* Clients
+
+  * `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
+
+  * `tig open source (CLI, all platforms) <https://github.com/jonas/tig>`_
+
+  * `GitKraken GUI for all platforms <https://www.gitkraken.com/features>`_
+
+  * `Further official List of GUI clients <https://git-scm.com/downloads/guis>`_
+
+* `List of version control software on english wikipedia
+  <https://en.wikipedia.org/wiki/List_of_version_control_software>`_.
+
+.. _Vimfest: http://vimfest.de/
+.. _Git: https://git-scm.com/
+.. _Hg: https://www.mercurial-scm.org/
+.. _SVN: https://subversion.apache.org/
+.. _Github: https://github.com/
+.. _Bitbucket: https://bitbucket.org/
+.. _Git Download: https://git-scm.com/download
+.. _Jekyll: https://jekyllrb.com/
+.. _Sphinx: http://www.sphinx-doc.org/en/stable/
+.. _Bamboo: https://www.atlassian.com/software/bamboo
+.. _awsome lists: https://github.com/sindresorhus/awesome
