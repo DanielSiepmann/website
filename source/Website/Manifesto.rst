@@ -15,7 +15,6 @@ because I believe in them.
 | Find the right way
 | Participate
 | Invest in your knowledge
-| Working product over discussions
 
 .. _manifesto-explanations:
 
@@ -44,7 +43,3 @@ and meetups. Share your knowledge and get new insights.
 Knowledge is power, you will be able to solve more tasks in shorter time, support others in solving
 issues and just be better. Invest by the above ideas like meetups and such, also follow blogs and
 read books. Read about new concept and ideas and understand the technologies you use.
-
-You often have discussions with product owner or project manager about the product. Most of the time
-they will produce more work. It's more important to have a working product that will help your
-customer, then investing more and more time in discussions.
