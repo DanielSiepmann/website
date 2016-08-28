@@ -21,13 +21,13 @@ because I believe in them.
 Explanations
 ============
 
-Mot of the things mentioned here are about loving what you do, because if you do something you don't
+Most of the things mentioned here are about loving what you do, because if you do something you don't
 love, then it will never satisfy you.
 
 Even if a fast Implementation is cheaper, that's only true for a very short time. It's always more
 expensive then a clean working solution.
-You always need to adjust your solution at some time, which will be cheaper if your existing
-solution was well designed.
+You always need to adjust or extend your solution at some time, which will be cheaper if your
+existing solution was well designed.
 
 If you are doing something, do it the right way, there is no other way that will satisfy. Why would
 you do something the half way or just try something?
@@ -36,7 +36,7 @@ If you don't already know the right way, invest some time to find the right way.
 and investigate. Otherwise you will produce a half way working solution with shortcomings.
 
 Participate in any way. Share your knowledge, improve existing code or documentation. If you are
-using an open source product, help improving it by filling our bug reports or feature requests.
+using an open source product, help improving it by filling out bug reports or feature requests.
 Create pull requests and improve documentation. Also go to events like code sprints or user groups
 and meetups. Share your knowledge and get new insights.
 
