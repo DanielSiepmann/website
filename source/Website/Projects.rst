@@ -24,13 +24,13 @@ Current active projects
 
 A list of projects I'm currently working on, more or less active:
 
-* Docker
-
-  * :ref:`t3-sphinx`
-
 * Sphinx
 
   * :ref:`This website <sphinx-website>`
+
+* Docker
+
+  * :ref:`t3-sphinx`
 
 .. _sphinx-website:
 
@@ -56,6 +56,21 @@ Old inactive projects
 
 This projects are no longer interesting. But are kept as you never know when you need them again,
 e.g. to take a look how you solved something earlier.
+
+Static website generation from Google Calendar
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I've created `spieletreff-mg.de <https://spieletreff-mg.de/>`_ which is generated using Sphinx as
+static website. The source is generated via ruby by parsing a Google Calendar.
+
+Getting started with Behat and Mink
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+To help new users to understand Behat and Mink, I've created a repository that should work out of
+the box and has a Readme with all necessary instructions.
+
+You can check out the repository at `Github
+<https://github.com/DanielSiepmann/Getting-started-with-Behat-and-Mink>`_.
 
 Jenkins
 ^^^^^^^
