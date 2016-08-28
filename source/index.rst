@@ -9,8 +9,8 @@ Posts
    :hidden:
    :maxdepth: 1
 
-   Website/Manifesto
    Website/Talks
    Website/Projects
+   Website/Manifesto
    Website/Contact
    Website/Imprint

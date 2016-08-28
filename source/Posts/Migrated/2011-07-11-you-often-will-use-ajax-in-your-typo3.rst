@@ -12,7 +12,7 @@ So I decided to use the "*TypoScript-Way*".
 
 First you need to create a new *PAGE*-Object:
 
-.. code-block:: plaintext
+.. code-block:: text
 
         tmp.ajaxConf = PAGE
         tmp.ajaxConf {

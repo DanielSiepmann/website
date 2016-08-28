@@ -203,13 +203,43 @@ html_extra_path = [
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
-    '**': [
+    'index': [
         'about.html',
         'localtoc.html', 'navigation.html',
         'searchbox.html',
         'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
     ],
+    'Website/*': [
+        'about.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
+    ],
+    'Event/*': [
+        'about.html',
+        'postcard.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+    ],
+    'Talk/*': [
+        'about.html',
+        'postcard.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+    ],
+    'Talk/Presentation/*': [
+        'about.html',
+        'postcard.html',
+        'localtoc.html',
+    ],
     'Posts/**': [
+        'about.html',
+        'postcard.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+        'tagcloud.html', 'categories.html', 'archives.html',
+    ],
+    'blog/**': [
         'about.html',
         'postcard.html',
         'localtoc.html', 'navigation.html',
