@@ -9,5 +9,7 @@ Posts
    :hidden:
    :maxdepth: 1
 
+   Website/Manifest
    Website/Projects
+   Website/Contact
    Website/Imprint

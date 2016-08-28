@@ -1,7 +1,8 @@
 // Adjust normalized elements
 p,
 dd, dt,
-li {
+li,
+.line-block {
     font-size: 115%;
 }
 
@@ -112,4 +113,13 @@ table.highlighttable {
     overflow: scroll;
     width: 100%;
     display: block;
+}
+
+// Classes for rst
+.center {
+    text-align: center;
+
+    .line {
+        padding: 5px;
+    }
 }
