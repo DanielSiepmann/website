@@ -79,7 +79,9 @@ How can I use Git?
 First of all you need to install Git. On some systems Git comes pre installed, like Mac. Otherwise
 use your favourite package manager to install Git or download from official source at `Git Download`_.
 
-We won't cover client except the CLI interface here.
+Then you can start using the CLI via ``git``.
+
+Also there is a great Vim Plugin called `fugitive`_ by Tim Pope.
 
 Further reading
 ---------------
@@ -116,3 +118,4 @@ Further reading
 .. _Sphinx: http://www.sphinx-doc.org/en/stable/
 .. _Bamboo: https://www.atlassian.com/software/bamboo
 .. _awsome lists: https://github.com/sindresorhus/awesome
+.. _fugitive: https://github.com/tpope/vim-fugitive
