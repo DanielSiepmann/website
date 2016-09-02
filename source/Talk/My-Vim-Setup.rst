@@ -90,6 +90,8 @@ vim-textobj-user            Dependency
 
 25 plugins in total
 
+Tagbar is used in combination with `universal ctags`_.
+
 Configuration options
 ---------------------
 
@@ -101,3 +103,4 @@ Further reading
 
 .. _Vimfest: http://vimfest.de/
 .. _Vim: http://www.vim.org/
+.. _universal ctags: https://ctags.io/

@@ -15,8 +15,17 @@ Also it will, hopefully, make you wanna use Git.
 
    It's not a full blown tutorial, or documentation, there are enough already.
 
-What is Git?
-------------
+Hello and who are you?
+----------------------
+
+* Who already knows Git?
+
+* Who is already using Git on a daily base?
+
+   * What are you using Git for?
+
+Short introduction: What is Git?
+--------------------------------
 
 * Git is a decentralized version control system
 
@@ -40,6 +49,31 @@ Always.
 How can I use Git?
 ------------------
 
+I'll show you an live example.
+
+The example consists of a very small hello world script.
+
+* Showing initial setup
+  Creating Repository
+
+* Adding and removing files
+
+* Checking current status
+
+   * Status
+
+   * Diff
+
+   * Log
+
+* Branches
+
+* Merging
+
+   * With conflicts
+     Also show tools to solve conflicts
+
+   * Without conflicts
 
 Further reading
 ---------------
