@@ -13,3 +13,8 @@ Deployment
 
 Just run ``make deploy`` from CLI.
 
+
+TODO
+----
+
+Add sidebar to special pages like search.
