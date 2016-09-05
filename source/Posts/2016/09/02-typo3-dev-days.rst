@@ -86,8 +86,6 @@ Second day was, of course, also about developing. It started with `Composer Comp
 goes over to `A practical guide to vanilla web components`_ and ended with `Automated Acceptance
 Testing`_ 
 
-.. todo:: Add recap of coding night?!
-
 Composer Composer Composer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -134,6 +132,33 @@ Mostly the task of the extension is to provide all possible markups for automate
 providing that, you as a developer or integrator can take a look at what markup is available to keep
 your modules in sync with the rest of backend design. Also it will show you which form elements are
 available for TCA and how you can combine them.
+
+Coding Night
+^^^^^^^^^^^^
+
+.. todo:: Add recap of coding night
+
+Day 3
+-----
+
+dkdeploy - advanced solution for web application deployment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Pushing the limits of PHP with React PHP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The full talk is available on Youtube:
+
+.. youtube:: giCIozOefy0
+
+Social Event
+^^^^^^^^^^^^
+
+Day 4
+-----
+
+Lightning Talks
+^^^^^^^^^^^^^^^
 
 Further reading
 ---------------
