@@ -1,5 +1,6 @@
-.. post:: Sep 02, 2016
+.. post:: Sep 07, 2016
    :tags: typo3, event
+   :location: Nuremberg, Germany
    :excerpt: 2
 
 TYPO3 Developer Days 2016 in Nuremberg - Recap
