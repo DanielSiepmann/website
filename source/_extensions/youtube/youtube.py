@@ -1,5 +1,3 @@
-#-*- coding:utf-8 -*-
-
 import urlparse
 
 from docutils import nodes
@@ -37,7 +35,6 @@ class YoutubeDirective(rst.Directive):
         node.url = self.arguments[0]
 
         return [node]
-
 
 
 def setup(app):
