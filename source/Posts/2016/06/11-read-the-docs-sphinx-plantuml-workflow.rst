@@ -179,8 +179,9 @@ something else. Do so by running::
     echo "build" > .gitignore && git init && git add . && git commit -m "First version"
 
 Next sign up at `Github`_ if you don't have an account yet. `Create a repository
-<https://github.com/new>`_. Github should redirect you to your new repository with a URL scheme like
-``<UserName>/<RepositoryName>``.  Add the repository at Github to your local repository by running::
+<https://github.com/new>`_, which is only possible if you are logged in. Github should redirect you
+to your new repository with a URL scheme like ``<UserName>/<RepositoryName>``.  Add the repository
+at Github to your local repository by running::
 
     git remote add origin https://github.com/<UserName>/<RepositoryName>.git && git push --mirror
 
@@ -283,7 +284,7 @@ Add the following entry to your :file:`Makefile`:
 .. code-block:: makefile
 
     plantuml:
-    	plantuml -psvg -o ../images/uml/ ./source/uml/*.uml
+        plantuml -psvg -o ../images/uml/ ./source/uml/*.uml
 
 You now can call::
 
@@ -399,7 +400,7 @@ And adjust your :file:`Makefile` to provide this file to PlantUML:
 .. code-block:: makefile
 
     plantuml:
-    	plantuml -config plantuml.cfg -psvg -o ../Images/Uml/ ./Uml/*.uml
+        plantuml -config plantuml.cfg -psvg -o ../Images/Uml/ ./Uml/*.uml
 
 Questions or issues
 ===================

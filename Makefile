@@ -6,11 +6,6 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = build
 
-# User-friendly check for sphinx-build
-ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
-endif
-
 # Internal variables.
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) source
 SPHINX_LIVE_PORT = 8001
@@ -93,12 +88,10 @@ linkcheck:
 css:
 	cd $(COMPASS_CONFIG_PATH) && compass compile --force
 
-# TODO: Add testing? Via gherkin to test before deployment locally and after
-#       deployment production? Use a Variable which defines context? / URL?
-#       Also part of it should be the linkchecker?!
-
 .PHONY: deploy
 deploy: clean css html optimize
-	# TODO: Raise version on each deploy?
-	#       Enables generation of changelogs
+	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
+
+.PHONY: deploy-light
+deploy-light: clean css html
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)

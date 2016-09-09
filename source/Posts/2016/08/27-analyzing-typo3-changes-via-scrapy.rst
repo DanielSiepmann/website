@@ -136,6 +136,6 @@ Check out the used tools:
 
 - `highcharts`_ The JavaScript library to display charts.
 
-.. _scrapy: http://scrapy.org/
+.. _scrapy: https://scrapy.org/
 .. _highcharts: http://www.highcharts.com/
 .. _TYPO3 Changelog: https://docs.typo3.org/typo3cms/extensions/core

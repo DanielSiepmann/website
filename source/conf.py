@@ -14,6 +14,7 @@
 
 import sys
 import os
+sys.path.insert(0, os.path.abspath('_extensions/youtube'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -33,6 +34,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.extlinks',
     'ablog',
+    'youtube',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -204,6 +206,12 @@ html_extra_path = [
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
     'index': [
+        'about.html',
+        'localtoc.html', 'navigation.html',
+        'searchbox.html',
+        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
+    ],
+    'search': [
         'about.html',
         'localtoc.html', 'navigation.html',
         'searchbox.html',
@@ -399,4 +407,5 @@ intersphinx_mapping = {
 }
 extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
+    'twitteruser': ('https://twitter.com/%s', 'Twitter user '),
 }

@@ -1,5 +1,6 @@
 build/
 source/_static/stylesheets/
+source/Code/TYPO3/example
 .sass-cache
 .dotfiles
 Gemfile.lock

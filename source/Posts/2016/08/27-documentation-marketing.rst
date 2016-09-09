@@ -41,16 +41,16 @@ Examples
 In my opinion one reason why Symfony is so widely used is there documentation, same is true for
 Drupal.
 
-Symfony features there documentation right on `start page <https://symfony.com/>`_ as second
-navigation item and third item on the page.
+Symfony features there documentation right on the `Symfony start page <https://symfony.com/>`_ as
+second navigation item and third item on the page.
 
 .. figure:: /images/2016/08-27-documentation-marketing/symfony.png
    :align: center
 
    Symfony start page with documentation highlighted in red.
 
-Drupal also covers documentation on his `start page <https://www.drupal.org/>`_ as third navigation
-item and as third item on the page.
+Drupal also covers documentation on his `Drupal start page <https://www.drupal.org/>`_ as third
+navigation item and as third item on the page.
 
 .. figure:: /images/2016/08-27-documentation-marketing/drupal.png
    :align: center
