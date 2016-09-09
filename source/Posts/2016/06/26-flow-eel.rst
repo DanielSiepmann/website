@@ -9,10 +9,10 @@
 Flow's embedded expression language (Eel)
 =========================================
 
-`Flow`_ provides different packages, one is `Eel <https://github.com/neos/eel>`_ the embedded
-expression language. A developer can use Eel to generate a `domain specific language`_, (=DSL).
-`Neos`_, the CMS built upon Flow, uses Eel to parse parts of their TypoScript 2. Also I've heard of
-one using Eel to generate QR-Codes.  Myself has used Eel like Vim auto command for filetype
+`Flow`_ provides different packages, one is the `Eel package <https://github.com/neos/eel>`_ the
+embedded expression language. A developer can use Eel to generate a `domain specific language`_,
+(=DSL).  `Neos`_, the CMS built upon Flow, uses Eel to parse parts of their TypoScript 2. Also I've
+heard of one using Eel to generate QR-Codes.  Myself has used Eel like Vim auto command for filetype
 detection. There is a wide range of use cases where Eel can be used.
 
 In this blog post you get a short introduction into the basics to understand how and when to use
