@@ -1,14 +1,14 @@
 .. highlight:: bash
 .. post:: Sep 09, 2016
-   :tags: git
+   :tags: git, vcs
    :category: Talk
    :location: Vimfest Berlin
-   :excerpt: 1
+   :excerpt: 2
 
 .. _introduction-to-git-for-daily-usage:
 
-Introduction to Git for daily usage
-===================================
+Talk: Introduction to Git for daily usage
+=========================================
 
 This talk will be held at `Vimfest`_ 2016 in Berlin. It will introduce you to `Git`_ and provide the
 minimum necessary information to get started using Git on a daily basis.
@@ -74,6 +74,9 @@ Concepts
 Documents
     As with concepts, most documents are saved in a text format that can be tracked.
 
+    Did you know dropbox has builtin versioning? Take a look at Blog post
+    :ref:`post-versioning-revert-old-files`.
+
 Knowledge exchange
     There are `awsome lists`_ on Github where users collaborate on via Git. It's like Wikipedia.
 
@@ -99,9 +102,13 @@ check out the section :ref:`git-daily-usage-further-reading`. Everything else wi
 during the talks.
 
 It's planed to record the talk, if so, you will find the video here, once the talk is published.
+Also the "presentation" will be published afterwards.
 
-Typical workflow
-----------------
+Typical workflows
+-----------------
+
+Below you can find two typical workflows that are true independent on your work, whether you are
+coding or working with documents.
 
 Create new repository
 ^^^^^^^^^^^^^^^^^^^^^
@@ -135,6 +142,8 @@ Further reading
 
 .. * `Video of the talk <>`_
 
+.. * :ref:`Presentation <presentation-introduction-to-git-for-daily-usage>`
+
 * `Official git website <https://git-scm.com/>`_
 
 * `Official online interactive tutorial <https://try.github.io/levels/1/challenges/1>`_
@@ -149,13 +158,20 @@ Further reading
 Clients
 ^^^^^^^
 
-* `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
-
 * `tig open source (CLI, all platforms) <https://github.com/jonas/tig>`_
 
 * `GitKraken GUI for all platforms <https://www.gitkraken.com/features>`_
 
+* `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
+
 * `Further official List of GUI clients <https://git-scm.com/downloads/guis>`_
+
+Also interesting
+^^^^^^^^^^^^^^^^
+
+* Blog post: :ref:`post-readthedocs-sphinx-plantuml`
+
+* Blog post: :ref:`post-versioning-revert-old-files`
 
 .. _Vimfest: http://vimfest.de/
 .. _Git: https://git-scm.com/

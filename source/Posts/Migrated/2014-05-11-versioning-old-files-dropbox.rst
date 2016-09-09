@@ -1,5 +1,7 @@
 .. post:: May 11, 2014
-   :tags: versioning, dropbox, backup
+   :tags: vcs, dropbox
+
+.. _post-versioning-revert-old-files:
 
 Versioning / revert old files
 =============================

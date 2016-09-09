@@ -3,6 +3,8 @@
    :category: Presentation
    :location: Vimfest Berlin
 
+.. _presentation-introduction-to-git-for-daily-usage:
+
 Introduction to Git for daily usage
 ===================================
 
@@ -23,6 +25,7 @@ Hello and who are you?
 * Who is already using Git on a daily base?
 
    * What are you using Git for?
+
 
 Short introduction: What is Git?
 --------------------------------
@@ -78,4 +81,4 @@ The example consists of a very small hello world script.
 Further reading
 ---------------
 
-* Sources at my website
+* :ref:`Blog post about talk <introduction-to-git-for-daily-usage>`
