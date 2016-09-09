@@ -88,12 +88,10 @@ linkcheck:
 css:
 	cd $(COMPASS_CONFIG_PATH) && compass compile --force
 
-# TODO: Add testing? Via gherkin to test before deployment locally and after
-#       deployment production? Use a Variable which defines context? / URL?
-#       Also part of it should be the linkchecker?!
-
 .PHONY: deploy
 deploy: clean css html optimize
-	# TODO: Raise version on each deploy?
-	#       Enables generation of changelogs
+	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
+
+.PHONY: deploy-light
+deploy-light: clean css html
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
