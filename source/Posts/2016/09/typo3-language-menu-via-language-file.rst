@@ -17,8 +17,7 @@ The idea
 --------
 
 The basic idea is to use the ``HMENU`` like all other solutions, but instead of using the
-``optionSplit`` we are using the :ref:`t3tsref:stdwrap-datawrap` to inject the values from a
-language file.
+``optionSplit`` we are using :ref:`t3tsref:stdwrap-data` to inject the values from a language file.
 
 The TypoScript
 --------------
@@ -29,8 +28,9 @@ The TypoScript
 
 On Line 5 to 8 we define the menu as you normally would. With one exception, we add all
 ``sys_language_uid``'s, not only the one we want on the current site. Via ``NO`` all existing
-languages that are not the current active are rendered. With ``ACT`` the current active language is
-rendered and via ``USERDEF1`` we define to not show links to language not available.
+languages that are not currently active are rendered. With ``ACT`` the current active language is
+rendered and via ``USERDEF1`` we define to not show links to languages which are not available for
+the current site, depending on your configuration.
 
 By Using ``USERDEF1`` we don't have to adjust the set of languages for each page.
 
@@ -43,9 +43,9 @@ language. This way we can adjust the labels for each language depending on the l
 .. note::
 
   The language configuration is needed in addition. But as this is documented anywhere else, it's
-  not part of this post. This post just coveres the menug generation.
+  not part of this post. This post just covers the menu generation.
 
-  Take a lookt at `Frontend Localization Guide`_.
+  Take a look at `Frontend Localization Guide`_.
 
 The language file
 -----------------
@@ -76,13 +76,14 @@ The output will look like the following:
 Credits
 -------
 
-This solution was "invented" by `Justus Moroni`_ and myself during one project, as we thought that
-option split and adjusting the settings for each site is not the best way.
+This solution was "invented" by :twitteruser:`Justus Moroni <Leonmrni>` and myself during one project, as we
+thought that option split and adjusting the settings for each site is not the best way. Also we were
+just to lazy, you know programmer?, to adjust the configuration for each multisite.
 
 Further reading
 ---------------
 
-Here is jut one example how it's done through option split:
+Here is just one example how it's done through option split:
 https://typo3.org/documentation/snippets/sd/64/
 
 And further resources to TYPO3 documentation which are used in this example:
@@ -97,5 +98,4 @@ And further resources to TYPO3 documentation which are used in this example:
 
 - :ref:`t3tsref:stdwrap-cobject`
 
-.. _Justus Moroni: https://twitter.com/Leonmrni
 .. _Frontend Localization Guide: https://docs.typo3.org/typo3cms/FrontendLocalizationGuide/BasicSetupOfALocalizedWebsite/TyposcriptConfiguration/Index.html

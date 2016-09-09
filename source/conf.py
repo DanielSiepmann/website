@@ -407,4 +407,5 @@ intersphinx_mapping = {
 }
 extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
+    'twitteruser': ('https://twitter.com/%s', 'Twitter user '),
 }
