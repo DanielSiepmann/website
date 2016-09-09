@@ -1,5 +1,5 @@
 .. highlight:: bash
-.. post:: Sep 17, 2016
+.. post:: Sep 09, 2016
    :tags: git
    :category: Talk
    :location: Vimfest Berlin
@@ -13,20 +13,24 @@ Introduction to Git for daily usage
 This talk will be held at `Vimfest`_ 2016 in Berlin. It will introduce you to `Git`_ and provide the
 minimum necessary information to get started using Git on a daily basis.
 
+This post is about the content of the talk and a basic introduction without the hands on.
+
 .. caution::
 
    It's not a full blown tutorial, or documentation, there are enough already.
 
+   Some are referenced at the end.
+
 What is Git?
 ------------
 
-Git is a version control system. Version control systems are used to keep track of different
-versions of something, e.g. of code, documents or something else. Some OS like Mac OS already
-implement such a system.
+Git is a version control system (=VCS). Version control systems are used to keep track of different
+versions of something, e.g. of code, documents or something else. Some operating systems  like Mac
+OS already implement such a system.
 
-Beside Git there are some others like `Hg`_ or Mercurial, `SVN`_ and some more.
+Beside Git there are some other VCS like `Hg`_ or Mercurial, `SVN`_ and some more.
 
-Some, especially older systems, are centralized solutions while Git is decentralized.
+Some, especially older systems, are centralized solutions while Git is decentralized (=DVCS).
 
 Decentralized in this context means you can have your system distributed, e.g. you have the
 necessary information on Services like `Github`_ or `Bitbucket`_ but also on your local machine and
@@ -40,10 +44,10 @@ With Git you can take a look back how your documents, website or code has look.
 Also you can revert changes or develop multiple features at the same time.
 
 Also Git allows you to synchronize some state between different remotes like your server, mobile
-device like laptop, and local device like desktop.
+devices like laptop, and local devices like desktop computers.
 
-Git supports collaboration as someone can see your code, e.g. at Github, check it out, change some
-parts, and share the changes with your.
+Git supports collaboration as someone can see your code, e.g. at Github. He can check it out, change
+some parts, and share the changes with you.
 
 When should I use Git?
 ----------------------
@@ -54,11 +58,14 @@ Here are some ideas for what kind of things you can, and should, use Git:
 
 Website
     E.g. HTML, JS, and server side code.
-    Also static websites or generation e.g. through tools like `Jekyll`_ or `Sphinx`_.
+    Also static websites or website generation e.g. through tools like `Jekyll`_ or `Sphinx`_.
 
 Code
     Whether it's a small script or a huge code base for a program.
     We are keeping track of our deployment bash scripts via Git and deploy them to our `Bamboo`_.
+
+    Also `Github`_ provides so called *Gists* which are small snippets that can consist of multiple
+    files. They are available at https://gist.github.com/ .
 
 Concepts
     Whether you write them as markdown, rst or Word and Open Office documents. They are just text or
@@ -73,6 +80,8 @@ Knowledge exchange
 The only part where tools like Git are not that helpful are binary files like images or compiled
 code. As they keep track of changes and one change on a binary file will change the whole file.
 
+But there is also some development going on to make Git used to work with large binary files.
+
 How can I use Git?
 ------------------
 
@@ -83,10 +92,48 @@ Then you can start using the CLI via ``git``.
 
 Also there is a great Vim Plugin called `fugitive`_ by Tim Pope.
 
+For GUIs take a look at the :ref:`git-clients`.
+
+Everything else, like the commands and workflows are already summed up on so many tutorials, just
+check out the section :ref:`git-daily-usage-further-reading`. Everything else will be explained
+during the talks.
+
+It's planed to record the talk, if so, you will find the video here, once the talk is published.
+
+Typical workflow
+----------------
+
+Create new repository
+^^^^^^^^^^^^^^^^^^^^^
+
+#. Initialize new git repository
+
+#. Make some changes
+
+#. Add and commit changes
+
+#. Create a remote somewhere like `Github`_
+
+#. Push changes
+
+
+Work on multiple things
+^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Create new branch
+
+#. Make some changes
+
+#. Add and commit changes
+
+#. Switch branch
+
+.. _git-daily-usage-further-reading:
+
 Further reading
 ---------------
 
-* `Video of the talk <>`_
+.. * `Video of the talk <>`_
 
 * `Official git website <https://git-scm.com/>`_
 
@@ -94,18 +141,21 @@ Further reading
 
 * `Official online book <https://git-scm.com/book/en/>`_
 
-* Clients
-
-  * `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
-
-  * `tig open source (CLI, all platforms) <https://github.com/jonas/tig>`_
-
-  * `GitKraken GUI for all platforms <https://www.gitkraken.com/features>`_
-
-  * `Further official List of GUI clients <https://git-scm.com/downloads/guis>`_
-
 * `List of version control software on english wikipedia
   <https://en.wikipedia.org/wiki/List_of_version_control_software>`_.
+
+.. _git-clients:
+
+Clients
+^^^^^^^
+
+* `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
+
+* `tig open source (CLI, all platforms) <https://github.com/jonas/tig>`_
+
+* `GitKraken GUI for all platforms <https://www.gitkraken.com/features>`_
+
+* `Further official List of GUI clients <https://git-scm.com/downloads/guis>`_
 
 .. _Vimfest: http://vimfest.de/
 .. _Git: https://git-scm.com/
