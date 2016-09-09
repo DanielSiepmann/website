@@ -108,7 +108,7 @@ Typical workflows
 -----------------
 
 Below you can find two typical workflows that are true independent on your work, whether you are
-coding or working with documents.
+coding or working with documents. All this workflows will be covered during the talk.
 
 Create new repository
 ^^^^^^^^^^^^^^^^^^^^^
@@ -123,7 +123,6 @@ Create new repository
 
 #. Push changes
 
-
 Work on multiple things
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -134,6 +133,35 @@ Work on multiple things
 #. Add and commit changes
 
 #. Switch branch
+
+Work with multiple remotes
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+#. Add remote
+
+#. Push to remote
+
+#. Fetch from remote
+
+#. Force push
+
+Merging / Rebasing
+^^^^^^^^^^^^^^^^^^
+
+* What is merging, what is rebasing?
+  
+* What's the difference?
+
+* How to merge, using ``vimdiff`` or GUI.
+
+* How to rebase.
+
+Github
+^^^^^^
+
+* What is github?
+
+* How to use github.
 
 .. _git-daily-usage-further-reading:
 
