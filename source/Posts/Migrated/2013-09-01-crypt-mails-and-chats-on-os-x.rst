@@ -8,7 +8,7 @@ You can crypt your Mail and Chat on Mac easily using `Adium <https://adium.im/>`
 using `GPG <https://gpgtools.org/>`__. Here you can find the manuals:
 
 -  Mail:
-   https://support.gpgtools.org/kb/how-to/first-steps-where-do-i-start-where-do-i-begin
+   https://gpgtools.tenderapp.com/kb/how-to/first-steps-where-do-i-start-where-do-i-begin-setup-gpgtools-create-a-new-key-your-first-encrypted-mail
 -  Adium: http://securityspread.com/2013/07/09/encrypted-chats-adium/
 
 Some more information about OTR (Off-the-record) Chat can be found on `cypherpunks.ca

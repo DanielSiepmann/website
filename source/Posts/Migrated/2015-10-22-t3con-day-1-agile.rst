@@ -32,7 +32,7 @@ your need.  Because no one out there know that you will come some day and use th
 still need to adopt it to your needs.
 
 If you think this opinion is wrong, just take a look at the `agile
-manifesto <http://www.agilemanifesto.org/>`__:
+manifesto <http://agilemanifesto.org/>`__:
 
     | Individuals and interactions over processes and tools
     | Working software over comprehensive documentation
