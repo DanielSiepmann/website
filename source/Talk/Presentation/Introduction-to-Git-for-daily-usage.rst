@@ -8,7 +8,7 @@
 Introduction to Git for daily usage
 ===================================
 
-This talk will introduce you to `Git` and provide the minimum necessary information to get started
+This talk will introduce you to Git and provide the minimum necessary information to get started
 using Git on a daily basis.
 
 Also it will, hopefully, make you wanna use Git.
@@ -22,10 +22,15 @@ Hello and who are you?
 
 * Who already knows Git?
 
-* Who is already using Git on a daily base?
+  * Who is already using Git on a daily base?
 
-   * What are you using Git for?
+    * What are you using Git for?
 
+* Who already knows Github, Bitbucket or any other hoster?
+
+   * Who is already using Github, Bitbucket or any other hoster?
+
+* What do you wanna learn during this talk?
 
 Short introduction: What is Git?
 --------------------------------
@@ -36,6 +41,7 @@ Short introduction: What is Git?
 
 * It also eases some workflows like deployment or testing
 
+* Totally in your hand
 
 Why should I use Git?
 ---------------------
@@ -47,14 +53,30 @@ Why should I use Git?
 When should I use Git?
 ----------------------
 
-Always.
+      Just: Always
+
+Examples
+^^^^^^^^
+
+* Website
+
+* Code
+
+* Concepts
+
+* Documents
+
+* Knowledge exchange
 
 How can I use Git?
 ------------------
 
-I'll show you an live example.
+I'll show you an live example on CLI.
 
-The example consists of a very small hello world script.
+Also there are GUI clients which I can show in parallel for visual aspects.
+
+Workflows
+^^^^^^^^^
 
 * Showing initial setup
   Creating Repository
@@ -63,22 +85,22 @@ The example consists of a very small hello world script.
 
 * Checking current status
 
-   * Status
+  * Status
 
-   * Diff
+  * Diff
 
-   * Log
+  * Log
 
 * Branches
 
 * Merging
 
-   * With conflicts
-     Also show tools to solve conflicts
+  * With conflicts
+    Also show tools to solve conflicts
 
-   * Without conflicts
+  * Without conflicts
 
 Further reading
 ---------------
 
-* :ref:`Blog post about talk <introduction-to-git-for-daily-usage>`
+On my blog: https://daniel-siepmann.de
