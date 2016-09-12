@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- SEO Stuff -->
+    {%- block title %}
+    <title>{{ title|striptags|e }} - {{ website_title }}</title>
+    {%- endblock %}
+
+    <link rel="canonical" href="{{ website_root }}{{ pagename }}.html"/>
+
+    {%- block seo %}
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@{{ twitter_id }}"/>
+    <meta name="twitter:creator" content="@{{ twitter_id }}"/>
+
+    <meta property="og:title" content="{{ title | striptags | e }}"/>
+    <meta property="og:description" name="description"
+          content="{{ body | striptags | replace('¶', '') | truncate(150) | e }}">
+    <meta property="og:url" content="{{ website_root }}{{ pagename }}.html"/>
+    {%- endblock %}
+
+    {% if pagename in ablog %}{% set post = ablog[pagename] %}
+    {% for coll in post.author %}
+    <meta name="author" content="{{ coll }}">
+    {% endfor %}
+    {% endif %}
+
+    {%- block stylesheets %}
+    <link href="{{ pathto('_static/Stylesheets/styles.css', 1) }}" rel="stylesheet" type="text/css"/>
+    {%- endblock %}
+</head>
+<body>
+<header>
+    <nav>
+        {{ toctree(includehidden=theme_sidebar_includehidden, collapse=theme_sidebar_collapse) }}
+        {% if theme_extra_nav_links %}
+        <ul>
+            {% for text, uri in theme_extra_nav_links.items() %}
+            <li>
+                <a href="{{ uri }}">{{ text }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+    </nav>
+</header>
+<main role="main">
+    {% block body %} {% endblock %}
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

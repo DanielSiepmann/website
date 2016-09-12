@@ -140,7 +140,7 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'alabaster'
+html_theme = 'leonmrni_oberon'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -149,22 +149,17 @@ html_theme = 'alabaster'
 # Options for alabaster
 html_context = {
     'website_title': blog_title,
-    'twitter_user': 'layneobserdia',
+    'twitter_id': 'layneobserdia',
+    'website_root': 'https://daniel-siepmann.de/'
 }
 html_theme_options = {
-    'analytics_id': 'UA-9837518-4',
-    'github_user': 'danielsiepmann',
-    'github_button': False,
-    'show_related': False,
-    'page_width': '1200px',
-    'sidebar_width': '250px',
     'extra_nav_links': {
         # 'Tw' : 'imprint.html'
     }
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ["_themes", ]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
