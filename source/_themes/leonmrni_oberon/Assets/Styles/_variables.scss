@@ -1,0 +1,23 @@
+// Colors
+$white: white;
+$black: black;
+$grey-dark: #333333;
+$grey-light: #F9F9F9;
+
+// Font stuff
+$font-weight: (
+    light: light,
+    normal: normal,
+    bold: 500
+);
+
+// Enable flexbox
+$enable-flex: true;
+
+// Body config
+$body-bg: $grey-light;
+$body-color: $grey-dark;
+
+// Global configs
+$border-width: 2px;
+$gutter-width-sides: 15px;

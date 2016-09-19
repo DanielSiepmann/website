@@ -30,12 +30,13 @@
     {% endif %}
 
     {%- block stylesheets %}
-    <link href="{{ pathto('_static/Stylesheets/styles.css', 1) }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ pathto('_static/Styles/Main.min.css', 1) }}" rel="stylesheet" type="text/css"/>
     {%- endblock %}
 </head>
 <body>
 <header>
     <nav>
+        <a href="/" title="Back to home">DANIEL SIEPMANN</a>
         {{ toctree(includehidden=theme_sidebar_includehidden, collapse=theme_sidebar_collapse) }}
         {% if theme_extra_nav_links %}
         <ul>
@@ -46,11 +47,12 @@
             {% endfor %}
         </ul>
         {% endif %}
-
     </nav>
 </header>
 <main role="main">
-    {% block body %} {% endblock %}
+    <section>
+        {% block body %} {% endblock %}
+    </section>
 </main>
 <footer>
 

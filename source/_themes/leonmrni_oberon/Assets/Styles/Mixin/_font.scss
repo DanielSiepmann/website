@@ -1,0 +1,24 @@
+/**
+ * Include font-family from font-map with default font fallback
+ *
+ * @group       global
+ * @param       {string} $font-code (default) - Index key of font-map (lower-case)
+ * @param       {string} $font-fallback ((Helvetica, Arial, sans-serif)) - Font fallback definition
+ */
+@mixin font-family($font-code: 'default', $font-fallback: $font-fallback) {
+    @if $font-code == 'default' {
+        font-family: map_get($fonts, $font-code);
+    } @else {
+        font-family: map_get($fonts, $font-code), $font-fallback;
+    }
+}
+
+/**
+ * Include font-weight from font-weight map with default "normal"
+ *
+ * @group       global
+ * @param       {string} $weight (normal) - Index key of font-weight map (lower-case)
+ */
+@mixin font-weight($weight: 'normal') {
+    font-weight: map_get($font-weight, $weight);
+}

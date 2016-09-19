@@ -1,0 +1,16 @@
+{
+    "root": "./",
+    "assets": {
+        "base": "/",
+        "dest": "/Assets/",
+        "bower": "./bower_components/"
+    },
+    "scss": {
+        "base": "./Assets/Styles/",
+        "files": "./Assets/Styles/**/*.scss",
+        "dest": "./static/Styles/"
+    },
+    "scripts": {
+        "dest": "./static/Scripts/"
+    }
+}

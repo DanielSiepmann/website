@@ -1,0 +1,20 @@
+{
+    "name": "leonmrni-leonmrnicom",
+    "version": "1.0.0",
+    "authors": [
+        "Justus Leon Moroni <developer@leonmrni.com"
+    ],
+    "description": "Sphinx theme using bootstrap.",
+    "license": "MIT",
+    "dependencies": {
+        "bootstrap": "4.0.0-alpha.4"
+    },
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "private": true
+}

@@ -1,0 +1,14 @@
+// Global variables for whole project
+@import "_variables";
+
+// Import mixins
+@import "Mixin/font";
+
+// Import libaries
+@import "_framework";
+
+// Import layout
+@import "Layout/global";
+@import "Layout/content";
+@import "Layout/header";
+@import "Layout/footer";

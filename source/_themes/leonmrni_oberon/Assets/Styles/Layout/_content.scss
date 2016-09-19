@@ -1,0 +1,13 @@
+body > main {
+    margin: $spacer 0;
+
+    > section {
+        @extend .container;
+        @include clearfix;
+        background: $white;
+        padding: {
+            bottom: $spacer;
+            top: $spacer;
+        }
+    }
+}
