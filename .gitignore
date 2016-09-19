@@ -3,3 +3,7 @@ source/_static/stylesheets/
 .sass-cache
 .dotfiles
 Gemfile.lock
+
+# Theme excludes
+bower_components
+node_modules
