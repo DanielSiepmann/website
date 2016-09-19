@@ -19,7 +19,7 @@ DEPLOY_HOST   = daniel-siepmann.de
 DEPLOY_PATH   = htdocs/daniel-siepmann.de
 DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
 
-COMPASS_CONFIG_PATH = source/_compass/
+GULP_CONFIG_PATH = source/_themes/leonmrni_oberon/
 
 .PHONY: help
 help:
@@ -43,6 +43,8 @@ install:
 	gem install bundler --no-document --user-install
 	bundle install
 	brew install pngquant optipng
+	npm install --global gulp-cli
+	cd $(GULP_CONFIG_PATH) && npm install
 
 .PHONY: optimize
 optimize:
@@ -54,24 +56,24 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml: clean css
+livehtml: clean gulp
 	# Ignore some folders and define port
 	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*.dotfiles/*' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
-html: clean css
+html: clean gulp
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 .PHONY: dirhtml
-dirhtml: css optimize
+dirhtml: gulp optimize
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml."
 
 .PHONY: singlehtml
-singlehtml: css optimize
+singlehtml: gulp optimize
 	$(SPHINXBUILD) -b singlehtml $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml
 	@echo
 	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml."
@@ -89,16 +91,16 @@ linkcheck:
 	@echo "Link check complete; look for any errors in the above output " \
 	      "or in $(BUILDDIR)/linkcheck/output.txt."
 
-.PHONY: css
-css:
-	cd $(COMPASS_CONFIG_PATH) && compass compile --force
+.PHONY: gulp
+gulp:
+	cd $(GULP_CONFIG_PATH) && gulp
 
 # TODO: Add testing? Via gherkin to test before deployment locally and after
 #       deployment production? Use a Variable which defines context? / URL?
 #       Also part of it should be the linkchecker?!
 
 .PHONY: deploy
-deploy: clean css html optimize
+deploy: clean gulp html optimize
 	# TODO: Raise version on each deploy?
 	#       Enables generation of changelogs
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
