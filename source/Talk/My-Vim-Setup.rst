@@ -1,4 +1,6 @@
-.. post:: Sep 17, 2016
+.. highlight:: vim
+
+.. post::
    :tags: vim
    :category: Talk
    :location: Vimfest Berlin
@@ -13,18 +15,24 @@ This talk will be held at `Vimfest`_ 2016 in Berlin. I'll show my current `Vim`_
 Configuration options and structure. Also I'm trying to show the Vim features I'm using on a daily
 basis.
 
-In general I try to keep my setup as smart as possible to have best experience. Following:
+In general I try to keep my setup as smart as possible to have best experience. Following the
+principle:
 
     As much as necessary, as less as possible
+
+In other words, I'm a purist.
+
+Principles for choosing Vim
+---------------------------
 
 And here are the reasons I'm using Vim instead of any other editor:
 
 Vim grammar
-    No other editor has this grammar which is so powerful: ``[operator][count][motion]``
+    No other editor has a grammar which is so powerful: ``[operator][count][motion]``.
 
-Modal based
-    Yes also other editors are modal based, but I don't like the CTRL+ALT+. stuff. In Germany we
-    call the typical Windows shortcut CTRL+ALT+DEL the "Affengriff"
+Mode based
+    Yes also other editors are mode based. I don't like the CTRL+ALT+. stuff. In Germany we
+    call the typical Windows shortcut CTRL+ALT+DEL the "Affengriff".
 
 Easy to remember shortcuts
     Most parts are easy to remember.
@@ -38,9 +46,11 @@ Features used on a daily basis
 
 * Folding
 
-* Autocompletion
+* Autocompletion / Spelling correction
 
 * Jumps / Tags
+
+* Plugins
 
 Features I definitely need to use more often
 --------------------------------------------
@@ -61,9 +71,7 @@ Plugins in use
 =========================== =========== ======
 Pluginname                  Usage       Reason
 =========================== =========== ======
-VST                         Weekly      Provide folding for rst files like presentations.
 ctrlp.vim                   Daily       Faster file and buffer navigation.
-emmet-vim                   Rarely      To speed up HTML creation.
 nerdtree                    Daily       To browse file system.
 php-getter-setter.vim       Rarely      To generate getter and setter from PHP instance variable.
 php.vim                     Daily       To provide more up to date PHP Support like keyword in syntax file.
@@ -78,8 +86,6 @@ vim-commentary              Daily       Easier comment or uncomment parts of cod
 vim-fugitive                Weekly      Git support inside of Vim.
 vim-indent-object           Rarely      Text objects based on indentation.
 vim-misc                    (Lib)
-vim-mustache-handlebars     Rarely      Syntax for mustache template engine.
-vim-pug                     Rarely      Syntax for another template engine.
 vim-repeat                  (Lib)
 vim-signature               Daily       Display set marks beside line.
 vim-snipmate                Daily       Snippet management.
@@ -88,15 +94,119 @@ vim-textobj-comment         Weekly      Text objects based on comments.
 vim-textobj-user            Dependency
 =========================== =========== ======
 
-25 plugins in total
+24 plugins in total
 
 Tagbar is used in combination with `universal ctags`_.
+
+ctrlp is used in combination with `the silver searcher`_.
 
 Configuration options
 ---------------------
 
-Folder structure
-----------------
+I've tried to split my configuration up, in a nice structure.
+Still vimrc has 126 lines.
+
+The configuration is done in the following structure and included via vims ``runtime!``::
+
+    " Trigger pathogen to autoload plugins
+        execute pathogen#infect()
+        call pathogen#helptags()
+
+    " Include further plugins
+        " Add manpage command (:Man) and highlighting!
+        runtime! ftplugin/man.vim
+
+    " Load further configurations
+        " Load general configurations
+        runtime! configs/*.vim
+        " Load autocommands
+        runtime! configs/autocommands/*.vim
+        " Load plugin configurations
+        runtime! configs/plugins/*.vim
+        " Load path specific configuration to override everything else
+        runtime! configs/folderspecific/*.vim
+        " Load at last, as this are modes like "day" or "present" which will
+        " overwrite all existing configuration
+        runtime! configs/modes/*.vim
+
+The structure is the following:
+
+.. code-block:: text
+
+    /Users/siepmann/.vim/configs
+    ├── autocommands
+    │   ├── apache.vim
+    │   ├── basics.vim
+    │   ├── rst.vim
+    │   ├── typo3.vim
+    │   ├── vdebug.vim
+    │   └── vim.vim
+    ├── folderspecific
+    │   ├── digital-competence.vim
+    │   ├── nodejs.vim
+    │   └── sphinx.vim
+    ├── functions.vim
+    ├── grepping.vim
+    ├── indentation.vim
+    ├── mappings.vim
+    ├── modes
+    │   └── present.vim
+    ├── plugins
+    │   ├── ctrlp.vim
+    │   ├── easytags.vim
+    │   ├── nerdtree.vim
+    │   ├── php-getter-setters.vim
+    │   ├── plantuml.vim
+    │   ├── syntastic.vim
+    │   ├── tagbar.vim
+    │   ├── undotree.vim
+    │   └── vdebug.vim
+    ├── searching.vim
+    ├── statusline.vim
+    └── wildignore.vim
+
+    4 directories, 26 files
+
+That's in addition to vims builtin structure:
+
+.. code-block:: text
+
+    /Users/siepmann/.vim/
+    ├── after
+    │   └── ...
+    ├── autoload
+    │   └── ...
+    ├── colors
+    │   └── ...
+    ├── ftdetect
+    │   └── ...
+    ├── spell
+    │   └── ...
+    └── syntax
+        └── ...
+
+    258 directories, 678 files
+
+Settings
+--------
+
+* Keep UI to a minimum, no cursorline, no numbers.
+
+* Use indentation for folding, as it will work in nearly all cases.
+
+* Highlight todos and trailing whitespace using ``match``.
+
+* Configure grepping through variable for adjustmends based on folderspecific, see
+  ~/.dotfiles/.vim/configs/folderspecific/sphinx.vim and ~/.dotfiles/.vim/configs/grepping.vim
+
+* Use vim to clear caches during development, see
+  ~/.dotfiles/.vim/configs/autocommands/typo3.vim
+
+* Or restart apache webserver, see
+  ~/.dotfiles/.vim/configs/autocommands/apache.vim
+
+* Also helpfull are some functions, see
+  ~/.dotfiles/.vim/configs/functions.vim
 
 Further reading
 ---------------
@@ -104,3 +214,4 @@ Further reading
 .. _Vimfest: http://vimfest.de/
 .. _Vim: http://www.vim.org/
 .. _universal ctags: https://ctags.io/
+.. _the silver searcher: 

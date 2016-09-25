@@ -1,4 +1,4 @@
-.. post:: Sep 18, 2016
+.. post::
    :tags: vim
    :category: Event
    :location: Vimfest Berlin

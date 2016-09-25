@@ -194,6 +194,14 @@ Clients
 
 * `Further official List of GUI clients <https://git-scm.com/downloads/guis>`_
 
+Enhancements
+^^^^^^^^^^^^
+
+* `diff-highlight <https://github.com/git/git/tree/master/contrib/diff-highlight>`_ to highlight
+  Inline differences on CLI.
+
+* `Meld <http://meldmerge.org/>`_ cross platform merge UI.
+
 Also interesting
 ^^^^^^^^^^^^^^^^
 

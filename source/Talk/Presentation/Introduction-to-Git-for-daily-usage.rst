@@ -1,4 +1,4 @@
-.. post:: Sep 17, 2016
+.. post::
    :tags: git
    :category: Presentation
    :location: Vimfest Berlin
@@ -28,7 +28,7 @@ Hello and who are you?
 
 * Who already knows Github, Bitbucket or any other hoster?
 
-   * Who is already using Github, Bitbucket or any other hoster?
+  * Who is already using Github, Bitbucket or any other hoster?
 
 * What do you wanna learn during this talk?
 
@@ -53,7 +53,13 @@ Why should I use Git?
 When should I use Git?
 ----------------------
 
-      Just: Always
+Just: Always
+
+As "*The Pragmatic Programmer*" says:
+
+    23. Always Use Source Code Control Page 88
+
+    Source code control is a time machine for your work -- you can go back.
 
 Examples
 ^^^^^^^^
