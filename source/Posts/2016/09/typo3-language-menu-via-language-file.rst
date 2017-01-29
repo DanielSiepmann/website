@@ -68,7 +68,7 @@ The result
 
 The output will look like the following:
 
-.. figure:: /Images/2016/09-typo3-language-menu-via-language-file/output.png
+.. figure:: /images/2016/09-typo3-language-menu-via-language-file/output.png
    :align: center
 
    Example output
