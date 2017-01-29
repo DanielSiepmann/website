@@ -22,15 +22,11 @@ This is a list of websites where I've a project and my projects can be found:
 Current active projects
 -----------------------
 
-A list of projects I'm currently working on, more or less active:
+.. toctree::
+   :maxdepth: 1
+   :glob:
 
-* Sphinx
-
-  * :ref:`This website <sphinx-website>`
-
-* Docker
-
-  * :ref:`t3-sphinx`
+   Projects/**
 
 .. _sphinx-website:
 
@@ -39,15 +35,6 @@ Sphinx
 
 This website. A try to move all my knowledge in plain text over to ``rst`` and render it with
 *Sphinx*. Also migrated my whole Blog from *Jekyll* over to sphinx.
-
-.. _t3-sphinx:
-
-t3-sphinx
-^^^^^^^^^
-
-`Public Github Repository <https://github.com/DanielSiepmann/t3-sphinx>`_ Docker container to ease
-writing documentation for TYPO3. Contains a full set up Sphinx setup to generate the
-documentation.
 
 .. _projects-inactive:
 
@@ -76,3 +63,12 @@ Jenkins
 ^^^^^^^
 First steps with Docker where I learned that you should better use :command:`docker compose`
 instead of providing all software in one docker image.
+
+.. _t3-sphinx:
+
+t3-sphinx
+^^^^^^^^^
+
+`Public Github Repository <https://github.com/DanielSiepmann/t3-sphinx>`_ Docker container to ease
+writing documentation for TYPO3. Contains a full set up Sphinx setup to generate the
+documentation.

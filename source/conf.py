@@ -217,7 +217,7 @@ html_sidebars = {
         'searchbox.html',
         'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
     ],
-    'Website/*': [
+    'Website/**': [
         'about.html',
         'localtoc.html', 'navigation.html',
         'searchbox.html',
