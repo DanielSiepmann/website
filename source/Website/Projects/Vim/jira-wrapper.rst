@@ -8,13 +8,13 @@ About
 -----
 
 Inspired by existing Vim plugin `vim-jira`_ I forked the plugin and first tried to extend the
-plugin. While still awesome command line wrapper for Jira exist, like `Ruby Gem JIRA CLI`_ it made
+plugin. While still awesome command line wrapper for Jira exist, like `Ruby Gem Terjira`_ it made
 more sense to build a wrapper for the existing solution.
 
 Dependencies
 ------------
 
-Therefore the plugin is a plain wrapper to integrate `Ruby Gem JIRA CLI`_ into Vim. You need to
+Therefore the plugin is a plain wrapper to integrate `Ruby Gem Terjira`_ into Vim. You need to
 install the gem first and can use it from within Vim afterwards.
 
 Usage
@@ -43,5 +43,5 @@ Project home
 The repository / project can be found on Github: https://github.com/DanielSiepmann/vim-jira-wrapper
 
 .. _vim-jira: https://github.com/cdonnellytx/vim-jira
-.. _Ruby Gem JIRA CLI: https://github.com/ruby-jira/jira-cli
+.. _Ruby Gem Terjira: https://github.com/keepcosmos/terjira
 .. _CTRL-R CTRL-A: http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R_CTRL-A
