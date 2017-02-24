@@ -51,7 +51,7 @@ clean:
 .PHONY: livehtml
 livehtml: clean css
 	# Ignore some folders and define port
-	sphinx-autobuild -b html -i '*.sw[pmnox]' -i '*.dotfiles/*' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	sphinx-autobuild -H 0.0.0.0 -b html -i '*.sw[pmnox]' -i '*.dotfiles/*' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
 html: clean css
