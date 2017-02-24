@@ -20,6 +20,8 @@ change or feature, were the missing idea to put everything together.
 In this post you will learn a minimum setup to put `scrapy`_ and `highcharts`_ together, to
 visualize information like the mentioned above.
 
+The result can be found `on my site`_.
+
 .. _scrapy-how-to-start:
 
 How to start
@@ -136,6 +138,12 @@ Check out the used tools:
 
 - `highcharts`_ The JavaScript library to display charts.
 
+- `Sourcecode`_ The source code is open sourced at Github.
+
+- The script is run every night and results are available `on my site`_.
+
 .. _scrapy: https://scrapy.org/
 .. _highcharts: http://www.highcharts.com/
 .. _TYPO3 Changelog: https://docs.typo3.org/typo3cms/extensions/core
+.. _Sourcecode: https://github.com/DanielSiepmann/typo3-stats
+.. _on my site: https://tmp.daniel-siepmann.de/stats/t3/versions/
