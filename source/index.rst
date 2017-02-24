@@ -1,7 +1,7 @@
 Posts
 =====
 .. postlist::
-   :format: {title} on {date}
+   :format: {title}
    :excerpts:
 
 .. Include Pages into sidebar but not here.
@@ -9,8 +9,5 @@ Posts
    :hidden:
    :maxdepth: 1
 
-   Website/Talks
-   Website/Projects
    Website/Manifesto
-   Website/Contact
    Website/Imprint

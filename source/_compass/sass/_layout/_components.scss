@@ -35,14 +35,31 @@ img {
 
 ul {
     list-style: circle inside;
+    @media screen and (max-width: 875px) {
+        margin-left: 30px;
+    }
 }
 @media screen and (max-width: 875px) {
     body {
-        padding: 0px 10px;
+        padding: 0;
     }
 
-    .highlight pre {
+    .section {
+        p {
+            padding: 0 20px;
+        }
+    }
+
+    pre {
         font-size: 115%;
+    }
+}
+
+// Reset stuff
+a.reference {
+    border: none;
+    &:hover {
+        border: none;
     }
 }
 
@@ -52,19 +69,29 @@ div.body {
     & h2,
     & h3,
     & h4 {
-        margin: 40px 0;
+        margin: 70px 0 0 0;
+        background: $headlineBackgroundColor;
+        padding: 0.25em;
+        padding-right: 1em;
+        line-height: 1.45em;
+        @media screen and (max-width: 875px) {
+            padding-left: 20px;
+        }
     }
     & h1 {
-        margin-top: 0px;
+        padding: 0.5em;
+        margin: 0 auto 60px 280px;
+        @media screen and (max-width: 875px) {
+            margin: 0;
+        }
+        line-height: 1.5em;
+        .page-index & {
+            margin-left: 0;
+        }
     }
-}
-
-a.external:after {
-    content: " ⤻";
 }
 
 blockquote {
-    border-left: 1px dashed black;
     padding-left: 25px;
 
     .line-block .line {
@@ -76,13 +103,15 @@ blockquote {
 div.admonition {
     border: none;
 
+    padding: 10px 20px;
+
     &.admonition-todo,
     &.warning {
         background-color: #fcf8e3;
     }
 
     &.note {
-        background-color: #d9edf7;
+        background-color: rgba(217, 237, 247, 0.41);
     }
 
     p.admonition-title {
@@ -97,6 +126,9 @@ pre {
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
 }
 
+td.code {
+    width: 100%;
+}
 code.docutils.literal {
     padding: 2px 8px;
 }
@@ -113,6 +145,19 @@ table.highlighttable {
     overflow: scroll;
     width: 100%;
     display: block;
+}
+
+// This selector is necessary, to overwrite original weight.
+div.sphinxsidebar {
+    #searchbox {
+        input {
+            padding: 3px inherit;
+
+            [type="text"] {
+                width: 190px;
+            }
+        }
+    }
 }
 
 // Classes for rst

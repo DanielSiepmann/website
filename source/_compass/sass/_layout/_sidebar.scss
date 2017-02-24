@@ -1,5 +1,5 @@
 div.sphinxsidebar {
-    border-right: 0.1px dotted silver;
+    padding-top: 0;
 
     h3 {
         border-bottom: 2px solid black;
@@ -24,6 +24,7 @@ div.sphinxsidebar {
 
 @media screen and (max-width: 875px) {
     div.sphinxsidebar {
-        width: 100%;
+        // We need to show at least navigation?
+        display: none;
     }
 }

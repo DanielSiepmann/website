@@ -35,3 +35,32 @@
         _gaq.push(['_anonymizeIp', true]);
     </script>
 {% endblock %}
+
+
+{%- block content %}
+    {%- block sidebar1 %} {# possible location for sidebar #} {% endblock %}
+    {% set pagenameParts = pagename.split('/') %}
+    <div class="document page-{{ pagenameParts | first | lower }}">
+        {%- if pagename != "index" %}
+            {%- block sidebarAll %}{{ sidebar() }}{% endblock %}
+        {%- endif %}
+        {%- block document %}
+        <div class="documentwrapper">
+            {%- if render_sidebar %}
+            <div class="bodywrapper">
+                {%- endif %}
+                <div class="body" role="main">
+                    {% block body %} {% endblock %}
+                </div>
+                {%- if render_sidebar %}
+            </div>
+            {%- endif %}
+        </div>
+        {%- endblock %}
+        {%- if pagename == "index" %}
+            {%- block sidebarIndex %}{{ sidebar() }}{% endblock %}
+        {%- endif %}
+
+        <div class="clearer"></div>
+    </div>
+{%- endblock %}

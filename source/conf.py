@@ -156,7 +156,7 @@ html_theme_options = {
     'github_user': 'danielsiepmann',
     'github_button': False,
     'show_related': False,
-    'page_width': '1200px',
+    'page_width': '1000px',
     'sidebar_width': '250px',
     'extra_nav_links': {
         # 'Tw' : 'imprint.html'
@@ -207,52 +207,24 @@ html_extra_path = [
 html_sidebars = {
     'index': [
         'about.html',
-        'localtoc.html', 'navigation.html',
+        'navigation.html',
         'searchbox.html',
-        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
+        'tagcloud.html',
     ],
-    'search': [
-        'about.html',
-        'localtoc.html', 'navigation.html',
-        'searchbox.html',
-        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
-    ],
+    'search': ['about.html', 'navigation.html',],
     'Website/**': [
         'about.html',
-        'localtoc.html', 'navigation.html',
-        'searchbox.html',
-        'recentposts.html', 'tagcloud.html', 'categories.html', 'archives.html',
-    ],
-    'Event/*': [
-        'about.html',
-        'postcard.html',
-        'localtoc.html', 'navigation.html',
+        'navigation.html',
         'searchbox.html',
     ],
-    'Talk/*': [
-        'about.html',
-        'postcard.html',
-        'localtoc.html', 'navigation.html',
-        'searchbox.html',
-    ],
-    'Talk/Presentation/*': [
-        'about.html',
-        'postcard.html',
-        'localtoc.html',
-    ],
-    'Posts/**': [
-        'about.html',
-        'postcard.html',
-        'localtoc.html', 'navigation.html',
-        'searchbox.html',
-        'tagcloud.html', 'categories.html', 'archives.html',
-    ],
+    'Event/*': ['about.html', 'localtoc.html',],
+    'Talk/*': ['about.html', 'localtoc.html',],
+    'Talk/Presentation/*': ['about.html', 'localtoc.html',],
+    'Posts/**': ['about.html', 'localtoc.html',],
     'blog/**': [
         'about.html',
-        'postcard.html',
-        'localtoc.html', 'navigation.html',
+        'navigation.html',
         'searchbox.html',
-        'tagcloud.html', 'categories.html', 'archives.html',
     ],
 }
 
