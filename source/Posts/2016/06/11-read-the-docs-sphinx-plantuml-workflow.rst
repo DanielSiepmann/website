@@ -19,12 +19,12 @@ All instructions are tested on OS X, I'll not document for Windows. Unix systems
 as OS X and you probably already know how to do it yourself.
 
 Sphinx
-======
+------
 
 First let's start with Sphinx to get a first documentation rendered on the local machine.
 
 Install
--------
+^^^^^^^
 
 To use Sphinx, we need to install it. Up to date instructions can be found at `Installing Sphinx`_.
 
@@ -33,7 +33,7 @@ Basically you can install via::
     pip install -U Sphinx
 
 Start documenting
------------------
+^^^^^^^^^^^^^^^^^
 
 To start your documentation sphinx provides a CLI tool to create a new project::
 
@@ -168,7 +168,7 @@ You can now start writing the documentation, following the `Sphinx Documentation
 look and feel, e.g. change the theme using one of the `builtin Themes`_.
 
 Github
-======
+------
 
 To make integration with Read the docs easier, we will publish our documentation as a Git repository
 to Github.
@@ -191,7 +191,7 @@ Github provides full documentation at https://help.github.com/ if something is n
 further help setting everything up.
 
 Read the docs
-=============
+-------------
 
 To host our documentation without the need to setup the rendering or web space, we will use Read the
 docs.
@@ -223,7 +223,7 @@ all you have to do in the future is to do a::
 Read the docs will detect the changes and render your documentation.
 
 Plantuml
-========
+--------
 
 Everything is working now. Let's add some sugar with nice looking UML diagrams to explain the
 structure of our project, or some complex workflows.
@@ -238,14 +238,14 @@ rendering for it. So you have to render the images on your local machine and pro
 the docs.
 
 Install
--------
+^^^^^^^
 
 First of all you need to install Java and Graphviz to draw the diagrams. Head over to
 http://plantuml.com/starting.html and http://plantuml.com/faqinstall.html to follow the
 installation.
 
 Provide wrapper
----------------
+^^^^^^^^^^^^^^^
 
 After PlantUml is on your local system, make your live easier by providing the following shell
 script inside your ``$PATH`` to just call ``plantuml`` in the future anywhere on your CLI::
@@ -257,7 +257,7 @@ Adjust the path according to your location of :file:`plantuml.jar`. This wrapper
 without the GUI, and generate SVGs as default for all provided PlantUml source files.
 
 Integration into Documentation
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To integrate PlantUml into your Sphinx documentation, you can setup the following structure:
 
@@ -321,7 +321,7 @@ such by using:
     html: plantuml
 
 Adjust look
------------
+^^^^^^^^^^^
 
 At the moment we will get the default styling of PlantUML which is not nice in our Template. You can
 adjust the styling by providing the a file called :file:`plantuml.cfg` with the following content:
@@ -403,14 +403,14 @@ And adjust your :file:`Makefile` to provide this file to PlantUML:
         plantuml -config plantuml.cfg -psvg -o ../Images/Uml/ ./Uml/*.uml
 
 Questions or issues
-===================
+-------------------
 
 Make sure to check the help for `Read the docs`_, `Github help <https://help.github.com/>`_, `Sphinx
 <http://www.sphinx-doc.org/>`_ and `PlantUml <http://plantuml.com/>`_.  If you still have questions
 or issues just leave a comment.
 
 Further reading
-===============
+---------------
 
 You should now be able to write basic documentation with hosting at Read the docs. The following
 links can be startpoints to get further:
