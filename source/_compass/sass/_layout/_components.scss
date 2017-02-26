@@ -16,12 +16,25 @@ li li {
 
 dt {
     font-weight: bold;
+    line-height: 2em;
+    padding-bottom: 1em;
 }
 
+ol li {
+    padding-left: 15px;
+}
+
+ol,
+dl,
 pre,
 p,
+.line-block,
 dd {
     margin-bottom: 25px;
+    padding-left: 30px;
+    dl & {
+        padding-left: 0;
+    }
 }
 
 code {
@@ -71,17 +84,18 @@ div.body {
     & h4 {
         margin: 70px 0 0 0;
         background: $headlineBackgroundColor;
-        padding: 0.25em;
-        padding-right: 1em;
+        padding: 0.25em 1em;
+        // padding-right: 1em;
         line-height: 1.45em;
         @media screen and (max-width: 875px) {
             padding-left: 20px;
         }
     }
     & h1 {
-        padding: 0.5em;
+        padding: 1em;
         margin: 0 auto 60px 280px;
         @media screen and (max-width: 875px) {
+            padding: 0.5em;
             margin: 0;
         }
         line-height: 1.5em;
@@ -123,6 +137,7 @@ div.admonition {
 // Source Code
 pre {
     padding: 15px;
+    padding-left: 30px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
 }
 
