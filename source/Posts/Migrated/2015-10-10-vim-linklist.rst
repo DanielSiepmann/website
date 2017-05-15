@@ -8,9 +8,9 @@ As a dedicated Vim user I've collected some links already which I want to share 
 list is dedicated to my team mate `@dk2kde <https://twitter.com/dk2kde>`_. And I recommend walking
 through them in the order I've listed them.
 
-1. `Vimtutor <http://vimdoc.sourceforge.net/htmldoc/usr_01.html#tutor>`__
+1. `Vimtutor <https://neovim.io/doc/user/usr_01.html#vimtutor>`__
    Interactive tutorial inside Vim to get you started.
-2. `Vim Help <http://vimdoc.sourceforge.net/htmldoc/>`__
+2. `Vim Help <https://neovim.io/doc/user/>`__
    The internal Vim help, also available off line in your Vim via
    ``:help``. It's a good idea to read it once. At least the TOC to know
    what's there to check it out as soon as you need it.
@@ -72,7 +72,7 @@ There are also some *videos* which you should check out. I've added all videos t
 them out <https://www.youtube.com/playlist?list=PLDXiDr43HScG8TQ6L6YPTK13ATFc2b8ke>`__ and I'll add
 further while watching. But there is another `playlist
 <https://www.youtube.com/playlist?list=PL8tzorAO7s0jy7DQ3Q0FwF3BnXGQnDirs>`__ by `thoughtbot
-<https://thoughtbot.com/>`__ conainting a lot of vim meetups
+<https://thoughtbot.com/>`__ containing a lot of vim meetups
 
 If you know more resources that should be mentioned here, just contact with me by one of the ways
 you can find in footer.
