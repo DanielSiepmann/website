@@ -11,7 +11,14 @@ This talk will be held at `Vimfest`_ 2017 in Berlin. I'll show how to write plug
 the new `Python Plugin API`_. The API is async and wraps the new `msgpack`_. The API is called
 "Remote Plugin API".
 
-As an example I will use my first plugin `neotags`_.
+As an example I will use the plugin `neotags`_, which is my first Nvim plugin using the new API.
+It's completely written in Python3 and covered with tests. Of course there are already some tag
+update plugins out there, but I wanted to try out the new API. Also most of the plugins did not work
+with my setup, or contain to much code and no tests.
+
+.. note::
+
+  This is an early version of the talk. Some parts might change until `Vimfest`_ 2017.
 
 What's the difference?
 ----------------------
