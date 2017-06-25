@@ -114,13 +114,14 @@ Beside functions the nvim instance provides ``vars`` as an array containing all 
 
 This will return the ``let g:neotags_logging`` value.
 
-The API is documented through code and https://neovim.io/doc/user/api.html#nvim_get_var()
+The API is documented through code and `https://neovim.io/doc/user/api.html#nvim_get_var() <https://neovim.io/doc/user/api.html#nvim_get_var()>`_.
 
 Defining functions and commands
 -------------------------------
 
 You can define functions and commands the same way as autocommands. Examples are provided in the
-official docs at https://neovim.io/doc/user/remote_plugin.html#remote-plugin-example .
+official docs at `https://neovim.io/doc/user/remote_plugin.html#remote-plugin-example
+<https://neovim.io/doc/user/remote_plugin.html#remote-plugin-example>`_.
 
 Further reading
 ---------------
