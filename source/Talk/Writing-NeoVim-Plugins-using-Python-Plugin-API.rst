@@ -8,32 +8,26 @@ Writing NeoVim Plugins using Python Plugin API
 ==============================================
 
 This talk will be held at `Vimfest`_ 2017 in Berlin. I'll show how to write plugins for Nvim using
-the new `Python Plugin API`_.
+the new `Python Plugin API`_. The API is async and wraps the new `msgpack`_. The API is called
+"Remote Plugin API".
 
 As an example I will use my first plugin `neotags`_.
 
 What's the difference?
 ----------------------
 
-All you have to do is to write a single Python file and place it :file:`rplugin/python3/file.py`.
-Afterwards run ``:UpdateRemotePlugins`` from within Nvim once, to generate the necessary Vimscript
-to make your Plugin available.
+All you have to do, except setting up the environment, is to write a single Python file and place it
+:file:`rplugin/python3/file.py`.  Afterwards run ``:UpdateRemotePlugins`` from within Nvim once, to
+generate the necessary Vimscript to make your Plugin available.
 
 Example of generated :file:`~/.local/share/nvim/rplugin.vim`:
 
-.. code-block:: vimscript
+.. code-block:: vim
 
     " python3 plugins
     call remote#host#RegisterPlugin('python3', '/Users/siepmann/.dotfiles/.vim/bundle/neotags/rplugin/python3/neotags.py', [
         \ {'sync': v:false, 'name': 'BufWritePost', 'type': 'autocmd', 'opts': {'pattern': '*', 'eval': 'expand("<afile>:p")'}},
         \ ])
-
-
-    " ruby plugins
-
-
-    " python plugins
-
 
 There is no need to write any Vimscript, you can fully stick to your preferred language. Beside
 Python also Ruby is supported via `Ruby Plugin API`_.
@@ -43,10 +37,24 @@ https://neovim.io/doc/user/remote_plugin.html.
 
 Most communication is async by default.
 
+Setting up the environment
+--------------------------
+
+#. Install Neovim
+
+#. Install Python3
+
+#. Install Python3 Neovim module:
+
+    .. code-block:: bash
+
+        pip3 install --upgrade neovim
+
 First example
 -------------
 
 .. code-block:: python
+   :linenos:
 
    import neovim
 
@@ -61,12 +69,7 @@ First example
            self.nvim.out_write('neotags > ' + message + "\n")
 
 First of all you have to import the ``neovim`` module to get access to the API. This will also
-import decorators for classes and methods. To make the module available, you have to install it
-through ``pip``:
-
-.. code-block:: bash
-
-   pip3 install --upgrade neovim
+import decorators for classes and methods.
 
 By decorating the class as a plugin, it will become a plugin.
 
