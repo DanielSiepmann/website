@@ -1,5 +1,5 @@
 .. post:: Jun 22, 2017
-   :tags: vim, python
+   :tags: vim, nvim, python
    :category: Talk
    :location: Vimfest Berlin
    :excerpt: 2
