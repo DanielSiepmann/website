@@ -209,6 +209,10 @@ Also interesting
 
 * Blog post: :ref:`post-versioning-revert-old-files`
 
+The full talk is available on Youtube:
+
+.. youtube:: gYbO0Ku3Drw
+
 .. _Vimfest: http://vimfest.de/
 .. _Git: https://git-scm.com/
 .. _Hg: https://www.mercurial-scm.org/

@@ -49,9 +49,32 @@ The things I wanted to to during the talks at second day:
   * :ref:`introduction-to-git-for-daily-usage`
   * :ref:`my-vim-setup`
 
+Recap
+-----
+
+The event was amazing, one of the best coding meetups I participated so far. Everyone was encouraged
+and interested in exchanging know how about Vim, coding and further cli applications. `Bram
+Moolenaar`_ did join the event and presented the latest Vim 8.0 release. We were eating pizza at a
+nice restaurant and exchanged experiences.
+
+Also `Justin M. Keyes`_ joined and introduced us to Neovim and the concepts behind the project and
+software.
+
+Our host were `Sven Guckes`_, `Tim Quellmalz`_, and `Matthias Günther`_. The event took place at
+`IN-Berlin`_ a great location.
+
+So I'm looking forward to participate again next year in 2017.
+
 Further reading
 ---------------
 
+- `Vimfest`_ the event website.
+
+- `IN-Berlin`_ the location.
+
+- `Awesome lists`_.
+
+.. _Vimfest: https://vimfest.org/
 .. _Athame: https://github.com/ardagnir/athame
 .. _mycli: https://github.com/dbcli/mycli
 .. _PHP Refactoring support for Vim: https://github.com/vim-php/vim-php-refactoring
@@ -60,3 +83,9 @@ Further reading
 .. _vim gutentags: https://github.com/ludovicchabant/vim-gutentags
 .. _Codemonitoring: http://codemonitoring.readthedocs.io/en/feature-first-import-mechanism/
 .. _Taskwarrior: http://taskwarrior.org/
+.. _Bram Moolenaar: http://moolenaar.net/
+.. _Justin M. Keyes: https://twitter.com/justinmk
+.. _Sven Guckes: http://www.guckes.net/
+.. _Tim Quellmalz: https://github.com/tqmz
+.. _Matthias Günther: https://wikimatze.de/about/
+.. _IN-Berlin: https://in-berlin.de/space/
