@@ -63,7 +63,7 @@ software.
 Our host were `Sven Guckes`_, `Tim Quellmalz`_, and `Matthias Günther`_. The event took place at
 `IN-Berlin`_ a great location.
 
-So I'm looking forward to participate again next your in 2017.
+So I'm looking forward to participate again next year in 2017.
 
 Further reading
 ---------------
