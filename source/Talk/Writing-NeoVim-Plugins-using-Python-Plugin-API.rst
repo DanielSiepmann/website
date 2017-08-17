@@ -4,8 +4,8 @@
    :location: Vimfest Berlin
    :excerpt: 2
 
-Writing NeoVim Plugins using Python Plugin API
-==============================================
+Talk: Writing NeoVim Plugins using Python Plugin API
+====================================================
 
 This talk will be held at `Vimfest`_ 2017 in Berlin. I'll show how to write plugins for Nvim using
 the new `Python Plugin API`_. The API is async and wraps the new `msgpack`_. The API is called

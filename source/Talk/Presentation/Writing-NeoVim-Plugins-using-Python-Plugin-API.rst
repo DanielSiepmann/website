@@ -1,4 +1,4 @@
-.. post:: Jun 22, 2017
+.. post::
    :tags: vim, nvim, python
    :category: Presentation
    :location: Vimfest Berlin
