@@ -2,42 +2,47 @@
 namespace DS\ExampleExtension\Service;
 
 /*
- * This file is part of the TYPO3 CMS project.
+ * Copyright (C) 2015  Daniel Siepmann <coding@daniel-siepmann.de>
  *
- * It is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License, either version 2
- * of the License, or any later version.
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
  *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
  *
- * The TYPO3 project - inspiring people to share!
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ * 02110-1301, USA.
  */
 
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /**
- * Example Service to demonstrate inject of settings from tx_news.
- *
- * @author Daniel Siepmann <coding@daniel-siepmann.de>
+ * Example Service to demonstrate inject of settings.
  */
 class SomeService
 {
-   /**
-     * Inject news settings via ConfigurationManager.
+    /**
+     * @var array
+     */
+    protected $settings = [];
+
+    /**
+     * Inject settings via ConfigurationManager.
      *
      * @param ConfigurationManagerInterface $configurationManager
-     *
-     * @return SomeService
      */
     public function injectConfigurationManager(ConfigurationManagerInterface $configurationManager)
     {
-        $this->newsSettings = $configurationManager->getConfiguration(
+        $this->settings = $configurationManager->getConfiguration(
             ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS,
-            'News',
-            'pi1'
+            'ExtensionName',
+            'PluginName'
         );
-
-        return $this;
     }
 }

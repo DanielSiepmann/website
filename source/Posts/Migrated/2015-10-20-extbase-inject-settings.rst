@@ -1,5 +1,8 @@
 .. post:: Oct 20, 2015
    :tags: typo3, extbase, dependency injection
+   :excerpt: 2
+
+.. _injectTypoScriptSettings:
 
 Inject TypoScript Settings
 ==========================
@@ -16,7 +19,7 @@ following code, and make sure you instantiate the class via
 .. literalinclude:: /Code/TYPO3/InjectTypoScriptSettings.php
    :language: php
    :linenos:
-   :emphasize-lines: 33-39
+   :emphasize-lines: 40-47
 
 This will use Extbase inject mechanism of ``ObjectManager`` to inject the ``ConfigurationManager``.
 Instead of persisting this instance as a property, we just use it to fetch the settings and persist
@@ -28,3 +31,8 @@ This way the settings are available as a property in the class without any furth
 Just make sure you are using the :ref:`t3api:TYPO3\\CMS\\Extbase\\Object\\ObjectManager` as pointed
 out above. It's really important, as only this class will process the injects.
 :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::makeInstance` doesn't support this feature.
+
+Further reading
+---------------
+
+Check out the post about :ref:`typo3ExtbaseInjection`.
