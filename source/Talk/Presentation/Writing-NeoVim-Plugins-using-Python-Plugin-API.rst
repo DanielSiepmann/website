@@ -17,7 +17,7 @@ Hello and who are you?
 
 * Who already knows remote plugin api / msgpack of nvim?
 
-    * Who is already using the new remote plugin api?
+  * Who is already using the new remote plugin api?
 
 * What do you wanna learn during this talk?
 

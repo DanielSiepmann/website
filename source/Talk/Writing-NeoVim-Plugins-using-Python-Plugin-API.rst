@@ -44,11 +44,11 @@ Setting up the environment
 
 #. Install Python3
 
-#. Install Python3 Neovim module:
+#. Install Python3 Neovim module
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        pip3 install --upgrade neovim
+    pip3 install --upgrade neovim
 
 First example
 -------------
