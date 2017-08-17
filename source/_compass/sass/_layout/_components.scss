@@ -39,6 +39,7 @@ dd {
 
 code {
     color: inherit;
+    white-space: nowrap;
 }
 
 img {
@@ -129,10 +130,15 @@ div.admonition {
 }
 
 // Source Code
+dl pre,
 pre {
     padding: 15px;
     padding-left: 30px;
+    margin-left: 30px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+dl pre {
+    margin-left: 0;
 }
 
 td.code {
