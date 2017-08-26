@@ -47,7 +47,7 @@ If so, we crypt the password and add it as a new variable at ``Crypt.<fieldname>
    :lines: 1-3,23-
 
 It's nearly the same as a Fluid ViewHelper. We configure options instead of arguments and can
-provide defaults. Then we add new variables to the container, in this case the provider.
+provide defaults. Then we add new variables to the container, in this case the FinisherVariableProvider.
 
 Register custom finisher
 """"""""""""""""""""""""
@@ -97,8 +97,8 @@ submitted plain text password. That's done on line 18.
 
 We use the curly braces as already known by Fluid. Inside of the braces we use the short identifier
 of the finisher, which is the class name without namespace and ``Finisher`` suffix. So for
-``\DS\ExampleExtension\Domain\Finishers\CryptFinisher`` this would be ``Crypt``. The, as already
-known by Fluid we separate the path with dots and access the added data as documented in our
+``\DS\ExampleExtension\Domain\Finishers\CryptFinisher`` this would be ``Crypt``. Then, as already
+known by Fluid, we separate the path with dots and access the added data as documented in our
 finisher.
 
 .. code-block:: yaml
@@ -123,6 +123,10 @@ finisher.
                 value: 'Registered via form'
               password:
                 value: '{Crypt.password}'
+
+That's it. We now save the crypted password instead of the original plain text submitted value.
+If, for any reason, multiple fields need to be crypted we can add the same finisher with different
+options multiplet times and don't need to bloat the implementation itself.
 
 Further reading
 ---------------
