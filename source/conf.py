@@ -374,6 +374,7 @@ intersphinx_mapping = {
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
     't3api': ('https://typo3.org/api/typo3cms/', None),
     't3tsref': ('https://docs.typo3.org/typo3cms/TyposcriptReference/', None),
+    't3form': ('https://docs.typo3.org/typo3cms/drafts/code.tritum.de/TYPO3.CMS/Form_Documentation/', None),
     'neos': ('https://neos.readthedocs.io/en/stable/', None),
     'flow': ('https://flowframework.readthedocs.io/en/latest/', None),
 }
