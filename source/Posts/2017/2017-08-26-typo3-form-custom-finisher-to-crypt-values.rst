@@ -55,18 +55,10 @@ Register custom finisher
 New finishers are not registered out of the box, we have to register them manually. Therefore we add
 the following to our ``yaml`` configuration which is defined in TypoScript:
 
-.. code-block:: yaml
+.. literalinclude:: /Code/TYPO3/example/Configuration/Forms/Base.yaml
+   :language: yaml
    :linenos:
-   :emphasize-lines: 7-8
-
-    TYPO3:
-      CMS:
-        Form:
-          prototypes:
-            standard:
-              finishersDefinition:
-                CryptFinisher:
-                  implementationClassName: DS\ExampleExtension\Domain\Finishers\CryptFinisher
+   :lines: 1-3,7-11
 
 This way we can prevent naming collisions as we define the name of the finisher to use.
 
