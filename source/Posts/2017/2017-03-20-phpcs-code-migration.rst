@@ -1,4 +1,4 @@
-.. _highlight: php
+.. _highlight: shell
 .. post:: Mar 20, 2017
    :tags: phpcs, php, typo3
    :excerpt: 2
@@ -67,9 +67,7 @@ Afterwards you need to "install" your new standard to enable the cli tools to ex
 that's it. Installation of a new standard is also explained at Github, see "`Setting the installed
 standard paths
 <https://github.com/squizlabs/PHP_CodeSniffer/wiki/Configuration-Options#setting-the-installed-standard-paths>`_".
-Also you can always provide the path to the standard, like:
-
-.. code-block:: bash
+Also you can always provide the path to the standard, like::
 
   $ phpcs --standard=/path/to/MyStandard test.php
 
@@ -164,9 +162,7 @@ Where do I find the tokens I can return inside of the ``register`` method?
                                     );
 
 How do I run only one sniff, the one I'm working on right now?
-    Just provide the ``--sniffs`` option during CLI calls:
-
-    .. code-block:: bash
+    Just provide the ``--sniffs`` option during CLI calls::
 
        phpcbf -p --colors -s --sniffs=Typo3Update.LegacyClassnames.DocComment Classes/Controller.php
 
@@ -179,13 +175,13 @@ How do I get the sniff name of a sniff?
 
     Also they are displayed by running ``phpcs`` with option ``-s``, like:
 
-    .. code-block:: bash
+    .. code-block:: shell
        :emphasize-lines: 4
 
        $ ./vendor/bin/phpcs -s <path>
-        8 | ERROR | [x] Legacy classes are not allowed; found
-          |       |   backend_toolbarItem
-          |       |   (Typo3Update.LegacyClassnames.Inheritance.legacyClassname)
+       8 | ERROR | [x] Legacy classes are not allowed; found
+         |       |   backend_toolbarItem
+         |       |   (Typo3Update.LegacyClassnames.Inheritance.legacyClassname)
 
 Make parts configurable through :file:`ruleset.xml`
     All public properties of sniffs are configurable through the :file:`ruleset.xml`. So all you
@@ -212,9 +208,11 @@ Make parts configurable through :file:`ruleset.xml`
 REPL your sniffs
     I prefer to use `psysh`_ nowadays and it makes it easy to "discover" your code and write your
     sniffs interactively. It's an Symfony Cli App you can call from within your code by including
-    the following line::
+    the following line:
 
-        require_once('~/bin/psysh'');eval(\Psy\sh());
+    .. code-block:: php
+
+        require_once('~/bin/psysh');eval(\Psy\sh());
 
     Like an ``xdebug_break()`` the execution will halt and you are inside the app and can play
     around.
