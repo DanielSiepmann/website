@@ -127,7 +127,7 @@ Just make sure to extend the original class or implement the expected interface.
 Therefore it's much better to define interfaces and to use them in your signatures, then concrete
 class implementations.
 
-Configuring dependnecies
+Configuring dependencies
 ------------------------
 
 Once you make use of dependency injection, you might want to exchange one resolved dependency for
