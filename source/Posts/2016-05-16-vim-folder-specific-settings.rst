@@ -1,6 +1,8 @@
 .. post:: May 16, 2016
    :tags: vim
 
+.. _folder_specific_settings_in_vim:
+
 Folder specific settings in Vim
 ===============================
 
