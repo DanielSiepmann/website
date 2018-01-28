@@ -7,7 +7,8 @@ Use Whoops as Exception handler for TYPO3
 
 During development for TYPO3 you often run into Exceptions. They do not look very nice.  A much
 nicer alternative might be `whoops <http://filp.github.io/whoops/>`_ which `@dk2kde
-<https://twitter.com/dk2kde>`_ told me about.
+<https://twitter.com/dk2kde>`_ told me about. It will not only handle exceptions, but also PHP
+Errors like syntax errors.
 
 In this small blog post I will show you how to use *whoops* as exception handler for TYPO3 projects
 during local development. The result will be:
@@ -36,7 +37,8 @@ Configure TYPO3
 ---------------
 
 Afterwards you can configure TYPO3 to use the new exception handler. Therefore insert the following
-in your :file:`typo3conf/AdditionalConfiguration.php`:
+in your :file:`typo3conf/AdditionalConfiguration.php`. Of course you have to update line 4 to match
+your installation path:
 
 .. code-block:: php
    :linenos:
@@ -87,3 +89,8 @@ Further reading
 ---------------
 
 - http://filp.github.io/whoops/
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 version 8 LTS.

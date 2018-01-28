@@ -262,3 +262,9 @@ Further reading
 - Github gist in a form of a Blog post about this topic https://gist.github.com/NamelessCoder/3b2e5931a6c1af19f9c3f8b46e74f837
 
 - German Blog post about this topic http://www.typo3tiger.de/blog/post/extbase-dependency-injection.html
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 6 LTS up to 8 LTS.
+

@@ -16,3 +16,8 @@ Just add the first line before you execute your SQL-Statement. Then echo the Que
 line after you executed it.
 
 Of course this only will work if you execute the queries with the TYPO3 functions.
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 4.7 up to 7 LTS.

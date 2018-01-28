@@ -33,3 +33,9 @@ Caching
 
 If you are ever wondering why your changes aren't applied, just clear
 the cache. Your *locallang-files* are cached!
+
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 4.5 up to 8 LTS.

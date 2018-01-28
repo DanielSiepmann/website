@@ -130,3 +130,8 @@ Check out the official doc sections:
 * :ref:`t3form:typo3.cms.form.prototypes.<prototypeIdentifier>.finishersdefinition.<finisheridentifier>.implementationClassName`
 
 * :ref:`t3form:apireference-frontendrendering-programmatically-apimethods-abstractfinisher`
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 version 8 LTS.

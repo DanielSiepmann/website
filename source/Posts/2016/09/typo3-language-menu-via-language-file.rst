@@ -99,3 +99,8 @@ And further resources to TYPO3 documentation which are used in this example:
 - :ref:`t3tsref:stdwrap-cobject`
 
 .. _Frontend Localization Guide: https://docs.typo3.org/typo3cms/FrontendLocalizationGuide/BasicSetupOfALocalizedWebsite/TyposcriptConfiguration/Index.html
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 4.5 up to 8 LTS.

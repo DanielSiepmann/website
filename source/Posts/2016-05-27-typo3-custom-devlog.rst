@@ -105,3 +105,9 @@ Further reading
 * :ref:`t3coreapi:hooks`
 
 * :ref:`t3coreapi:logging`
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 7 LTS up to 8 LTS.
+

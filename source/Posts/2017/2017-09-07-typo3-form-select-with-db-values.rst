@@ -102,3 +102,7 @@ Check out the official doc sections:
 
 * :ref:`t3form:concepts-configuration-prototypes`
 
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 version 8 LTS.

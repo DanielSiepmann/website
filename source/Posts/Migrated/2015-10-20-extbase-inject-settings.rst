@@ -36,3 +36,8 @@ Further reading
 ---------------
 
 Check out the post about :ref:`typo3ExtbaseInjection`.
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 7 LTS up to 8 LTS.

@@ -157,3 +157,8 @@ Also check out :ref:`examples for userfunctions <t3tsref:cobj-user-examples>`.
 
 Also you can check how other developers make usage of hooks, e.g. in the example extension
 `wv_feuser_locations <https://github.com/web-vision/wv_feuser_locations/tree/develop>`_.
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 4.5 up to 8 LTS.

@@ -50,3 +50,8 @@ Why do we have to do this? Or in other words "How does TYPO3 / Extbase handle th
 
 Extbase will use the defined storagePid of the current Plugin for all repositories. Even for those
 from other extensions. Therefore we have to add there storagePids to our plugin.
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 versions 4.7 up to 8 LTS.

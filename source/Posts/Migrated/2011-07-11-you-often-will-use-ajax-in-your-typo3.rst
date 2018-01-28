@@ -48,3 +48,8 @@ plugin or the default part.
 You can find a German version here: `www.typo3-tutorials.org
 <http://www.typo3-tutorials.org/cms/typo3-und-ajax-wie-geht-das.html>`__.  There
 are additional possibilities for AJAX and TYPO3.
+
+Checked for TYPO3 Versions
+--------------------------
+
+The post was checked against TYPO3 version 4.7.
