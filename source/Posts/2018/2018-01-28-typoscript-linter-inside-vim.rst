@@ -3,6 +3,8 @@
    :tags: typo3, development
    :excerpt: 2
 
+.. _integrate_typoscript_linter_into_vim:
+
 Integrate Typoscript linter into VIM
 ====================================
 
