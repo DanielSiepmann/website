@@ -201,11 +201,11 @@ Also you can take a look at the `official website`_.
 .. _Composer Composer Composer: https://t3dd16.typo3.org/schedule/composer-composer-composer
 .. _A practical guide to vanilla web components: https://t3dd16.typo3.org/schedule/a-practical-guide-to-vanilla-web-components
 .. _Automated Acceptance Testing: https://t3dd16.typo3.org/schedule/automated-acceptance-testing
-.. _Codeception: http://codeception.com/
+.. _Codeception: https://codeception.com/
 .. _official website: https://t3dd16.typo3.org/
 .. _extension styleguide: https://typo3.org/extensions/repository/view/styleguide
 .. _Harry Glatz: https://twitter.com/randomresult
 .. _Patrick Broens: https://twitter.com/aurora_borealis
 .. _Martin Bless: https://twitter.com/marantern
 .. _Christian Lück: https://twitter.com/another_clue
-.. _React PHP: http://reactphp.org/
+.. _React PHP: https://reactphp.org/

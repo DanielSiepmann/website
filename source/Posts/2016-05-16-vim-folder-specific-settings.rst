@@ -122,6 +122,6 @@ Source
 ------
 
 The hint to use ``autocmd`` was given on `Stackoverflow
-<http://stackoverflow.com/questions/456792/vim-apply-settings-on-files-in-directory#answer-456846>`_.
+<https://stackoverflow.com/questions/456792/vim-apply-settings-on-files-in-directory#answer-456846>`_.
 There are also other ways, as often, like plugins or the built in ``exrc``. All of them are mentioned
 on Stackoverflow.

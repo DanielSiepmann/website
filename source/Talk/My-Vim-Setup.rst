@@ -211,7 +211,7 @@ Settings
 Further reading
 ---------------
 
-.. _Vimfest: http://vimfest.de/
-.. _Vim: http://www.vim.org/
+.. _Vimfest: https://vimfest.org/
+.. _Vim: https://www.vim.org/
 .. _universal ctags: https://ctags.io/
 .. _the silver searcher: 

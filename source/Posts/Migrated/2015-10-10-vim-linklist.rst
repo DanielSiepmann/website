@@ -19,7 +19,7 @@ through them in the order I've listed them.
    I definitely recommend reading this book as it walks you through most
    use cases without being bloated. Even if you just think about
    switching to Vim, get this book and look up if it's worth to switch.
-4. `VimAwesome <http://vimawesome.com/>`__
+4. `VimAwesome <https://vimawesome.com/>`__
    A collection of Vim plugins with grouping by topics and search. Of
    course you can train the shortcuts on the page by using ``J`` an
    ``K`` and such.
@@ -29,7 +29,7 @@ through them in the order I've listed them.
    wanna check out the top most plugins to get an idea what plugins can
    do for you.
 5. `Vim Text Objects: The Definitive
-   Guide <http://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/>`__
+   Guide <https://blog.carbonfive.com/2011/10/17/vim-text-objects-the-definitive-guide/>`__
    Introduction into textobjects which are one of the defacto reasons to
    use Vim over other editors.
 6. `Vimcasts <http://vimcasts.org/episodes/>`__

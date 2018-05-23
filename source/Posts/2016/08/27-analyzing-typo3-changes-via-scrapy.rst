@@ -143,7 +143,7 @@ Check out the used tools:
 - The script is run every night and results are available `on my site`_.
 
 .. _scrapy: https://scrapy.org/
-.. _highcharts: http://www.highcharts.com/
+.. _highcharts: https://www.highcharts.com/
 .. _TYPO3 Changelog: https://docs.typo3.org/typo3cms/extensions/core
 .. _Sourcecode: https://github.com/DanielSiepmann/typo3-stats
 .. _on my site: https://tmp.daniel-siepmann.de/stats/t3/versions/

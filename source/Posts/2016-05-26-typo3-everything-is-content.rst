@@ -144,7 +144,7 @@ How TYPO3 and the ecosystem will benefit
 
 Yes, in my Opinion also TYPO3 will benefit from this approach. If you take it further, it will
 reduce the amount of time spent by developers on developing custom records and plugins all doing the
-same. The amount of outdated extensions in `TER <https://typo3.org/extensions/repository/>`_ will
+same. The amount of outdated extensions in `TER <https:////extensions.typo3.org/>`_ will
 decrease and only useful extensions will remain. Also more time is available to work on TYPO3
 itself. Also users of TYPO3 will know TYPO3 itself better again. At the moment most people know
 extensions better then the system itself. Leading to things like using an extension for news to

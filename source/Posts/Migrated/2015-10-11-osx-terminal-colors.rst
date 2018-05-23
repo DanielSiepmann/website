@@ -21,7 +21,7 @@ file with ``terminal`` suffix.
 `Smyck <http://color.smyck.org/>`__ is available for more programs like Vim and Sublime Text. It
 comes with a ``terminal`` file ready to import.  |Smyck|
 
-If you like to have more options, take a look at `base16 <https://chriskempson.github.io/base16/>`__
+If you like to have more options, take a look at `base16 <http://chriskempson.com/projects/base16/>`__
 where you have 36 different ones. In his `repository <https://github.com/chriskempson/base16>`__ are
 links to further resources you wanna check out. |base16| Duplicate an existing scheme in the
 terminal app and modify the files. Copy the hex values of each color and paste them in the copied
@@ -32,11 +32,11 @@ Perhaps you also wanna change the font of your terminal. That's also possible in
 comparisons.
 
 -  http://hivelogic.com/articles/top-10-programming-fonts
--  http://wesbos.com/programming-fonts/
+-  https://wesbos.com/programming-fonts/
 
 .. |OS X Terminal Settings| image:: /images/2015-10-11-osx-terminal-colors/settings.png
    :target: /images/2015-10-11-osx-terminal-colors/settings.png
 .. |Smyck| image:: /images/2015-10-11-osx-terminal-colors/smyck.png
    :target: http://color.smyck.org/
 .. |base16| image:: /images/2015-10-11-osx-terminal-colors/base16.png
-   :target: https://chriskempson.github.io/base16/
+   :target: http://chriskempson.com/projects/base16/

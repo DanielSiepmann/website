@@ -188,7 +188,7 @@ Clients
 
 * `tig open source (CLI, all platforms) <https://github.com/jonas/tig>`_
 
-* `GitKraken GUI for all platforms <https://www.gitkraken.com/features>`_
+* `GitKraken GUI for all platforms <https://www.gitkraken.com/git-client>`_
 
 * `Sourcetree by atlassian (GUI for Mac and Windows) <https://www.sourcetreeapp.com/>`_
 
@@ -213,7 +213,7 @@ The full talk is available on Youtube:
 
 .. youtube:: gYbO0Ku3Drw
 
-.. _Vimfest: http://vimfest.de/
+.. _Vimfest: http://vimfest.org/
 .. _Git: https://git-scm.com/
 .. _Hg: https://www.mercurial-scm.org/
 .. _SVN: https://subversion.apache.org/

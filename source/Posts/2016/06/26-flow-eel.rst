@@ -171,6 +171,6 @@ Documentation is available at :ref:`flow:eel`. Also the `grammar
 <https://github.com/neos/eel/blob/master/Documentation/FLOW3-Eel-Grammar.txt>`_ is already
 documented. Same is true for the :ref:`neos:Eel Helpers Reference`.
 
-.. _Flow: https://flowframework.readthedocs.io/
+.. _Flow: https://flowframework.readthedocs.io/en/stable/
 .. _Neos: https://www.neos.io/
 .. _domain specific language: https://en.wikipedia.org/wiki/Domain-specific_language

@@ -139,7 +139,7 @@ that concept here, there are already some blog posts about the topic:
 
 - `English blog post at usetypo3.com <https://usetypo3.com/signals-and-hooks-in-typo3.html#c210>`_
 
-- `German blog post at typo3blogger.de <http://typo3blogger.de/signal-slot-pattern/>`_
+- `German blog post at typo3blogger.de <https://typo3blogger.de/signal-slot-pattern/>`_
 
 - `Official Documentation of Signal Slots in Flow Framework
   <https://flowframework.readthedocs.io/en/stable/TheDefinitiveGuide/PartIII/SignalsAndSlots.html#signals-and-slots>`_

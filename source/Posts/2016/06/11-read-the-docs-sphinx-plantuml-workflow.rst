@@ -241,7 +241,7 @@ Install
 ^^^^^^^
 
 First of all you need to install Java and Graphviz to draw the diagrams. Head over to
-http://plantuml.com/starting.html and http://plantuml.com/faqinstall.html to follow the
+http://plantuml.com/starting and http://plantuml.com/faq-install to follow the
 installation.
 
 Provide wrapper
@@ -392,8 +392,8 @@ adjust the styling by providing the a file called :file:`plantuml.cfg` with the 
     skinparam stateStartColor black
     skinparam stateEndColor   black
 
-More about styling can be found at http://plantuml.com/skinparam.html ,
-http://plantuml.com/sequence.html#Skinparam .
+More about styling can be found at http://plantuml.com/skinparam ,
+http://plantuml.com/sequence-diagram .
 
 And adjust your :file:`Makefile` to provide this file to PlantUML:
 
@@ -406,7 +406,7 @@ Questions or issues
 -------------------
 
 Make sure to check the help for `Read the docs`_, `Github help <https://help.github.com/>`_, `Sphinx
-<http://www.sphinx-doc.org/>`_ and `PlantUml <http://plantuml.com/>`_.  If you still have questions
+<http://www.sphinx-doc.org/en/stable/>`_ and `PlantUml <http://plantuml.com/>`_.  If you still have questions
 or issues just leave a comment.
 
 Further reading
@@ -415,7 +415,7 @@ Further reading
 You should now be able to write basic documentation with hosting at Read the docs. The following
 links can be startpoints to get further:
 
-* `Sphinx autobuild <https://pypi.python.org/pypi/sphinx-autobuild/0.2.3>`_ will detect changes and
+* `Sphinx autobuild <https://pypi.org/project/sphinx-autobuild/0.2.3/>`_ will detect changes and
   autogenerate documentation. Also comes with server and autoreload.
 
 * `Sphinx intersphinx <http://www.sphinx-doc.org/en/stable/ext/intersphinx.html>`_ allow linking
@@ -438,6 +438,6 @@ Also the following links as a collection:
 .. _Plantuml: http://plantuml.com/
 .. _Read the Docs: https://readthedocs.org/
 .. _Sphinx Documentation: http://www.sphinx-doc.org/en/stable/contents.html
-.. _Sphinx: http://www.sphinx-doc.org/
+.. _Sphinx: http://www.sphinx-doc.org/en/stable/
 .. _builtin Themes: http://www.sphinx-doc.org/en/stable/theming.html#builtin-themes
 .. _register at Read the docs: https://readthedocs.org/accounts/signup/

@@ -68,4 +68,4 @@ You might also be interested in :ref:`post-readthedocs-sphinx-plantuml`.
 
 Even if I found this out myself, I'm not the only one with this opinion, check out `5 Reasons your
 product documentation is a marketing asset by Mashable
-<http://mashable.com/2011/08/12/product-documentation-marketing/>`_.
+<https://mashable.com/2011/08/12/product-documentation-marketing/>`_.

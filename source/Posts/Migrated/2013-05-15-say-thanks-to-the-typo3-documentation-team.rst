@@ -4,7 +4,7 @@
 Say thanks to the TYPO3 Documentation Team
 ==========================================
 
-The `TYPO3 Documentation Team <https://typo3.org/teams-committees/documentation/>`__ makes a great job. Each
+The `TYPO3 Documentation Team <https://typo3.org/community/teams/documentation/>`__ makes a great job. Each
 feature is as good as it's documentation.  Whether inside the code or as HTML or plain text format.
 
 The Team updates the documentation as good as it could.

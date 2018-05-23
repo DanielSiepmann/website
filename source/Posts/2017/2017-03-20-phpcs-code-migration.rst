@@ -91,7 +91,7 @@ sniffs from other projects, here are some examples:
 * `Drupal <https://www.drupal.org/node/1419980>`_.
 
 * `TYPO3 Standard <https://github.com/typo3-ci/TYPO3CMS>`_ `TYPO3 Sniffs
-  <https://github.com/typo3-ci/TYPO3SniffPool>`_
+  <https://github.com/Konafets/TYPO3SniffPool >`_
 
 Chances are that your cms / framework already provides a basic standard. At least `PSR-2`_ which is
 already included in PHP_CodeSniffer installation is available.
@@ -283,8 +283,8 @@ Further reading
 .. _Sublime Text: https://github.com/squizlabs/sublime-PHP_CodeSniffer
 .. _Coding Standard Tutorial: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial
 .. _Annotated ruleset.xml: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
-.. _PSR-2: http://www.php-fig.org/psr/psr-2/
-.. _psysh: http://psysh.org/
+.. _PSR-2: https://www.php-fig.org/psr/psr-2/
+.. _psysh: https://psysh.org/
 .. _DanielSiepmann/automated-typo3-update: https://github.com/DanielSiepmann/automated-typo3-update
 
 .. _replaceToken: https://pear.php.net/package/PHP_CodeSniffer/docs/2.8.1/PHP_CodeSniffer/PHP_CodeSniffer_Fixer.html#methodreplaceToken

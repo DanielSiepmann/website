@@ -19,6 +19,6 @@ Read more:
    programs <https://en.wikipedia.org/wiki/Category:Free_revision_control_software>`__
    — For local versioning
 -  `How do I recover deleted
-   files? <https://www.dropbox.com/en/help/296>`__ — At dropbox
+   files? <https://www.dropbox.com/en/help/security/recover-deleted-files-folders?_locale_specific=en>`__ — At dropbox
 -  `How do I recover old versions of
-   files? <https://www.dropbox.com/en/help/11>`__ — At dropbox
+   files? <https://www.dropbox.com/en/help/security/recover-older-versions?_locale_specific=en>`__ — At dropbox

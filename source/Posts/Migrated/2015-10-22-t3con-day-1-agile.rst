@@ -71,7 +71,7 @@ interesting to see how an organisation can be structured to make it easier to gr
 create chaos by growing to fast. He even coded an interactive digram which you can check out on his
 Blog as a `post <http://www.ahojsenn.com/2015/10/20/chaos-eine-erkl%C3%A4rung/>`__ You can check out
 his `presentation online.
-<http://krukas.dyn.amicdns.de/~pi/_ManageChaos/20151021-Management.html#/title>`__
+<https://krukas.dyn.amicdns.de/~pi/_ManageChaos/20151021-Management.html#/title>`__
 
 .. |SHIFT| image:: /images/2015-10-22-t3con-day-1-agile/shift.png
 

@@ -7,7 +7,7 @@
 Vimfest Berlin 2016
 ===================
 
-You can find the Event online at http://vimfest.de/ .
+You can find the Event online at https://vimfest.org/ .
 
 Following the agenda, I'll list the different things like Hacking, Talks and Tools in different
 sections here, so you can get an insight how the event was for me, what was shared and what I wanted

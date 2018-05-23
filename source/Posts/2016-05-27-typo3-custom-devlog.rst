@@ -14,7 +14,7 @@ Beside the new Core feature :ref:`t3coreapi:logging`, it's older and therefore u
 extensions.
 TYPO3 doesn't ship with a handler for this function, it's possible to provide handler via TYPO3's
 :ref:`t3coreapi:hooks` mechanism and the popular `devlog extension
-<https://typo3.org/extensions/repository/view/devlog>`_ is installed on many TYPO3 installations to
+<https://extensions.typo3.org/extension/devlog/>`_ is installed on many TYPO3 installations to
 have a handler which logs everything to the database and provide a backend module to see the entries.
 But that's not necessary, you can register your own, very small handler in your
 :file:`AdditionalConfiguration.php` or your distribution.

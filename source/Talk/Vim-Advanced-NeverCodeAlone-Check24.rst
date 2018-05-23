@@ -126,25 +126,25 @@ Plugins
 ^^^^^^^
 
 Es gibt unterschiedliche Pluginmnager, Anleitungen zur Insallation befinden sich auf `vimawesome.com
-<http://vimawesome.com/>`_
+<https://vimawesome.com/>`_
 
-* Plugins findet man auf `Github <https://github.com/search?q=language%3Aviml&type=Repositories&utf8=%E2%9C%93>`_ und `vimawesome.com <http://vimawesome.com/>`_
+* Plugins findet man auf `Github <https://github.com/search?q=language%3Aviml&type=Repositories&utf8=%E2%9C%93>`_ und `vimawesome.com <https://vimawesome.com/>`_
 
 * Bekannte / hilfreiche Plugins:
 
-  * `nerdtree <http://vimawesome.com/plugin/nerdtree-red>`_
+  * `nerdtree <https://vimawesome.com/plugin/nerdtree-red>`_
 
-  * `syntastic <http://vimawesome.com/plugin/syntastic>`_
+  * `syntastic <https://vimawesome.com/plugin/syntastic>`_
 
-  * `tagbar <http://vimawesome.com/plugin/tagbar>`_
+  * `tagbar <https://vimawesome.com/plugin/tagbar>`_
 
-  * `undotree <http://vimawesome.com/plugin/undotree-vim>`_
+  * `undotree <https://vimawesome.com/plugin/undotree-vim>`_
 
-  * `vdebug <http://vimawesome.com/plugin/vdebug>`_
+  * `vdebug <https://vimawesome.com/plugin/vdebug>`_
 
-  * `vim-commentary <http://vimawesome.com/plugin/vim-commentary>`_
+  * `vim-commentary <https://vimawesome.com/plugin/vim-commentary>`_
 
-  * `vim-fugitive <http://vimawesome.com/plugin/fugitive-vim>`_
+  * `vim-fugitive <https://vimawesome.com/plugin/fugitive-vim>`_
 
 Vim individualisieren
 ^^^^^^^^^^^^^^^^^^^^^
