@@ -90,6 +90,10 @@ were provided. This is done with this configuration:
 For further information about the above configuration refer to
 :ref:`t3coreapi:authentication-advanced-options` section of the TYPO3 Core Reference.
 
+The registration and configuration are wrapped with a condition to check that we are
+not in CLI mode. As we do not need and want our code to run in CLI context. We only
+need this in backend and frontend mode.
+
 Usage
 -----
 
@@ -157,3 +161,9 @@ Checked for TYPO3 Versions
 
 The post was checked against TYPO3 version 8 LTS.
 It should work with previous versions and PHP >= 5.3.0.
+
+Update 26.07.2018
+-----------------
+
+Thanks to `Tim Schreiner <https://twitter.com/Codemonkey1988>`_ the condition for CLI
+requests was added which will prevent the code from execution in CLI context.
