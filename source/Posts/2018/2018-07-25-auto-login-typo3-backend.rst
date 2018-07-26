@@ -130,6 +130,16 @@ Add the following configuration to :file:`AdditionalConfiguration.php`:
 The value is in seconds, so ``60 * 60 * 24`` is a whole day. You could also add
 ``*7`` for a week.
 
+Going further
+-------------
+
+As everything here, this post and solution is open source. If you have ideas based
+upon this solution go ahead. E.g. write a small extension and use ``require-dev`` to
+fetch the extension. Make the user name configurable or check a cookie or IP address
+to activate this solution and detect the user name. That's why all necessary resources are referenced and explained.
+
+But always think about security.
+
 Further reading
 ---------------
 
