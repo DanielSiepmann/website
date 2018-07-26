@@ -14,10 +14,13 @@ lot of time during development.
 In this blog post this solution will be shown and explained. You will never ever have
 to login on your local installation anymore.
 
-.. note::
+.. danger::
 
   This approach is only for a local development environment. Do never use this in a
-  production environment!
+  production or publical available environment!
+
+  This auto login automatically authentificates the configured user in. Please read
+  the complete article and do nothing you do not understand.
 
 Background knowledge
 --------------------
