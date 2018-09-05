@@ -1,5 +1,5 @@
 .. post:: Jul 25, 2018
-   :tags: 
+   :tags: typo3
    :excerpt: 2
 
 Auto login for TYPO3 Backend during development
@@ -160,7 +160,7 @@ Checked for TYPO3 Versions
 --------------------------
 
 The post was checked against TYPO3 version 8 LTS.
-It should work with previous versions and PHP >= 5.3.0.
+It should work with previous versions and PHP >= 5.5.0.
 
 Update 26.07.2018
 -----------------
