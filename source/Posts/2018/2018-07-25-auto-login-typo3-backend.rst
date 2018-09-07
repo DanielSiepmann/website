@@ -156,6 +156,8 @@ Further reading
 
 - :ref:`t3coreapi:authentication-advanced-options` section of the TYPO3 Core Reference.
 
+- Composer package version: `undkonsorten/typo3-auto-login <https://packagist.org/packages/undkonsorten/typo3-auto-login>`_
+
 Checked for TYPO3 Versions
 --------------------------
 
@@ -167,3 +169,10 @@ Update 26.07.2018
 
 Thanks to `Tim Schreiner <https://twitter.com/Codemonkey1988>`_ the condition for CLI
 requests was added which will prevent the code from execution in CLI context.
+
+Update 07.09.2018
+-----------------
+
+Thanks to Felix Althaus from `undkonsorten <https://www.undkonsorten.com/>`_ these
+solution is available as a composer package `undkonsorten/typo3-auto-login
+<https://packagist.org/packages/undkonsorten/typo3-auto-login>`_.
