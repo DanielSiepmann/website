@@ -1,0 +1,126 @@
+.. post:: Nov 05, 2018
+   :tags: typo3, mbox
+   :excerpt: 2
+
+How to use mbox with TYPO3 CMS
+==============================
+
+From time to time you need to test some email within your TYPO3 installation. Whether
+it might be that you are a developer sending some mail via a CommandController or
+Plugin, or you are an integrator configuring EXT:powermail or EXT:form to deliver
+some mail.
+
+In all cases you need to make sure this mail is not send to external addresses like
+your customer during development and testing. Also you need to be able to check the
+content of the mail. In this blog post you will learn what mbox is and how to use it.
+
+What's mbox?
+------------
+
+Accordingly to Wikipedia:
+
+   Mbox is a generic term for a family of related file formats used for holding
+   collections of email messages, […]
+
+   All messages in an mbox mailbox are concatenated and stored as plain text in a
+   single file. […]
+
+   […] the format used for the storage of email has never been formally defined
+   through the RFC standardization mechanism […] In 2005 finally, the
+   application/mbox media type was standardized as `RFC 4155`_, and hints that mbox
+   stores mailbox messages in their original Internet Message (`RFC 2822`_) format, […]
+
+   — https://en.wikipedia.org/wiki/Mbox
+
+So mbox does not introduce any dependency at all, it's just a plain text file in your
+filesystem. Stored mail can be checked with any editor you feel comfortable with.
+Beside a plain editor, thanks due the RFC existing Mail clients are able to read the
+stored mails. This way it's possible to open mails with an existing desktop GUI for
+inspection.
+
+Setup TYPO3
+-----------
+
+TYPO3 provides an `API to deliver emails`_. It's a small wrapper around the `Swift
+Mailer`_ library. Every email send through this API is delivered accordingly to the
+configuration of TYPO3. This makes it possible to send all mails via an SMTP or some
+other mail system. But it's also possible to use mbox as an alternative.
+
+To use mbox as mail delivery within TYPO3, the following two options have to be set,
+e.g. within :file:`AdditionalConfiguration.php`::
+
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport'] = 'mbox';
+    $GLOBALS['TYPO3_CONF_VARS']['MAIL']['transport_mbox_file'] = '/path/to/mbox/file';
+
+Within :file:`typo3/sysext/core/Configuration/DefaultConfigurationDescription.yaml`
+the option ``transport_mbox_file`` is documented:
+
+   The file where to write the mails into. This file will be conforming the mbox
+   format described in `RFC 4155`_. It is a simple text file with a concatenation of all
+   mails. Path must be absolute.
+
+Once the options are configured, you could use the "Environment" backend module to
+"Test Mail Setup", which was located inside the Install Tool prior CMS v9. The Mail
+should be send and the file should be created by TYPO3 containing the example mail.
+
+Setup E-Mail client
+-------------------
+
+Not every client works with mbox files:
+
+For command line there is the "mail" utility, e.g. within the `mailutils debian package`_ or on macOS.
+   Call ``mail /path/to/mbox/file`` to open all available mails.
+
+Also on command line available is the mail client `mutt`_ and `neomutt`_.
+   Call the program with path to the mbox file.
+
+For desktop clients, `Thunderbird`_ will do the job.
+   Create a symlink to the mbox file within the Thunderbird profile. E.g. under
+   Ubuntu 18.04 this can be done by calling:
+
+   .. code-block:: bash
+
+      ln -s "/path/to/mbox/file" "/home/<username>/.thunderbird/<profileFolder>/Mail/Local Folders"
+
+   An concrete example:
+
+   .. code-block:: bash
+
+      ln -s ~/Projects/mbox/typo3-example.mbox "/home/daniels/.thunderbird/j30pjbfz.default/Mail/Local Folders"
+
+   After the link was created, restart Thunderbird and you should see the mbox file
+   in the bottom left of available mail accounts inside "Local Folders".
+
+There might be further clients available I'm not aware of, just contact me and I'll
+add them.
+
+Further thoughts
+----------------
+
+Since mbox is just plain text one could easily integrate this for functional testing
+within a test suite, without the need to run any other software.
+
+Also as the file can be opened with desktop mail clients, Frontend developers are
+able to "real world" test the output and styling. Contrary to solutions like
+`MailHog`_ or `MailCatcher`_ the rendering happens inside the client and not a
+browser.
+
+Further reading
+---------------
+
+- TYPO3 documentation about emails:
+  https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Mail/Index.html
+
+- Reading an mbox file with Thunderbird - Berkeley Lab Commons:
+  https://commons.lbl.gov/display/~jwelcher@lbl.gov/Reading+an+mbox+file+with+Thunderbird
+
+.. _Swift Mailer: https://packagist.org/packages/swiftmailer/swiftmailer
+.. _RFC 4155: https://tools.ietf.org/html/rfc4155
+.. _RFC 2822: https://tools.ietf.org/html/rfc2822
+.. _mailutils debian package: https://packages.debian.org/stretch/mailutils
+.. _mutt: http://www.mutt.org/
+.. _neomutt: https://neomutt.org/
+.. _thunderbird: https://www.thunderbird.net/
+.. _MailHog: https://github.com/mailhog/MailHog
+.. _MailCatcher: https://mailcatcher.me/
+.. _API to deliver emails: https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Mail/Index.html
