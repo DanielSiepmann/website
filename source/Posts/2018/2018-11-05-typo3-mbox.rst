@@ -1,5 +1,5 @@
 .. post:: Nov 05, 2018
-   :tags: typo3, mbox
+   :tags: typo3, mbox, testing
    :excerpt: 2
 
 How to use mbox with TYPO3 CMS
@@ -32,8 +32,8 @@ Accordingly to Wikipedia:
 
    — https://en.wikipedia.org/wiki/Mbox
 
-So mbox does not introduce any dependency at all, it's just a plain text file in your
-filesystem. Stored mail can be checked with any editor you feel comfortable with.
+So mbox does not introduce any dependency at all, it's just a plain text file inside
+the filesystem. Stored mail can be checked with any editor one feels comfortable with.
 Beside a plain editor, thanks due the RFC existing Mail clients are able to read the
 stored mails. This way it's possible to open mails with an existing desktop GUI for
 inspection.
@@ -59,7 +59,7 @@ the option ``transport_mbox_file`` is documented:
    format described in `RFC 4155`_. It is a simple text file with a concatenation of all
    mails. Path must be absolute.
 
-Once the options are configured, you could use the "Environment" backend module to
+Once the options are configured, one could use the "Environment" backend module to
 "Test Mail Setup", which was located inside the Install Tool prior CMS v9. The Mail
 should be send and the file should be created by TYPO3 containing the example mail.
 
@@ -88,8 +88,22 @@ For desktop clients, `Thunderbird`_ will do the job.
 
       ln -s ~/Projects/mbox/typo3-example.mbox "/home/daniels/.thunderbird/j30pjbfz.default/Mail/Local Folders"
 
-   After the link was created, restart Thunderbird and you should see the mbox file
+   After the link was created, restart Thunderbird and one should see the mbox file
    in the bottom left of available mail accounts inside "Local Folders".
+
+   Some further notes regarding mbox within Thunderbid:
+
+   #. The local folders are not synced. Once a mail is send, one needs to refresh
+      them. This can be achieved by right click on the mbox file within Thunderbird.
+      Select "Properties" and click "Repair Folder". This will refresh the content
+      within Thunderbird.
+
+   #. Thunderbird will not update the mbox file. E.g. if mails are deleted within
+      Thunderbird, this will not be reflected within the file. So one might truncate
+      the file content from time to time.
+
+   I didn't take a deeper look at this, but it looks like Thunderbird uses an
+   internal database beside the mbox for indexing, leading to the above workarounds.
 
 There might be further clients available I'm not aware of, just contact me and I'll
 add them.
@@ -114,6 +128,12 @@ Further reading
 - Reading an mbox file with Thunderbird - Berkeley Lab Commons:
   https://commons.lbl.gov/display/~jwelcher@lbl.gov/Reading+an+mbox+file+with+Thunderbird
 
+Updates
+-------
+
+Added information about refreshing Thunderbird and clearing contents of mbox. Thanks
+to `@garbast`_ for the hint to add these information.
+
 .. _Swift Mailer: https://packagist.org/packages/swiftmailer/swiftmailer
 .. _RFC 4155: https://tools.ietf.org/html/rfc4155
 .. _RFC 2822: https://tools.ietf.org/html/rfc2822
@@ -124,3 +144,4 @@ Further reading
 .. _MailHog: https://github.com/mailhog/MailHog
 .. _MailCatcher: https://mailcatcher.me/
 .. _API to deliver emails: https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Mail/Index.html
+.. _@garbast: https://twitter.com/garbast
