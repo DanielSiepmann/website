@@ -12,7 +12,7 @@ SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
 DEPLOY_PATH   = htdocs/daniel-siepmann.de
-DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
+# DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
 
 COMPASS_CONFIG_PATH = source/_compass/
 
@@ -49,12 +49,13 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml: clean css
+livehtml: clean
 	# Ignore some folders and define port
 	sphinx-autobuild -H 0.0.0.0 -b html -i '*.sw[pmnox]' -i '*.dotfiles/*' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html
 
 .PHONY: html
-html: clean css
+# html: clean css
+html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
@@ -93,5 +94,5 @@ deploy: clean css html optimize
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
 
 .PHONY: deploy-light
-deploy-light: clean css html
+deploy-light: html
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
