@@ -42,7 +42,7 @@ namespace Codappix\CdxAutoLogin {
 
     if ((TYPO3_REQUESTTYPE & TYPO3_REQUESTTYPE_CLI) === 0) {
         ExtensionManagementUtility::addService(
-            'sv',
+            'sitepackage',
             'auth',
             AutoAuthenticationTypo3Service::class,
             [
