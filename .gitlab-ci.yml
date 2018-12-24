@@ -1,0 +1,45 @@
+stages:
+  - build
+  - render
+  - deploy
+
+render:website:
+  image: 'registry.gitlab.com/danielsiepmann/website-sphinx:latest'
+  stage: render
+  script:
+    - make css
+    - make html
+  artifacts:
+    paths:
+      - build/html
+
+deploy:staging: &DEPLOY
+  image: 'alpine:3.5'
+  stage: deploy
+  before_script:
+    - apk add --no-cache openssh-client rsync
+    # SSH deploy key
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" > /tmp/private_key
+    - chmod go-rwx /tmp/private_key; chmod u-x /tmp/private_key
+    - ssh-add /tmp/private_key
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+  script:
+    - rsync -avz --delete ${CI_PROJECT_DIR}/build/html/* ${DEPLOY_USER}@${DEPLOY_SERVER}:/var/www/daniel-siepmann.de/sub/new/htdocs
+  environment:
+    name: staging
+    url: http://new.daniel-siepmann.de/
+  except:
+    - master
+
+deploy:production:
+  <<: *DEPLOY
+  environment:
+    name: production
+    url: https://daniel-siepmann.de/
+  script:
+    - rsync -avz --delete ${CI_PROJECT_DIR}/build/html/* ${DEPLOY_USER}@${DEPLOY_SERVER}:/var/www/daniel-siepmann.de/htdocs
+  except: []
+  only:
+    - master
