@@ -11,8 +11,8 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) source
 SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
-DEPLOY_PATH   = htdocs/daniel-siepmann.de
-# DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
+# DEPLOY_PATH   = htdocs/daniel-siepmann.de
+DEPLOY_PATH   = htdocs/new.daniel-siepmann.de
 
 COMPASS_CONFIG_PATH = source/_compass/
 
@@ -115,10 +115,9 @@ css:
 		-c "cd /srv/project/$(COMPASS_CONFIG_PATH) && compass compile --force"
 
 .PHONY: deploy
-deploy: clean css html optimize
-	# docker push registry.gitlab.com/danielsiepmann/website-sphinx
-	# rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
+deploy: css html optimize
+	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
 
 .PHONY: deploy-light
 deploy-light: html
-	# rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
+	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)

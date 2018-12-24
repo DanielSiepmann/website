@@ -5,11 +5,10 @@
 TYPO3 Camp Rhein Ruhr 2018 - Recap
 ==================================
 
-This is my personal recap of this years TYPO3 Camp Rhein. Especially as this is a
-German speaking camp.
-
-I'll publish the recap in English, so everyone not capable of understanding the
-Youtube videos or slides, has a chance to at least know what happened.
+This is my personal recap of this years TYPO3 Camp Rhein Ruhr. Especially as this is
+a German speaking camp. I'll publish the recap in English, so everyone not capable of
+understanding the Youtube videos or slides, has a chance to at least know what
+happened.
 
 Personal pre event two days before
 ----------------------------------
