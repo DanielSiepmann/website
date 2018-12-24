@@ -184,6 +184,7 @@ div.sphinxsidebar {
 }
 
 // Sphinx is adding p tags within ul li, we remove spaces
+ol.arabic p,
 ol.simple p,
 ul.simple p {
     display: inline;
