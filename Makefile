@@ -58,7 +58,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 .PHONY: livehtml
-livehtml:
+livehtml: css
 	rm -rf $(BUILDDIR)/*
 	# Ignore some folders and define port
 	docker run --rm \
@@ -70,7 +70,7 @@ livehtml:
 		-c "cd /srv/project && sphinx-autobuild -H 0.0.0.0 -b html -i '*.sw[pmnox]' -i '*.dotfiles/*' -i '*/_compass/*' -i '.git*' -i '*~' -p $(SPHINX_LIVE_PORT) $(ALLSPHINXOPTS) $(BUILDDIR)/html"
 
 .PHONY: html
-html:
+html: css
 	docker run --rm \
 		-v $(CURRENT_DIR):/srv/project \
 		--entrypoint bash \
@@ -115,7 +115,7 @@ css:
 		-c "cd /srv/project/$(COMPASS_CONFIG_PATH) && compass compile --force"
 
 .PHONY: deploy
-deploy: css html optimize
+deploy: html optimize
 	rsync --delete -vaz $(BUILDDIR)/html/* $(DEPLOY_HOST):$(DEPLOY_PATH)
 
 .PHONY: deploy-light
