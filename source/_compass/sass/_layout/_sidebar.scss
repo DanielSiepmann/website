@@ -1,3 +1,21 @@
+.page-posts .sphinxsidebar {
+    ul {
+        ul {
+            margin-left: 0;
+
+            // Display sub headings
+            & > li > a {
+                display: inline;
+            }
+        }
+
+        // Hide top level link, the post itself.
+        & > li > a {
+            display: none;
+        }
+    }
+}
+
 div.sphinxsidebar {
 
     background: white;
@@ -21,13 +39,6 @@ div.sphinxsidebar {
 
         ul {
             list-style: none;
-        }
-
-        li {
-            a {
-                display: inline;
-                padding: 10px 5px 0px 0px;
-            }
         }
     }
 }
