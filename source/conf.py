@@ -15,7 +15,6 @@
 import sys
 import os
 import datetime
-# sys.path.insert(0, os.path.abspath('_extensions/youtube'))
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -35,7 +34,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.extlinks',
     'ablog',
-    # 'youtube',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -384,4 +382,5 @@ intersphinx_mapping = {
 extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
     'twitteruser': ('https://twitter.com/%s', 'Twitter user '),
+    'youtubevideo': ('https://www.youtube.com/watch?v=%s', 'Youtube Video '),
 }

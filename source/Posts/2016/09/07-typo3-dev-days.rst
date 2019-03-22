@@ -58,7 +58,7 @@ That will bring some benefits like:
 
 The full talk is available on Youtube:
 
-.. youtube:: q2rCRhtEHZ0
+:youtubevideo:`T3DD16 Temporal Modelling with Mathias Verraes - TYPO3 Developer Days 2016 Nuremberg <q2rCRhtEHZ0>`
 
 Extremely defensive PHP
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -80,7 +80,7 @@ It's basically just about good design and what you *can do* with PHP, but *shoul
 
 The full talk is available on Youtube:
 
-.. youtube:: ML-lqk_Rbew
+:youtubevideo:`T3DD16 Extremely defensive PHP with Marco Pivetta - TYPO3 Developer Days 2016 Nuremberg <ML-lqk_Rbew>`
 
 Day 2
 -----
@@ -101,7 +101,7 @@ It was also an introduction how to use composer with TYPO3.
 
 The full talk is available on Youtube:
 
-.. youtube:: yJRla3UCb-s
+:youtubevideo:`T3DD16 Composer Composer Composer with Helmut Hummel - TYPO3 Developer Days 2016 Nuremberg <yJRla3UCb-s>`
 
 A practical guide to vanilla web components
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -121,7 +121,7 @@ components: They are reusable through all projects.
 
 The full talk is available on Youtube:
 
-.. youtube:: uX06JvXmDjk
+:youtubevideo:`T3DD16 Practical guide to vanilla web comp. with Leon Revill - TYPO3 Developer Days 2016 Nuremberg<Paste> <uX06JvXmDjk>`
 
 Automated Acceptance Testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -168,7 +168,7 @@ already had some experience with React PHP I didn't participate.
 
 The mean reason for React PHP is non blocking I/O, e.g. web requests through APIs or file system.
 
-.. youtube:: giCIozOefy0
+:youtubevideo:`T3DD16 Pushing the limits of PHP with React PHP with Christian Lück - TYPO3 Developer Days 2016 <giCIozOefy0>`
 
 Social Event
 ^^^^^^^^^^^^
