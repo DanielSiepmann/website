@@ -277,12 +277,12 @@ Further reading
 
 .. _PHP_CodeSniffer: https://github.com/squizlabs/PHP_CodeSniffer
 .. _Magento PHP_CodeSniffer Coding Standard: https://github.com/magento-ecg/coding-standard
-.. _compatibility of the code with PHP versions: https://github.com/wimg/PHPCompatibility
+.. _compatibility of the code with PHP versions: https://github.com/PHPCompatibility/PHPCompatibility
 .. _PHPStorm: https://confluence.jetbrains.com/display/PhpStorm/PHP+Code+Sniffer+in+PhpStorm
 .. _Vim: https://github.com/vim-syntastic/syntastic
 .. _Sublime Text: https://github.com/squizlabs/sublime-PHP_CodeSniffer
 .. _Coding Standard Tutorial: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Coding-Standard-Tutorial
-.. _Annotated ruleset.xml: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml
+.. _Annotated ruleset.xml: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-Ruleset
 .. _PSR-2: https://www.php-fig.org/psr/psr-2/
 .. _psysh: https://psysh.org/
 .. _DanielSiepmann/automated-typo3-update: https://github.com/DanielSiepmann/automated-typo3-update

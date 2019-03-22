@@ -148,7 +148,7 @@ one has to provide a wrapper around the `msgpack`_ to allow communication with N
 - `neotags`_ the Nvim plugin written in Python3, covered with Unittests.
 
 .. _Vimfest: https://vimfest.org/
-.. _Python Plugin API: https://github.com/neovim/python-client
+.. _Python Plugin API: https://github.com/neovim/pynvim
 .. _msgpack: https://msgpack.org/
 .. _neotags: https://gitlab.com/DanielSiepmann/neotags
-.. _Ruby Plugin API: https://github.com/alexgenco/neovim-ruby
+.. _Ruby Plugin API: https://github.com/neovim/neovim-ruby

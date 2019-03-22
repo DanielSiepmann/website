@@ -158,9 +158,9 @@ Further reading
 
 - Blog post :ref:`integrate_typoscript_linter_into_vim`.
 
-.. _Gitlab-CI: https://about.gitlab.com/features/gitlab-ci-cd/
+.. _Gitlab-CI: https://about.gitlab.com/product/continuous-integration/
 .. _Gitlab: https://about.gitlab.com/
 .. _Typoscript linter: https://github.com/martin-helmich/typo3-typoscript-lint
 .. _composer: https://getcomposer.org/
-.. _yaml: http://yaml.org/
+.. _yaml: https://yaml.org/
 .. _yamllint: https://yamllint.readthedocs.io/en/latest/

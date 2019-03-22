@@ -406,7 +406,7 @@ Questions or issues
 -------------------
 
 Make sure to check the help for `Read the docs`_, `Github help <https://help.github.com/>`_, `Sphinx
-<http://www.sphinx-doc.org/en/stable/>`_ and `PlantUml <http://plantuml.com/>`_.  If you still have questions
+<https://www.sphinx-doc.org/en/stable/>`_ and `PlantUml <http://plantuml.com/>`_.  If you still have questions
 or issues just leave a comment.
 
 Further reading
@@ -418,7 +418,7 @@ links can be startpoints to get further:
 * `Sphinx autobuild <https://pypi.org/project/sphinx-autobuild/0.2.3/>`_ will detect changes and
   autogenerate documentation. Also comes with server and autoreload.
 
-* `Sphinx intersphinx <http://www.sphinx-doc.org/en/stable/ext/intersphinx.html>`_ allow linking
+* `Sphinx intersphinx <https://www.sphinx-doc.org/en/stable/ext/intersphinx.html>`_ allow linking
   between sphinx projects without need to know urls.
 
 * Sphinx `builtin Themes`_
@@ -434,10 +434,10 @@ Also the following links as a collection:
 * `Plantuml`_
 
 .. _Github: https://github.com/
-.. _Installing Sphinx: http://www.sphinx-doc.org/en/stable/install.html
+.. _Installing Sphinx: https://www.sphinx-doc.org/en/stable/install.html
 .. _Plantuml: http://plantuml.com/
 .. _Read the Docs: https://readthedocs.org/
-.. _Sphinx Documentation: http://www.sphinx-doc.org/en/stable/contents.html
-.. _Sphinx: http://www.sphinx-doc.org/en/stable/
-.. _builtin Themes: http://www.sphinx-doc.org/en/stable/theming.html#builtin-themes
+.. _Sphinx Documentation: https://www.sphinx-doc.org/en/stable/contents.html
+.. _Sphinx: https://www.sphinx-doc.org/en/stable/
+.. _builtin Themes: https://www.sphinx-doc.org/en/stable/theming.html#builtin-themes
 .. _register at Read the docs: https://readthedocs.org/accounts/signup/

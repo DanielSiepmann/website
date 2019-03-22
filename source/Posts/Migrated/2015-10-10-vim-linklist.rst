@@ -56,7 +56,7 @@ you have to take a look whether they are great or not. And of course I can't des
 Last but not least, practice and adjust, google if you need and read blog posts like the following.
 
 -  `How I boosted my
-   Vim <http://nvie.com/posts/how-i-boosted-my-vim/>`__
+   Vim <https://nvie.com/posts/how-i-boosted-my-vim/>`__
 -  `Using Vim as a PHP
    IDE <http://blog.joncairns.com/2012/05/using-vim-as-a-php-ide/>`__
 -  `How to boost your Vim

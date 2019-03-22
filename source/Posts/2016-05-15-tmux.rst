@@ -114,8 +114,8 @@ Attach to remote tmux session::
 Some further reading:
 
 * `Official website <https://tmux.github.io/>`_
-* `Blog Post "A tmux Crash Course" by "thoughtbot" <https://robots.thoughtbot.com/a-tmux-crash-course>`_
-* `Section "The Tao of tmux" of "tmuxp" documentation <http://tmuxp.readthedocs.io/en/latest/about_tmux.html>`_
+* `Blog Post "A tmux Crash Course" by "thoughtbot" <https://thoughtbot.com/blog/a-tmux-crash-course>`_
+* `Section "The Tao of tmux" of "tmuxp" documentation <https://tmuxp.readthedocs.io/en/latest/about_tmux.html>`_
 * `Blog Post "A tmux Primer" by "danielmiessler.com" <https://danielmiessler.com/study/tmux/>`_
 
 Some options to set inside your :file:`~/.tmux.conf`::

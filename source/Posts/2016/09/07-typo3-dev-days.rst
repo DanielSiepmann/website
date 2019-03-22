@@ -121,7 +121,7 @@ components: They are reusable through all projects.
 
 The full talk is available on Youtube:
 
-:youtubevideo:`T3DD16 Practical guide to vanilla web comp. with Leon Revill - TYPO3 Developer Days 2016 Nuremberg<Paste> <uX06JvXmDjk>`
+:youtubevideo:`T3DD16 Practical guide to vanilla web comp. with Leon Revill - TYPO3 Developer Days 2016 Nuremberg <uX06JvXmDjk>`
 
 Automated Acceptance Testing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -203,7 +203,7 @@ Also you can take a look at the `official website`_.
 .. _Automated Acceptance Testing: https://t3dd16.typo3.org/schedule/automated-acceptance-testing
 .. _Codeception: https://codeception.com/
 .. _official website: https://t3dd16.typo3.org/
-.. _extension styleguide: https://typo3.org/extensions/repository/view/styleguide
+.. _extension styleguide: https://extensions.typo3.org/extension/styleguide
 .. _Harry Glatz: https://twitter.com/randomresult
 .. _Patrick Broens: https://twitter.com/aurora_borealis
 .. _Martin Bless: https://twitter.com/marantern

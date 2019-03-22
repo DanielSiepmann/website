@@ -32,7 +32,7 @@ the website in your browser, starting the JavaScript console and load jQuery. Th
 writing the "query" to fetch the necessary information.
 
 Let's stick to the above example by using Google Chrome. Head over to `TYPO3 7.0 Changelog
-<https://docs.typo3.org/typo3cms/extensions/core/7.6/Changelog/7.0/>`_, jQuery is already loaded on
+<https://docs.typo3.org/typo3cms/extensions/core/Changelog/7.0/>`_, jQuery is already loaded on
 this site, `open the console
 <https://developers.google.com/web/tools/chrome-devtools/debug/console/console-ui?hl=en#opening-the-console>`_
 and execute the following JavaScript inside the console::

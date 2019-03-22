@@ -209,7 +209,7 @@ Also interesting
 
 * Blog post: :ref:`post-versioning-revert-old-files`
 
-.. _Vimfest: http://vimfest.org/
+.. _Vimfest: https://vimfest.org/
 .. _Git: https://git-scm.com/
 .. _Hg: https://www.mercurial-scm.org/
 .. _SVN: https://subversion.apache.org/
@@ -217,7 +217,7 @@ Also interesting
 .. _Bitbucket: https://bitbucket.org/
 .. _Git Download: https://git-scm.com/download
 .. _Jekyll: https://jekyllrb.com/
-.. _Sphinx: http://www.sphinx-doc.org/en/stable/
+.. _Sphinx: https://www.sphinx-doc.org/en/stable/
 .. _Bamboo: https://www.atlassian.com/software/bamboo
 .. _awsome lists: https://github.com/sindresorhus/awesome
 .. _fugitive: https://github.com/tpope/vim-fugitive

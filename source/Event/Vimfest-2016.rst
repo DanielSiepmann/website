@@ -83,7 +83,7 @@ Further reading
 .. _vim gutentags: https://github.com/ludovicchabant/vim-gutentags
 .. _Codemonitoring: http://codemonitoring.readthedocs.io/en/feature-first-import-mechanism/
 .. _Taskwarrior: http://taskwarrior.org/
-.. _Bram Moolenaar: http://moolenaar.net/
+.. _Bram Moolenaar: https://moolenaar.net/
 .. _Justin M. Keyes: https://twitter.com/justinmk
 .. _Sven Guckes: http://www.guckes.net/
 .. _Tim Quellmalz: https://github.com/tqmz
