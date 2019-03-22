@@ -160,6 +160,14 @@ table.highlighttable {
     overflow: scroll;
     width: 100%;
     display: block;
+
+    @media screen and (max-width: 875px) {
+        margin: 0;
+
+        pre {
+            margin: 0;
+        }
+    }
 }
 
 // This selector is necessary, to overwrite original weight.
