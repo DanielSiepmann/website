@@ -8,16 +8,18 @@ ENV RUBY_BUILD_PACKAGES curl-dev libffi-dev ruby-dev build-base
 ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler
 ENV TZ=Europe/Berlin
 
-# Install dependencies
+# Install system dependencies
 RUN apk update && apk upgrade \
     && apk add bash \
     && apk add pngquant optipng \
     && apk add --update tzdata \
     && apk add python py-pip \
+    && pip install --upgrade pip \
     && apk add $RUBY_BUILD_PACKAGES \
     && apk add $RUBY_PACKAGES \
     && rm -rf /var/cache/apk/*
 
+# Install python and ruby dependencies
 COPY . /docker
 RUN cd /docker \
     && pip install --upgrade -r requirements.txt \
