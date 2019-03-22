@@ -80,7 +80,6 @@ necessary lines and context here:
    :linenos:
    :dedent: 4
    :lines: 165-185
-   :append: // ...
 
 If you search for the string "acceptance" in this file, you will first find line 2
 from above example. It's like PHPDoc showing us that the installation procedure for
