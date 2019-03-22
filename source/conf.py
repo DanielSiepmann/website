@@ -372,7 +372,7 @@ primary_domain = None
 
 intersphinx_mapping = {
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
-    't3api': ('https://typo3.org/api/typo3cms/', None),
+    't3api': ('https://api.typo3.org/typo3cms/current/html/', None),
     't3tsref': ('https://docs.typo3.org/typo3cms/TyposcriptReference/', None),
     't3form': ('https://docs.typo3.org/typo3cms/drafts/code.tritum.de/TYPO3.CMS/Form_Documentation/', None),
     't3contrib': ('https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/', None),
