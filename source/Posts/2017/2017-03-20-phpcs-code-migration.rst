@@ -90,8 +90,8 @@ sniffs from other projects, here are some examples:
 
 * `Drupal <https://www.drupal.org/node/1419980>`_.
 
-* `TYPO3 Standard <https://github.com/typo3-ci/TYPO3CMS>`_ `TYPO3 Sniffs
-  <https://github.com/Konafets/TYPO3SniffPool >`_
+* `TYPO3 Standard <https://github.com/typo3-ci/TYPO3CMS>`_
+  `TYPO3 Sniffs <https://github.com/Konafets/TYPO3SniffPool>`_
 
 Chances are that your cms / framework already provides a basic standard. At least `PSR-2`_ which is
 already included in PHP_CodeSniffer installation is available.
