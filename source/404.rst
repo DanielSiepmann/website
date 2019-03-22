@@ -1,0 +1,17 @@
+404 Not Found
+=============
+
+The requested resource could not be found.
+
+Either the requested resource is no longer available, or it was never there.
+
+You might go to the :ref:`startpage <posts>` and browser for a resource, or use the
+`search </search.html>`_ to search for the resource.
+
+.. Include Pages into sidebar but not here.
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+
+   Website/Manifesto
+   Website/Imprint

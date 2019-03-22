@@ -206,6 +206,7 @@ html_extra_path = [
 
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
+    '404': ['about.html', 'navigation.html'],
     'index': [
         'about.html',
         'navigation.html',

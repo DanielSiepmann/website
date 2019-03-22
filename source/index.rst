@@ -1,3 +1,5 @@
+.. _posts:
+
 Posts
 =====
 .. postlist::
