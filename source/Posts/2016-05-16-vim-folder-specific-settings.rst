@@ -87,9 +87,18 @@ are used to group options, e.g. for mappings or plugins. The folder structure lo
 
 And the files are included from within my :file:`~/.vimrc`:
 
-.. literalinclude:: /.dotfiles/.vim/init.vim
-   :language: vim
-   :lines: 107-115
+.. code-block:: vim
+
+    runtime! configs/*.vim
+    " Load autocommands
+    runtime! configs/autocommands/*.vim
+    " Load plugin configurations
+    runtime! configs/plugins/*.vim
+    " Load path specific configuration to override everything else
+    runtime! configs/folderspecific/*.vim
+    " Load at last, as this are modes like "day" or "present" which will
+    " overwrite all existing configuration
+    runtime! configs/modes/*.vim
 
 This way I can place further configuration in the files and don't mess up my main :file:`~/.vimrc`.
 The :file:`configs/folderspecific/*.vim` contains the configurations for specific folders. As
@@ -101,8 +110,16 @@ Example of specific configuration
 
 The setup for sphinx looks like :file:`~/.vim/configs/folderspecific/sphinx.vim`:
 
-.. literalinclude:: /.dotfiles/.vim/configs/folderspecific/sphinx.vim
-   :language: vim
+.. code-block:: vim
+
+   " Special configuration for sphinx documentations
+   augroup sphinxFolder
+      autocmd!
+      " Ignore build folder for grepping
+      autocmd BufRead,BufNewFile **/Projects/own/website/*,**/sphinx/*,**/Documentation/*,**/company/trainings/** execute ':let g:ctrlp_user_command = g:dsiepmann_user_command . " --ignore \"build\""'
+      autocmd BufRead,BufNewFile **/Projects/own/website/*,**/sphinx/*,**/Documentation/*,**/company/trainings/** execute ':set path+=./documentation/'
+      autocmd BufRead,BufNewFile **/Projects/own/website/*,**/sphinx/*,**/Documentation/*,**/company/trainings/** execute ':set path+=./Documentation/'
+   augroup END
 
 This allows me to exclude the :file:`build` folder from *ctrlp* Plugin search. But just for the
 matching folders.
