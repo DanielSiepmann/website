@@ -71,3 +71,13 @@ div.bodywrapper {
 #further-reading li {
     margin: 1em 0;
 }
+
+#updates {
+    blockquote {
+        padding-left: 0;
+    }
+
+    .admonition {
+        background-color: #EEE;
+    }
+}
