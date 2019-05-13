@@ -7,7 +7,7 @@ PAPER         =
 BUILDDIR      = build
 
 # Internal variables.
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(SPHINXOPTS) source
+ALLSPHINXOPTS   = --color -j 7 -d $(BUILDDIR)/doctrees $(SPHINXOPTS) source
 SPHINX_LIVE_PORT = 8001
 
 DEPLOY_HOST   = daniel-siepmann.de
