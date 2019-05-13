@@ -1,18 +1,18 @@
-.. post:: Feb 14, 2019
-   :tags: windows, ssh, git, ddev
+.. post:: May 13, 2019
+   :tags: windows, ssh, ddev
    :excerpt: 2
 
-Setting up SSH on Windows 10, using PuTTY, Tower and ddev
-=========================================================
+SSH on Windows 10, with PuTTY, Tower and ddev
+=============================================
 
 One of our web agency customers has a Windows only setup. So every developer is using
 Windows, nothing else. To setup a working environment, including git push and pull,
-and deployments via php `Deployer`__, I needed to setup SSH for the developers.
+and deployments via php `Deployer`_, I needed to setup SSH for the developers.
 
 As I didn't find any single source that guided me through all the steps, that were
 necessary in our case, this Blog post will try to be this source. It will describe
-the steps I took to setup SSH under Windows 10, together with Git client `Tower`__
-and drud `ddev`__ as docker development environment. Last one is involved due to git
+the steps I took to setup SSH under Windows 10, together with Git client `Tower`_
+and drud `ddev`_ as docker development environment. Last one is involved due to git
 clone, e.g. via composer, and for deployments, via Deployer.
 
 .. danger::
@@ -72,7 +72,7 @@ Ddev
    https://github.com/drud/ddev
 
    Wrapper around Docker Compose to make web development easier. Especially for
-   `TYPO3`__.
+   `TYPO3`_.
 
 Generate Keys
 -------------
@@ -134,7 +134,7 @@ Further reading
 
 * https://ddev.readthedocs.io/en/stable/users/cli-usage/#ssh-into-containers
 
-__ Tower: https://www.git-tower.com/mac
-__ TYPO3: https://typo3.org.com/
-__ Deployer: https://deployer.org/
-__ ddev: https://ddev.readthedocs.io/
+.. _Tower: https://www.git-tower.com/mac
+.. _TYPO3: https://typo3.org.com/
+.. _Deployer: https://deployer.org/
+.. _ddev: https://ddev.readthedocs.io/
