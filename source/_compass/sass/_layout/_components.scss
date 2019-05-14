@@ -183,6 +183,14 @@ div.sphinxsidebar {
     }
 }
 
+// Sphinx is adding p tags within ul li, we remove spaces
+ol.simple p,
+ul.simple p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
 // Classes for rst
 .center {
     text-align: center;

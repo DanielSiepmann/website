@@ -5,20 +5,18 @@ div.document {
 }
 .postlist {
     li {
-        p.first {
+        p:first-of-type {
             padding-left: 0;
             a {
-                &:first-of-type {
-                    margin: 20px 0;
-                    padding: 0.25em 30px;
-                    padding-right: 1em;
-                    font-size: 160%;
-                    line-height: 1.45em;
-                    background: $headlineBackgroundColor;
-                    display: block;
-                    @media screen and (max-width: 875px) {
-                        padding: 0.25em 20px;
-                    }
+                margin: 20px 0;
+                padding: 0.25em 30px;
+                padding-right: 1em;
+                font-size: 160%;
+                line-height: 1.45em;
+                background: $headlineBackgroundColor;
+                display: block;
+                @media screen and (max-width: 875px) {
+                    padding: 0.25em 20px;
                 }
             }
             @media screen and (max-width: 875px) {

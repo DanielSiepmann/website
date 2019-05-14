@@ -26,3 +26,8 @@ RUN cd /docker \
     && gem install bundler --no-document \
     && bundle install \
     && rm -rf /docker
+
+# Install TypoScript syntax for pygments
+RUN destdir=$(dirname $(python3 -c "import pygments; print(pygments.__file__)"))/lexers \
+   && wget https://raw.githubusercontent.com/TYPO3-Documentation/Pygments-TypoScript-Lexer/v2.2.4/typoscript.py --quiet --output-document $destdir/typoscript.py \
+   && cd $destdir; python3 _mapping.py
