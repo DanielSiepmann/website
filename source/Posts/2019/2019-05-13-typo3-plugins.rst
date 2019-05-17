@@ -2,8 +2,11 @@
    :tags: typo3, extbase, typoscript
    :excerpt: 3
 
-TYPO3 plugins
-=============
+TYPO3 Plugins as Content Elements
+=================================
+
+E.g. to add a simplified and project-specific News Extension Content element for
+backend editors.
 
 You might think "I know what plugins, within TYPO3, are". Maybe that's true, maybe
 you still will learn something new.
@@ -17,7 +20,13 @@ nowadays. But it also works, partly, for pibase extensions. The basic idea dates
 to 2018, when I first started to work on this. We now make use of this concept within
 an actual project, so this covers not only abstract concepts, but real world examples.
 
-.. todo:: Explain the prerequisites (knowledge of the integrator/developer for this blog post.
+Target Audience
+---------------
+
+This Blog post requires some TYPO3 knowledge in order to understand everything. This
+post targets Integrators and developers, who already know how to write and use
+TypoScript, TSconfig, Fluid and TCA configuration. You should also know what
+:ref:`FlexForms <t3coreapi:t3ds>` are.
 
 What is a TYPO3 plugin?
 -----------------------
@@ -68,31 +77,37 @@ So extensions already provide plugins, why should one add further plugins to exi
 Example 1 EXT:solr + news
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo:: Explain the approach and reason / combination / usage more.
+Let's assume there is a TYPO3 installation with a search and news. The search is
+provided by EXT:solr, and news are implemented using the "Custom Page Type
+approach™", see (Blog Post: :ref:`everything-is-content` and TYPO3 Documentation
+:ref:`t3coreapi:page-types`). The news should be displayed by using EXT:solr, as
+there is no need for another extension, in this use case.
 
-Let's assume there is a TYPO3 installation with a search, provided by EXT:solr, and
-news, using the "Custom Page Type approach™", see (Blog Post:
-:ref:`everything-is-content` and TYPO3 Documentation :ref:`t3coreapi:page-types`).
-Everything is working, all news are searchable.
+A typical use case would be to display a list of recent news, e.g. the five recent
+news on startpage. Maybe also some pre filtered news should be displayed on sub
+pages, e.g. only news regarding new products or news regarding the company. All those
+use cases are solved by using EXT:solr.
 
-Now the customer want an index of all news within the "News" page. Maybe he also
-needs some pre filtered news on sub pages, e.g. only news regarding new products or
-news regarding the company.
-
-Of course one could now add TypoScript to these pages to configure EXT:solr to start
-in filter mode instead of search mode. Also filter can be added to only show news
+Of course one could now add TypoScript to pages to configure EXT:solr to start in
+filter mode instead of search mode. Also filter can be added to only show news
 records from these categories. This is not that flexible. The editor is not able to
 add new "News listings" to further pages, as TypoScript is involved.
 
-Instead the integrator can add a new plugin "news" within the "Sitepackage™" of the
-installation. This plugin duplicates the existing plugin, provided by EXT:solr.
-Instead of keeping the result action none cacheable, it can define that this action
-should be cacheable. Also a new plugin allows to add a different FlexForm to this
-plugin. These FlexForm can provide a drop down with possible categories, or allow an
-editor to define how many news should be displayed. Thanks to Extbase conventions,
-all options available within TypoScript ``settings`` section can be used within
-FlexForms. Due to a different plugin signature, the plugin can be configured
-differently via TypoScript.
+It would be better if the integrator can add a new plugin "news" within the
+"Sitepackage™" of the installation. This plugin duplicates the existing plugin,
+provided by EXT:solr.
+
+Benefits of this approach would be:
+
+* Instead of keeping the result action none cacheable, it can define that this action
+  should be cacheable.
+
+* Also a new plugin allows to add a different FlexForm to this plugin. These FlexForm
+  can provide a drop down with possible categories, or allow an editor to define how
+  many news should be displayed.  Thanks to Extbase conventions, all options
+  available within TypoScript ``settings`` section can be used within FlexForms. Due
+  to a different plugin signature, the plugin can be configured differently via
+  TypoScript.
 
 This new Plugin speeds up the delivery of the page, as it's fully cached. Also an
 editor can now add a "news" content element and select the specific category and
@@ -377,7 +392,8 @@ displayed.
          </sheets>
       </T3DataStructure>
 
-#. Configure PageTSconfig for content element to add it to the new content element wizard::
+#. Configure PageTSconfig for content element to add it to the new content element
+   wizard:
 
    .. code-block:: typoscript
 
@@ -455,6 +471,9 @@ Acknowledgements
 Acknowledgements to `pietzpluswild GmbH <https://www.ppw.de/>`_ and `KM2 >>
 netz:innovationen.gmbh <https://km2.de/>`_ who allowed me to dive into the topic and
 to implement a solution for their customers.
+
+Also thanks to :twitteruser:`Josef Glatz <jouschcom>` for proof reading and
+contributing to the Blog post. He also motivated me to finish this post.
 
 Checked for TYPO3 Versions
 --------------------------
