@@ -28,10 +28,11 @@ post targets Integrators and developers, who already know how to write and use
 TypoScript, TSconfig, Fluid and TCA configuration. You should also know what
 :ref:`FlexForms <t3coreapi:t3ds>` are.
 
-Also :ref:`t3fsc:adding-your-own-content-elements` as dependency. This post will
-provide a complete example, but will not explain every taken step in order to create
-the new content element. Instead we will focus on the Plugin becoming a regular
-content element.
+Also the officla TYPO3 documentation secion
+:ref:`t3fsc:adding-your-own-content-elements` is required in order to follow this
+Blog post. This post will provide a complete example, but will not explain every
+taken step in order to create the new content element. Instead we will focus on the
+Plugin becoming a regular content element.
 
 What is a TYPO3 plugin?
 -----------------------

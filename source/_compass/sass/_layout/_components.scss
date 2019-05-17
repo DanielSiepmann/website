@@ -155,16 +155,6 @@ table pre {
 }
 
 table.highlighttable {
-    margin-bottom: 25px;
-    td {
-        padding-right: 0;
-    }
-}
-
-td.code {
-    width: 100%;
-}
-table.highlighttable {
     overflow: auto;
     width: 100%;
     display: block;
