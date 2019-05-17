@@ -17,6 +17,8 @@ nowadays. But it also works, partly, for pibase extensions. The basic idea dates
 to 2018, when I first started to work on this. We now make use of this concept within
 an actual project, so this covers not only abstract concepts, but real world examples.
 
+.. todo:: Explain the prerequisites (knowledge of the integrator/developer for this blog post.
+
 What is a TYPO3 plugin?
 -----------------------
 
@@ -36,7 +38,7 @@ form. In the end, a plugin can be anything.
 
 Most extensions provide plugins out of the box. Most likely you will have a single
 plugin per extension. The extension author allows the editor to select further
-configuration options through the content element, via so called flexforms. E.g. the
+configuration options through the content element, via so called FlexForms. E.g. the
 editor can select the "mode", e.g. "list" or "detail" for something like news.
 
 Within TYPO3 Extbase, an plugin consists of the following:
@@ -47,15 +49,15 @@ Within TYPO3 Extbase, an plugin consists of the following:
 
 * TypoScript defining the rendering of the plugin
 
-* An combination of callable controller and actions
+* A combination of callable controller and actions
 
-* An combination of non cached callable controller and actions
+* A combination of non cached callable controller and actions
 
 * An identifier, so called "plugin signature"
 
-* An optional Flexform for further configuration via editors
+* An optional FlexForm for further configuration via editors
 
-* An optional Wizard entry for new content elements
+* An optional New Content Element Wizard entry for new content elements
 
 Why adding plugins for existing extensions?
 -------------------------------------------
@@ -85,11 +87,11 @@ add new "News listings" to further pages, as TypoScript is involved.
 Instead the integrator can add a new plugin "news" within the "Sitepackage™" of the
 installation. This plugin duplicates the existing plugin, provided by EXT:solr.
 Instead of keeping the result action none cacheable, it can define that this action
-should be cacheable. Also a new plugin allows to add a different Flexform to this
-plugin. These Flexform can provide a drop down with possible categories, or allow an
+should be cacheable. Also a new plugin allows to add a different FlexForm to this
+plugin. These FlexForm can provide a drop down with possible categories, or allow an
 editor to define how many news should be displayed. Thanks to Extbase conventions,
 all options available within TypoScript ``settings`` section can be used within
-Flexforms. Due to a different plugin signature, the plugin can be configured
+FlexForms. Due to a different plugin signature, the plugin can be configured
 differently via TypoScript.
 
 This new Plugin speeds up the delivery of the page, as it's fully cached. Also an
@@ -165,7 +167,7 @@ To add a new plugin, first of one API call is necessary. After this was done,
 the plugin is already available to the frontend. Next the content element can be
 created in the preferred way, which depends on the agency and developer.
 
-Afterwards the optional Flexform and TypoScript configuration can be added.
+Afterwards the optional FlexForm and TypoScript configuration can be added.
 
 For further information, take a look at :ref:`typo3-custom-plugin-real-world-example`.
 
@@ -259,11 +261,11 @@ displayed.
           );
       })();
 
-#. Optional, add and register flexform.
+#. Optional, add and register FlexForm.
 
    Registration is happening in TCA, see above example, line 27-35.
 
-   The flexform itself can be like the following
+   The FlexForm itself can be like the following
    :file:`Configuration/FlexForms/ContentElements/RecentNews.xml`.:
 
    .. code-block:: xml
@@ -375,7 +377,7 @@ displayed.
          </sheets>
       </T3DataStructure>
 
-#. Configure PageTSconfig for content element:
+#. Configure PageTSconfig for content element to add it to the new content element wizard::
 
    .. code-block:: typoscript
 
