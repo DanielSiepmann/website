@@ -1,19 +1,16 @@
-Installation
+About
+-----
+
+This repository provides all sources and related files for my website. The setup
+consists of compass for Frontend scss and Sphinx for rendering rst to a website.
+
+Contribution
 ------------
 
-If ``make`` is installed, just run ``make install`` to install all required dependencies.
+Create an issue if you want to comment a specific Blog post or to request a Blog
+post.
 
 Generation
 ----------
 
-To generate, just install sphinx and run ``make html`` or ``make livehtml`` from CLI.
-
-Deployment
-----------
-
-Just run ``make deploy`` from CLI.
-
-
-TODO
-----
-
+To generate, just install sphinx and run ``make html`` within project root from CLI.
