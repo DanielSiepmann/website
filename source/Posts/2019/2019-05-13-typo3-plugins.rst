@@ -55,6 +55,8 @@ Within TYPO3 Extbase, an plugin consists of the following:
 
 * An optional Flexform for further configuration via editors
 
+* An optional Wizard entry for new content elements
+
 Why adding plugins for existing extensions?
 -------------------------------------------
 
@@ -64,9 +66,12 @@ So extensions already provide plugins, why should one add further plugins to exi
 Example 1 EXT:solr + news
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. todo:: Explain the approach and reason / combination / usage more.
+
 Let's assume there is a TYPO3 installation with a search, provided by EXT:solr, and
-news, using the "Custom Page Type approach™". Everything is working, all news are
-searchable.
+news, using the "Custom Page Type approach™", see (Blog Post:
+:ref:`everything-is-content` and TYPO3 Documentation :ref:`t3coreapi:page-types`).
+Everything is working, all news are searchable.
 
 Now the customer want an index of all news within the "News" page. Maybe he also
 needs some pre filtered news on sub pages, e.g. only news regarding new products or
@@ -202,6 +207,7 @@ displayed.
    :file:`Configuration/TCA/Overrides/tt_content_recent_news.php`:
 
    .. code-block:: php
+      :linenos:
 
       (function ($tablename = 'tt_content', $contentType = 'recent_news') {
           \TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule($GLOBALS['TCA'][$tablename], [
@@ -252,6 +258,122 @@ displayed.
               'after'
           );
       })();
+
+#. Optional, add and register flexform.
+
+   Registration is happening in TCA, see above example, line 27-35.
+
+   The flexform itself can be like the following
+   :file:`Configuration/FlexForms/ContentElements/RecentNews.xml`.:
+
+   .. code-block:: xml
+
+      <T3DataStructure>
+         <sheets>
+            <sDEF>
+                  <ROOT>
+                     <TCEforms>
+                        <sheetTitle>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_tab.settings</sheetTitle>
+                     </TCEforms>
+                     <type>array</type>
+                     <el>
+                        <!-- Limit Start -->
+                        <settings.limit>
+                              <TCEforms>
+                                 <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_additional.limit</label>
+                                 <config>
+                                    <type>input</type>
+                                    <size>5</size>
+                                    <eval>num</eval>
+                                 </config>
+                              </TCEforms>
+                        </settings.limit>
+
+                        <!-- Offset -->
+                        <settings.offset>
+                              <TCEforms>
+                                 <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_additional.offset</label>
+                                 <config>
+                                    <type>input</type>
+                                    <size>5</size>
+                                    <eval>num</eval>
+                                 </config>
+                              </TCEforms>
+                        </settings.offset>
+
+                        <!-- Category Mode -->
+                        <settings.categoryConjunction>
+                              <TCEforms>
+                                 <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction</label>
+                                 <config>
+                                    <type>select</type>
+                                    <renderType>selectSingle</renderType>
+                                    <items>
+                                          <numIndex index="0" type="array">
+                                             <numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction.all</numIndex>
+                                             <numIndex index="1"></numIndex>
+                                          </numIndex>
+                                          <numIndex index="1">
+                                             <numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction.or</numIndex>
+                                             <numIndex index="1">or</numIndex>
+                                          </numIndex>
+                                          <numIndex index="2">
+                                             <numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction.and</numIndex>
+                                             <numIndex index="1">and</numIndex>
+                                          </numIndex>
+                                          <numIndex index="3">
+                                             <numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction.notor</numIndex>
+                                             <numIndex index="1">notor</numIndex>
+                                          </numIndex>
+                                          <numIndex index="4">
+                                             <numIndex index="0">LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categoryConjunction.notand</numIndex>
+                                             <numIndex index="1">notand</numIndex>
+                                          </numIndex>
+                                    </items>
+                                 </config>
+                              </TCEforms>
+                        </settings.categoryConjunction>
+
+                        <!-- Category -->
+                        <settings.categories>
+                              <TCEforms>
+                                 <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.categories</label>
+                                 <config>
+                                    <type>select</type>
+                                    <renderMode>tree</renderMode>
+                                    <renderType>selectTree</renderType>
+                                    <treeConfig>
+                                          <dataProvider>GeorgRinger\News\TreeProvider\DatabaseTreeDataProvider</dataProvider>
+                                          <parentField>parent</parentField>
+                                          <appearance>
+                                             <maxLevels>99</maxLevels>
+                                             <expandAll>TRUE</expandAll>
+                                             <showHeader>TRUE</showHeader>
+                                          </appearance>
+                                    </treeConfig>
+                                    <foreign_table>sys_category</foreign_table>
+                                    <foreign_table_where>AND (sys_category.sys_language_uid = 0 OR sys_category.l10n_parent = 0) ORDER BY sys_category.sorting</foreign_table_where>
+                                    <size>15</size>
+                                    <minitems>0</minitems>
+                                    <maxitems>99</maxitems>
+                                 </config>
+                              </TCEforms>
+                        </settings.categories>
+
+                        <!-- Include sub categories -->
+                        <settings.includeSubCategories>
+                              <TCEforms>
+                                 <label>LLL:EXT:news/Resources/Private/Language/locallang_be.xlf:flexforms_general.includeSubCategories</label>
+                                 <config>
+                                    <type>check</type>
+                                 </config>
+                              </TCEforms>
+                        </settings.includeSubCategories>
+                     </el>
+                  </ROOT>
+            </sDEF>
+         </sheets>
+      </T3DataStructure>
 
 #. Configure PageTSconfig for content element:
 
