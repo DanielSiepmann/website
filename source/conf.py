@@ -148,7 +148,7 @@ html_theme = 'alabaster'
 # Options for alabaster
 html_context = {
     'website_title': blog_title,
-    'twitter_user': 'layneobserdia',
+    'twitter_user': 'daniel_siepmann',
 }
 html_theme_options = {
     'analytics_id': 'UA-9837518-4',
