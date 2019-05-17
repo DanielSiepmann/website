@@ -468,9 +468,9 @@ displayed.
 Acknowledgements
 ----------------
 
-Acknowledgements to `pietzpluswild GmbH <https://www.ppw.de/>`_ and `KM2 >>
-netz:innovationen.gmbh <https://km2.de/>`_ who allowed me to dive into the topic and
-to implement a solution for their customers.
+Acknowledgements to `pietzpluswild GmbH <https://www.ppw.de/>`_ and `KM2 >> GmbH
+<https://km2.de/>`_ who allowed me to dive into the topic and to implement a solution
+for their customers.
 
 Also thanks to :twitteruser:`Josef Glatz <jouschcom>` for proof reading and
 contributing to the Blog post. He also motivated me to finish this post.
