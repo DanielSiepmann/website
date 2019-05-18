@@ -371,6 +371,7 @@ intersphinx_mapping = {
     't3api': ('https://api.typo3.org/typo3cms/current/html/', None),
     't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
     't3extbasebook': ('https://docs.typo3.org/typo3cms/ExtbaseFluidBook', None),
+    't3installguide': ('https://docs.typo3.org/typo3cms/InstallationGuide', None),
     't3tsref': ('https://docs.typo3.org/typo3cms/TyposcriptReference/', None),
     't3tsconfigref': ('https://docs.typo3.org/typo3cms/TSconfigReference/', None),
     't3tcaref': ('https://docs.typo3.org/typo3cms/TCAReference/', None),
@@ -384,4 +385,5 @@ extlinks = {
     't3issue': ('https://forge.typo3.org/issues/%s', 'TYPO3 Forge issue '),
     'twitteruser': ('https://twitter.com/%s', 'Twitter user '),
     'youtubevideo': ('https://www.youtube.com/watch?v=%s', 'Youtube Video '),
+    'composerpackage': ('https://packagist.org/packages/%s', 'Composer Package '),
 }
