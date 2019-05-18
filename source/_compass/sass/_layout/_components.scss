@@ -6,6 +6,10 @@ li,
     font-size: 115%;
 }
 
+ul, ol {
+    margin-left: 20px;
+}
+
 // Keep normal scale if elements are child elements.
 dd p,
 li p,
@@ -21,7 +25,7 @@ dt {
 }
 
 ol li {
-    padding-left: 15px;
+    padding-left: 0;
 }
 
 ol,
@@ -31,7 +35,7 @@ p,
 .line-block,
 dd {
     margin-bottom: 25px;
-    padding-left: 30px;
+    padding-left: 1em;
     dl & {
         padding-left: 0;
     }
@@ -50,7 +54,7 @@ img {
 ul {
     list-style: circle inside;
     @media screen and (max-width: 875px) {
-        margin-left: 30px;
+        margin-left: 20px;
     }
 }
 @media screen and (max-width: 875px) {
@@ -119,6 +123,10 @@ div.admonition {
         background-color: #fcf8e3;
     }
 
+    &.tip {
+        background-color: #c6f2d0;
+    }
+
     &.note {
         background-color: rgba(217, 237, 247, 0.41);
     }
@@ -134,11 +142,43 @@ dl pre,
 pre {
     padding: 15px;
     padding-left: 30px;
-    margin-left: 30px;
+    margin-left: 20px;
     font-family: 'Consolas', 'Menlo', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
 }
 dl pre {
     margin-left: 0;
+}
+
+table pre {
+    padding-right: 0;
+    margin-bottom: 0;
+}
+table.highlighttable {
+    overflow: auto;
+    width: 100%;
+    display: block;
+    margin: {
+        left: 0;
+        bottom: 25px;
+    }
+
+    @media screen and (max-width: 875px) {
+        margin: 0;
+
+        pre {
+            margin: 0;
+        }
+    }
+
+    td {
+        padding: {
+            right: 0;
+            left: 0;
+        }
+        &.linenos {
+            padding-right: 1em;
+        }
+    }
 }
 
 td.code {
@@ -156,20 +196,6 @@ code.docutils.literal {
     padding: 2px 8px;
 }
 
-table.highlighttable {
-    overflow: auto;
-    width: 100%;
-    display: block;
-
-    @media screen and (max-width: 875px) {
-        margin: 0;
-
-        pre {
-            margin: 0;
-        }
-    }
-}
-
 // This selector is necessary, to overwrite original weight.
 div.sphinxsidebar {
     #searchbox {
@@ -184,11 +210,15 @@ div.sphinxsidebar {
 }
 
 // Sphinx is adding p tags within ul li, we remove spaces
+ol.arabic p,
 ol.simple p,
-ul.simple p {
-    display: inline;
-    margin: 0;
+ul p {
     padding: 0;
+    margin-left: 20px;
+    &:first-of-type {
+        display: inline;
+        margin: 0;
+    }
 }
 
 // Classes for rst
