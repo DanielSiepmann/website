@@ -132,6 +132,9 @@ While the package :file:`composer.json` could be:
 By providing a version within :file:`composer.json`, the local package is stable and
 be required. Also further packages can place dependencies on that package.
 
+.. todo:: Provide search filter information on packagist, hint composer.typo3.org and
+   typo3-ter vs. official, etc.
+
 Benefits
 --------
 
@@ -146,6 +149,8 @@ By following this approach, one gets the following benefits:
 * :ref:`replacing-3rd-party-package`.
 
 * :ref:`splitting-local-package`.
+
+* :ref:`typo3-secure-web-package`.
 
 .. _replacing-3rd-party-package:
 
@@ -261,6 +266,29 @@ new repository and deleted afterwards.
 The folder can now be removed within the project, and the package can be required via
 composer from VCS or Packagist, etc.
 
+.. _typo3-secure-web-package:
+
+TYPO3 secure web package
+------------------------
+
+Helmut Hummel developed the :composerpackage:`helhum/typo3-secure-web` which makes
+your TYPO3 more secure out of the box.
+
+The package will split the TYPO3 installation into two folders. One containing public
+resources, e.g. :file:`index.php` and :file:`typo3conf/ext/*/Resources/Public/`, and
+another private folder.
+
+Acknowledgements
+----------------
+
+Thanks to :twitteruser:`wandoliver` and "Riccardo De Contardi" for bringing this
+topic up again.
+
+Also thanks to :twitteruser:`helhum` for providing not only the ``typo3-secure-web``,
+but further Composer Packages related to TYPO3. This makes live much easier, check
+out: https://packagist.org/packages/helhum/ and
+https://packagist.org/packages/typo3-console/.
+
 Further reading
 ---------------
 
@@ -272,4 +300,13 @@ Further reading
 
 * :composerpackage:`helhum/typo3-secure-web` for TYPO3 projects
 
-*  `typo3worx.eu Blog Post <https://typo3worx.eu/2017/08/patch-typo3-using-composer/>`_
+* https://packagist.org/packages/typo3-console/
+
+* https://packagist.org/packages/helhum/
+
+* `typo3worx.eu Blog Post <https://typo3worx.eu/2017/08/patch-typo3-using-composer/>`_
+
+* `"composer.json specification for TYPO3 extensions" Blog Post
+  <https://insight.helhum.io/post/148886148725/composerjson-specification-for-typo3-extensions>`_
+
+* `Composer Helper Work in Progress <https://get.typo3.org/misc/composer/helper>`_
