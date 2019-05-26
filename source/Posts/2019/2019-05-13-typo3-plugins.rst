@@ -28,6 +28,11 @@ post targets Integrators and developers, who already know how to write and use
 TypoScript, TSconfig, Fluid and TCA configuration. You should also know what
 :ref:`FlexForms <t3coreapi:t3ds>` are.
 
+Also :ref:`t3fsc:adding-your-own-content-elements` as dependency. This post will
+provide a complete example, but will not explain every taken step in order to create
+the new content element. Instead we will focus on the Plugin becoming a regular
+content element.
+
 What is a TYPO3 plugin?
 -----------------------
 
@@ -189,15 +194,18 @@ For further information, take a look at :ref:`typo3-custom-plugin-real-world-exa
 Conclusion for Extbase controller
 ---------------------------------
 
-Each controller within an Extbase extension should consist of actions, which only do
-a single task. By providing fine grained actions for single tasks, the Integrator is
-able to configure installation specific plugins.
+Each controller within an Extbase extension consists of actions, which should only do
+a single task each. By providing fine grained actions for single tasks, the
+Integrator is able to configure installation specific plugins, with new combination
+of existing controllers and actions.
 
-A contrary example was developed by myself and our team during my training.  There we
-created a single controller with nearly 10 actions, all doing the same. Just to
-provide 10 different template variants. Today one could use ten custom plugins, or
-even better use a setting like the ``layout`` field within content element, together
-with an ``f:render`` call within Fluid to switch the rendering.
+A contrary example was developed by myself and our team during my training. There we
+created a single controller with nearly 10 actions, all doing the same. The reason
+for those actions was to provide 10 different template variants. Today one could use
+ten custom plugins. Or even better use a setting like the ``layout`` field within
+content element, together with an ``f:render`` call within Fluid to switch the
+rendering. But this will not be covered here. Just make sure, actions and controllers
+are written in a clean, reusable way.
 
 .. _typo3-custom-plugin-real-world-example:
 
@@ -217,16 +225,18 @@ displayed.
           'Recent',
           [
               'News' => 'list',
-          ]
+          ],
+          [],
+          \TYPO3\CMS\Extbase\Utility\ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
       );
 
 #. Configure TCA for content element within
-   :file:`Configuration/TCA/Overrides/tt_content_recent_news.php`:
+   :file:`Configuration/TCA/Overrides/tt_content_news_recent.php`:
 
    .. code-block:: php
       :linenos:
 
-      (function ($tablename = 'tt_content', $contentType = 'recent_news') {
+      (function ($tablename = 'tt_content', $contentType = 'news_recent') {
           \TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule($GLOBALS['TCA'][$tablename], [
               'ctrl' => [
                   'typeicon_classes' => [
@@ -400,12 +410,12 @@ displayed.
       mod {
           wizards.newContentElement.wizardItems.common {
               elements {
-                  recent_news {
+                  news_recent {
                       iconIdentifier = content-recent-news
                       title = Recent News
                       description = Displayes recent news
                       tt_content_defValues {
-                          CType = recent_news
+                          CType = news_recent
                           pi_flexform (
                               <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
                               <T3FlexForms>
@@ -423,9 +433,9 @@ displayed.
                       }
                   }
               }
-              show := addToList(recent_news)
+              show := addToList(news_recent)
           }
-          web_layout.tt_content.preview.recent_news = EXT:sitepackage/Resources/Private/Templates/ContentElementsPreview/RecentNews.html
+          web_layout.tt_content.preview.news_recent = EXT:sitepackage/Resources/Private/Templates/ContentElementsPreview/RecentNews.html
       }
 
 #. Configure TypoScript for rendering of content element:
@@ -433,7 +443,6 @@ displayed.
 
    .. code-block:: typoscript
 
-      tt_content.recent_news =< tt_content.list.20.news_recent
       plugin.tx_news_recent {
           settings {
               orderBy = datetime
@@ -465,6 +474,12 @@ displayed.
           );
       }
 
+.. note::
+
+   For several reasons, don't hardcode labels, instead use
+   ``LLL:EXT:sitepackage/Resources/Private/locallang.xlf`` references.
+   In order to keep example code short, this rule is broken.
+
 Acknowledgements
 ----------------
 
@@ -492,3 +507,5 @@ Further reading
 * :ref:`t3tcaref:start`
 
 * :ref:`t3coreapi:icon`
+
+* :ref:`t3fsc:adding-your-own-content-elements`
