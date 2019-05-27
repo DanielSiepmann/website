@@ -28,7 +28,7 @@ post targets Integrators and developers, who already know how to write and use
 TypoScript, TSconfig, Fluid and TCA configuration. You should also know what
 :ref:`FlexForms <t3coreapi:t3ds>` are.
 
-Also the officla TYPO3 documentation secion
+Also the official TYPO3 documentation section
 :ref:`t3fsc:adding-your-own-content-elements` is required in order to follow this
 Blog post. This post will provide a complete example, but will not explain every
 taken step in order to create the new content element. Instead we will focus on the
@@ -40,7 +40,7 @@ What is a TYPO3 plugin?
 To understand the whole Blog post, one needs to understand the basics of plugins
 within TYPO3.
 
-TYPO3 itself it nothing then a collection of so called "Extensions". An Extension is
+TYPO3 itself is nothing then a collection of so called "Extensions". An Extension is
 something that extends TYPO3 in any way. This can either be done by providing Plugins
 and custom PHP code, or by providing CSS, JS, Fluid Templates, Hooks, or anything
 else. Within this post, we will only cover a specific aspect of Plugins.
