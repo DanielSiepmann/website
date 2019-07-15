@@ -9,46 +9,46 @@ E.g. to add a simplified and project-specific News Extension Content element for
 backend editors.
 
 You might think "I know what plugins, within TYPO3, are". Maybe that's true, maybe
-you still will learn something new.
+you will still learn something new.
 
-This Blog post will first explain what TYPO3 plugins are. But he will also explain
-how to define site specific plugins for existing installed 3rd Party extensions, and
+This blog post will first explain what TYPO3 plugins are. But it will also explain
+how to define site specific plugins for existing installed 3rd party extensions, and
 why this might be useful.
 
-This will only cover Extbase plugins, as most Extensions only provide Extbase
+This will only cover Extbase plugins, as most extensions only provide Extbase
 nowadays. But it also works, partly, for pibase extensions. The basic idea dates back
 to 2018, when I first started to work on this. We now make use of this concept within
 an actual project, so this covers not only abstract concepts, but real world examples.
 
-Target Audience
+Target audience
 ---------------
 
-This Blog post requires some TYPO3 knowledge in order to understand everything. This
-post targets Integrators and developers, who already know how to write and use
+This blog post requires some TYPO3 knowledge in order to understand everything. This
+post targets integrators and developers, who already know how to write and use
 TypoScript, TSconfig, Fluid and TCA configuration. You should also know what
 :ref:`FlexForms <t3coreapi:t3ds>` are.
 
 Also the official TYPO3 documentation section
 :ref:`t3fsc:adding-your-own-content-elements` is required in order to follow this
-Blog post. This post will provide a complete example, but will not explain every
+blog post. This post will provide a complete example, but will not explain every
 taken step in order to create the new content element. Instead we will focus on the
-Plugin becoming a regular content element.
+plugin becoming a regular content element.
 
 What is a TYPO3 plugin?
 -----------------------
 
-To understand the whole Blog post, one needs to understand the basics of plugins
+To understand the whole blog post, one needs to understand the basics of plugins
 within TYPO3.
 
-TYPO3 itself is nothing then a collection of so called "Extensions". An Extension is
-something that extends TYPO3 in any way. This can either be done by providing Plugins
+TYPO3 itself is nothing then a collection of so called "Extensions". An extension is
+something that extends TYPO3 in any way. This can either be done by providing plugins
 and custom PHP code, or by providing CSS, JS, Fluid Templates, Hooks, or anything
-else. Within this post, we will only cover a specific aspect of Plugins.
+else. Within this post, we will only cover a specific aspect of plugins.
 
 Plugins are a way to integrate custom PHP logic into TYPO3 for frontend websites. An
 editor is able to insert a new content element of type "Insert Plugin", where he can
 select the specific plugin. This plugin can be something like "List news" or "List
-events". A plugin can also be an search form or search result or some other kind of
+events". A plugin can also be a search form or search result or some other kind of
 form. In the end, a plugin can be anything.
 
 Most extensions provide plugins out of the box. Most likely you will have a single
@@ -56,7 +56,7 @@ plugin per extension. The extension author allows the editor to select further
 configuration options through the content element, via so called FlexForms. E.g. the
 editor can select the "mode", e.g. "list" or "detail" for something like news.
 
-Within TYPO3 Extbase, an plugin consists of the following:
+Within TYPO3 Extbase, a plugin consists of the following:
 
 * A title for the editor within the TYPO3 backend
 
@@ -64,15 +64,15 @@ Within TYPO3 Extbase, an plugin consists of the following:
 
 * TypoScript defining the rendering of the plugin
 
-* A combination of callable controller and actions
+* A combination of callable controllers and actions
 
-* A combination of non cached callable controller and actions
+* A combination of non cached callable controllers and actions
 
 * An identifier, so called "plugin signature"
 
 * An optional FlexForm for further configuration via editors
 
-* An optional New Content Element Wizard entry for new content elements
+* An optional "New Content Element Wizard" entry for new content elements
 
 Why adding plugins for existing extensions?
 -------------------------------------------
@@ -90,12 +90,12 @@ approach™", see (Blog Post: :ref:`everything-is-content` and TYPO3 Documentati
 there is no need for another extension, in this use case.
 
 A typical use case would be to display a list of recent news, e.g. the five recent
-news on startpage. Maybe also some pre filtered news should be displayed on sub
+news on the startpage. Maybe also some pre filtered news should be displayed on sub
 pages, e.g. only news regarding new products or news regarding the company. All those
 use cases are solved by using EXT:solr.
 
 Of course one could now add TypoScript to pages to configure EXT:solr to start in
-filter mode instead of search mode. Also filter can be added to only show news
+filter mode instead of search mode. Also filters can be added to only show news
 records from these categories. This is not that flexible. The editor is not able to
 add new "News listings" to further pages, as TypoScript is involved.
 
@@ -108,8 +108,8 @@ Benefits of this approach would be:
 * Instead of keeping the result action none cacheable, it can define that this action
   should be cacheable.
 
-* Also a new plugin allows to add a different FlexForm to this plugin. These FlexForm
-  can provide a drop down with possible categories, or allow an editor to define how
+* Also a new plugin allows to add a different FlexForm to this plugin. This FlexForm
+  can provide a drop down with possible categories, or allows an editor to define how
   many news should be displayed.  Thanks to Extbase conventions, all options
   available within TypoScript ``settings`` section can be used within FlexForms. Due
   to a different plugin signature, the plugin can be configured differently via
@@ -122,12 +122,12 @@ number of news to display. He does not need to understand that solr is used.
 Example 2 - EXT:news
 ~~~~~~~~~~~~~~~~~~~~
 
-In case of EXT:news, one might to add "recent news" to the pages. This might contain
+In case of EXT:news, one might want to add "recent news" to the pages. This might contain
 a configurable number of news entries and different layouts, like "list" or "slider".
 This is another example where custom plugins for existing 3rd party extensions might
 be useful. One can create those content elements and plugins.
 
-Another benefit of this example: One can add "recent news" on news detail page
+Another benefit of this example: One can add "recent news" on a news detail page
 without thinking about any limitations. Due to being another plugin with a different
 signature, no arguments might create trouble. Also links created between those
 plugins can make use of the Extbase setting:
@@ -150,7 +150,7 @@ This can also be enabled for the whole extension:
        }
    }
 
-Or whole installation / page:
+Or the whole installation / page:
 
 .. code-block:: typoscript
 
@@ -172,7 +172,7 @@ to "Detail News" custom plugin:
       <h4>{news.title}</h4>
    </f:link.action>
 
-As each plugins has his own default Controller-Action-Combination, there is no need
+As each plugin has its own default Controller-Action-Combination, there is no need
 to add them to the URL generation. Also thanks to the configuration of
 ``skipDefaultArguments``, these will not be added to the url, resulting in an URL
 like this with CMS v9:
@@ -185,7 +185,7 @@ How to add a new TYPO3 plugin
 -----------------------------
 
 To add a new plugin, first of one API call is necessary. After this was done,
-the plugin is already available to the frontend. Next the content element can be
+the plugin is already available to the frontend. Next, the content element can be
 created in the preferred way, which depends on the agency and developer.
 
 Afterwards the optional FlexForm and TypoScript configuration can be added.
@@ -197,13 +197,13 @@ Conclusion for Extbase controller
 
 Each controller within an Extbase extension consists of actions, which should only do
 a single task each. By providing fine grained actions for single tasks, the
-Integrator is able to configure installation specific plugins, with new combination
+Integrator is able to configure installation specific plugins, with new combinations
 of existing controllers and actions.
 
 A contrary example was developed by myself and our team during my training. There we
 created a single controller with nearly 10 actions, all doing the same. The reason
 for those actions was to provide 10 different template variants. Today one could use
-ten custom plugins. Or even better use a setting like the ``layout`` field within
+ten custom plugins. Or even better use a setting like the ``layout`` field within the
 content element, together with an ``f:render`` call within Fluid to switch the
 rendering. But this will not be covered here. Just make sure, actions and controllers
 are written in a clean, reusable way.
@@ -287,11 +287,11 @@ displayed.
           );
       })();
 
-#. Optional, add and register FlexForm.
+#. Optionally, add and register FlexForm.
 
    Registration is happening in TCA, see above example, line 27-35.
 
-   The FlexForm itself can be like the following
+   The FlexForm itself can look like the following
    :file:`Configuration/FlexForms/ContentElements/RecentNews.xml`.:
 
    .. code-block:: xml
@@ -403,7 +403,7 @@ displayed.
          </sheets>
       </T3DataStructure>
 
-#. Configure PageTSconfig for content element to add it to the new content element
+#. Configure PageTSconfig for the content element to add it to the new content element
    wizard:
 
    .. code-block:: typoscript
@@ -459,7 +459,7 @@ displayed.
 
 #. Add fluid template accordingly to configured paths.
 
-#. Optional, register Icon for content element within :file:`ext_localconf.php`:
+#. Optionally, register Icon for content element within :file:`ext_localconf.php`:
 
    .. code-block:: php
 
@@ -479,7 +479,7 @@ displayed.
 
    For several reasons, don't hardcode labels, instead use
    ``LLL:EXT:sitepackage/Resources/Private/locallang.xlf`` references.
-   In order to keep example code short, this rule is broken.
+   In order to keep the example code short, this rule is broken.
 
 Acknowledgements
 ----------------
