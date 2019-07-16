@@ -125,7 +125,7 @@ Further reading
 
 Check out the official doc sections:
 
-* :ref:`t3form:concepts-frontendrendering-codecomponents-customfinisherimplementations`
+* :ref:`t3form:concepts-finishers-customfinisherimplementations`
 
 * :ref:`t3form:typo3.cms.form.prototypes.<prototypeIdentifier>.finishersdefinition.<finisheridentifier>.implementationClassName`
 

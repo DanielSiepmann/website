@@ -369,14 +369,14 @@ primary_domain = None
 
 intersphinx_mapping = {
     't3api': ('https://api.typo3.org/typo3cms/current/html/', None),
-    't3coreapi': ('https://docs.typo3.org/typo3cms/CoreApiReference', None),
-    't3extbasebook': ('https://docs.typo3.org/typo3cms/ExtbaseFluidBook', None),
-    't3tsref': ('https://docs.typo3.org/typo3cms/TyposcriptReference/', None),
-    't3tsconfigref': ('https://docs.typo3.org/typo3cms/TSconfigReference/', None),
-    't3tcaref': ('https://docs.typo3.org/typo3cms/TCAReference/', None),
-    't3form': ('https://docs.typo3.org/typo3cms/drafts/code.tritum.de/TYPO3.CMS/Form_Documentation/', None),
-    't3fsc': ('https://docs.typo3.org/typo3cms/extensions/fluid_styled_content/', None),
-    't3contrib': ('https://docs.typo3.org/typo3cms/ContributionWorkflowGuide/', None),
+    't3coreapi': ('https://docs.typo3.org/m/typo3/reference-coreapi/master/en-us/', None),
+    't3extbasebook': ('https://docs.typo3.org/m/typo3/book-extbasefluid/master/en-us/', None),
+    't3tsref': ('https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/', None),
+    't3tsconfigref': ('https://docs.typo3.org/m/typo3/reference-tsconfig/master/en-us/', None),
+    't3tcaref': ('https://docs.typo3.org/m/typo3/reference-tca/master/en-us/', None),
+    't3form': ('https://docs.typo3.org/c/typo3/cms-form/master/en-us/', None),
+    't3fsc': ('https://docs.typo3.org/c/typo3/cms-fluid-styled-content/master/en-us/', None),
+    't3contrib': ('https://docs.typo3.org/m/typo3/guide-contributionworkflow/master/en-us/', None),
     'neos': ('https://neos.readthedocs.io/en/stable/', None),
     'flow': ('https://flowframework.readthedocs.io/en/latest/', None),
 }
