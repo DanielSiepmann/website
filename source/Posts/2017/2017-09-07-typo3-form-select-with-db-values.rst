@@ -8,7 +8,7 @@ How to create TYPO3 Form select element with options selected from database
 TYPO3s new form framework allows to write custom form elements. This way you are able to define a
 new select element, based on the existing one, but filled with options fetched from database.
 
-E.g. you want your user to select from ``sys_cateogy`` or some other custom records. In this blog
+E.g. you want your user to select from ``sys_category`` or some other custom records. In this blog
 post I will show how to provide the necessary logic in a custom PHP class, how to register a new
 element extending the existing one and how to use this new element in your forms.
 
