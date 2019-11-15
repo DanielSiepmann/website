@@ -151,7 +151,7 @@ html_context = {
     'twitter_user': 'daniel_siepmann',
 }
 html_theme_options = {
-    'analytics_id': 'UA-9837518-4',
+    # 'analytics_id': 'UA-9837518-4',
     'github_user': 'danielsiepmann',
     'github_button': False,
     'show_related': False,

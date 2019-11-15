@@ -29,11 +29,6 @@
     {% if pagename in ablog %}{% set post = ablog[pagename] %}
     {% for coll in post.author %}<meta name="author" content="{{ coll }}">{% endfor %}
     {% endif %}
-
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_anonymizeIp', true]);
-    </script>
 {% endblock %}
 
 
